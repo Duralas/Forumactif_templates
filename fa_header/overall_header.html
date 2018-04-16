@@ -219,7 +219,23 @@
           
  <body background="{T_BODY_BACKGROUND}" bgcolor="{T_BODY_BGCOLOR}" text="{T_BODY_TEXT}" link="{T_BODY_LINK}" vlink="{T_BODY_VLINK}">
   <div class="navig" align="{MENU_POSITION}">
-    {GENERATED_NAV_BAR}
+    <ul class="navbar_expanding">
+      <li class="mainmenu"><a href="{U_INDEX}" class="mainmenu-link">{L_HOME}</a></li>
+      <li class="mainmenu"><a href="/t556-bestiaire-de-duralas" class="mainmenu-link">Bestiaire</a></li>
+      <li class="mainmenu"><a href="/h9-carte-temporaire" class="mainmenu-link">Carte</a></li>
+      <li class="mainmenu"><a href="/t1139-contexte-de-duralas#30846" class="mainmenu-link">Contexte</a></li>
+      <li class="mainmenu"><a href="{U_FAQ}" class="mainmenu-link">{L_FAQ}</a></li>
+      <li class="mainmenu"><a href="{U_MEMBERLIST}" class="mainmenu-link">{L_MEMBERLIST}</a></li>
+      <li class="mainmenu"><a href="{U_GROUP_CP}" class="mainmenu-link">{L_USERGROUPS}</a></li>
+      <!-- BEGIN switch_user_logged_in -->
+      <li class="mainmenu"><a href="{U_PROFILE}" class="mainmenu-link">{L_PROFILE}</a></li>
+      <li class="mainmenu"><a href="{U_PRIVATEMSGS}" class="mainmenu-link">{L_PRIVATEMSGS}</a></li>
+      <!-- END switch_user_logged_in -->
+      <!-- BEGIN switch_user_logged_out -->
+      <li class="mainmenu"><a href="{U_REGISTER}" class="mainmenu-link">{L_REGISTER}</a></li>
+      <!-- END switch_user_logged_out -->
+      <li class="mainmenu"><a href="{U_LOGIN_LOGOUT}" class="mainmenu-link">{L_LOGIN_LOGOUT}</a></li>
+    </ul>
   </div>
    
 <!-- BEGIN hitskin_preview -->
