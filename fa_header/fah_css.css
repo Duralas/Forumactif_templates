@@ -1,0 +1,39 @@
+/* * * * * OLD * * * * */
+.navig {
+  background:#1A1209;
+  font:philosopher;
+  left:0px;
+  right:0px;
+  top:0px;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding: 10px 0 6px 0;
+  opacity: 0.8;
+  filter: alpha(opacity=100);
+  box-shadow :0px 0px 3px #000;
+}
+
+/* * * * * NEW * * * * */
+.navbar_expanding {
+  display: table;
+  list-style: none;
+  margin: 0;
+}
+.navbar_expanding li {
+  display: table-cell;
+}
+.navbar_expanding a.mainmenu-link {
+  font-size:18px;
+  font-weight: 700;
+  padding: 0 10px;
+  text-shadow :0px 0px 3px #000;
+}
+.navbar_expanding a.mainmenu-link:hover {
+  font-size:18px;
+  text-shadow :0px 0px 3px #FFF;
+  color:#FFF;
+}
+.navbar_expanding .submenu {
+  display: none;
+}
