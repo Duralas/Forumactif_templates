@@ -212,6 +212,29 @@
   //]]>
   </script>
   <!-- END google_analytics_code -->
+
+  <!-- /begin messagerie -->
+  <script type="text/javascript">
+    $(document).ready(function(){    
+      /* Récupération des variables */
+      let navContext = document.createRange().createContextualFragment(`{GENERATED_NAV_BAR}`);
+      let aMessagerie = $(navContext).children(`a[href*='{U_PRIVATEMSGS}']`);
+      if (!aMessagerie.length) {
+        return;
+      }
+
+      /* Vérification du nombre de messages */
+      let iNew = $(aMessagerie).children("#i_icon_mini_new_message");
+      if (!iNew.length) { /* Pas de nouveau message */
+        return;
+      }
+      let countNew = $(iNew).attr("title").replace(/^([1-9][0-9]*) .*$/,"$1");
+      let message = parseInt(countNew) > 1 ? countNew + " nouvelles missives" : countNew + " nouvelle missive";
+      $("#navMessagerie").text(message);
+      $("#navMessagerie").addClass("nouveau_message");
+    });
+  </script>
+  <!--  /end  messagerie -->
 </head> 
           <div id="i_bg">
     <div><img src=""/></div>
@@ -229,7 +252,7 @@
       <li class="mainmenu"><a href="{U_GROUP_CP}" class="mainmenu-link">{L_USERGROUPS}</a></li>
       <!-- BEGIN switch_user_logged_in -->
       <li class="mainmenu"><a href="{U_PROFILE}" class="mainmenu-link">{L_PROFILE}</a></li>
-      <li class="mainmenu"><a href="{U_PRIVATEMSGS}" class="mainmenu-link">{L_PRIVATEMSGS}</a></li>
+      <li class="mainmenu"><a id="navMessagerie" href="{U_PRIVATEMSGS}" class="mainmenu-link">Missives privées</a></li>
       <!-- END switch_user_logged_in -->
       <!-- BEGIN switch_user_logged_out -->
       <li class="mainmenu"><a href="{U_REGISTER}" class="mainmenu-link">{L_REGISTER}</a></li>
