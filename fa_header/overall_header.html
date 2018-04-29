@@ -235,30 +235,156 @@
     });
   </script>
   <!--  /end  messagerie -->
+
+  <!-- /begin navbar_expanding -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".mainmenu, .submenu").hover(function(){
+        let $this = $(this);
+        let navContBlock = null;
+        let target = null;
+        if ($this.hasClass("mainmenu")) {
+          target = $this.data("submenu");
+          navContBlock = $this.parents('.navbar_container_block')[0];
+        } else if ($this.hasClass("submenu")) {
+          target = "#" + this.id;
+          navContBlock = $('.mainmenu[data-submenu*="' + this.id + '"]').parents('.navbar_container_block')[0];
+        } else {
+          return;
+        }
+        $(target).css("display", "inline-block");
+        if (navContBlock) {
+          let offset = $(navContBlock).offset();
+          $(target).css("left", offset.left);
+        }
+      }, function(){
+        let $this = $(this);
+        let target = null;
+        if ($this.hasClass("mainmenu")) {
+          target = $this.data("submenu");
+        } else if ($this.hasClass("submenu")) {
+          target = "#" + this.id;
+        } else {
+          return;
+        }
+        $(target).css("display", "none");
+      });
+    });
+  </script>
+  <!--  /end  navbar_expanding -->
 </head> 
           <div id="i_bg">
     <div><img src=""/></div>
 </div>
           
  <body background="{T_BODY_BACKGROUND}" bgcolor="{T_BODY_BGCOLOR}" text="{T_BODY_TEXT}" link="{T_BODY_LINK}" vlink="{T_BODY_VLINK}">
+   <div style="display: none; height: 0;">{GENERATED_NAV_BAR}</div>
   <div class="navig" align="{MENU_POSITION}">
-    <ul class="navbar_expanding">
-      <li class="mainmenu"><a href="{U_INDEX}" class="mainmenu-link">{L_HOME}</a></li>
-      <li class="mainmenu"><a href="/t556-bestiaire-de-duralas" class="mainmenu-link">Bestiaire</a></li>
-      <li class="mainmenu"><a href="/h9-carte-temporaire" class="mainmenu-link">Carte</a></li>
-      <li class="mainmenu"><a href="/t1139-contexte-de-duralas#30846" class="mainmenu-link">Contexte</a></li>
-      <li class="mainmenu"><a href="{U_FAQ}" class="mainmenu-link">{L_FAQ}</a></li>
-      <li class="mainmenu"><a href="{U_MEMBERLIST}" class="mainmenu-link">{L_MEMBERLIST}</a></li>
-      <li class="mainmenu"><a href="{U_GROUP_CP}" class="mainmenu-link">{L_USERGROUPS}</a></li>
-      <!-- BEGIN switch_user_logged_in -->
-      <li class="mainmenu"><a href="{U_PROFILE}" class="mainmenu-link">{L_PROFILE}</a></li>
-      <li class="mainmenu"><a id="navMessagerie" href="{U_PRIVATEMSGS}" class="mainmenu-link">Missives privées</a></li>
-      <!-- END switch_user_logged_in -->
+    <div class="navbar_expanding">
+      <div class="navbar_container_block">
+        <div class="navbar_block">
+          <div class="mainmenu"><a href="{U_INDEX}" class="mainmenu-link">{L_HOME}</a></div>
+        </div>
+      </div>
+      <div class="navbar_container_block">
+        <div class="navbar_block">
+          <div class="mainmenu" data-submenu="#subPreambule"><span class="mainmenu-item">Préambule</span></div>
+        </div>
+      </div>
+      <div class="navbar_container_block">
+        <div class="navbar_block">
+          <div class="mainmenu" data-submenu="#subLeMonde"><span class="mainmenu-item">Le monde</span></div>
+        </div>
+      </div>
+      <div class="navbar_container_block">
+        <div class="navbar_block">
+          <div class="mainmenu" data-submenu="#subLeJeu"><span class="mainmenu-item">Le jeu</span></div>
+        </div>
+      </div>
+      <div class="navbar_container_block">
+        <div class="navbar_block">
+          <div class="mainmenu" data-submenu="#subProfil">
+            <!-- BEGIN switch_user_logged_in -->
+              <a href="{U_PROFILE}" class="mainmenu-link" title="Consulter votre profil">{L_PROFILE}</a>
+            <!-- END switch_user_logged_in -->
+
+            <!-- BEGIN switch_user_logged_out -->
+              <span class="mainmenu-item">Contact</span>
+            <!-- END switch_user_logged_out -->
+          </div>
+        </div>
+      </div>
+      <div class="navbar_container_block">
+        <div class="navbar_block">
+          <div class="mainmenu"><a id="navMessagerie" href="{U_PRIVATEMSGS}" class="mainmenu-link" title="Consulter le pigeonnier de vos missives privées.">Missives privées</a></div>
+        </div>
+      </div>
       <!-- BEGIN switch_user_logged_out -->
-      <li class="mainmenu"><a href="{U_REGISTER}" class="mainmenu-link">{L_REGISTER}</a></li>
+        <div class="navbar_container_block">
+          <div class="navbar_block">
+            <div class="mainmenu"><a href="{U_REGISTER}" class="mainmenu-link" title="Inscrivez-vous sur Dùralas.">{L_REGISTER}</a></div>
+          </div>
+        </div>
       <!-- END switch_user_logged_out -->
-      <li class="mainmenu"><a href="{U_LOGIN_LOGOUT}" class="mainmenu-link">{L_LOGIN_LOGOUT}</a></li>
-    </ul>
+      <div class="navbar_container_block">
+        <div class="navbar_block">
+          <div class="mainmenu"><a href="{U_LOGIN_LOGOUT}" class="mainmenu-link">{L_LOGIN_LOGOUT}</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMENUS -->
+    <div id="subPreambule" class="submenu">
+      <a href="/t3-reglement-general-du-forum" class="submenu-link" title="Prendre connaissance du règlement général">Règlement général</a>
+      <a href="/t6-reglement-du-rp-des-combats" class="submenu-link" title="Prendre connaissance du règlement RP">Règlement RP</a>
+      <a href="/f177-chartes-duralassiennes" class="submenu-link" title="Visualiser les chartes dùralassiennes">Chartes Dùralassiennes</a>
+      <span class="submenu-separation"></span>
+      <span class="submenu-link no-link" title="Découvrir le staff.">Staff</span>
+      <a href="/faq" class="submenu-link" title="Consulter la FAQ de Dùralas">FAQ</a>
+      <a href="/t2427-credits" class="submenu-link" title="Prendre note des crédits de Dùralas">Crédits</a>
+      <span class="submenu-separation"></span>
+      <span class="submenu-link no-link" title="À venir...">Guide des nouveaux</span>
+    </div>
+
+    <div id="subLeMonde" class="submenu">
+      <a href="/t1139-contexte-de-duralas" class="submenu-link" title="Lire le contexte de Dùralas">Contexte</a>
+      <a href="/t556-bestiaire-de-duralas" class="submenu-link" title="Consulter le bestiaire de Dùralas">Bestiaire</a>
+      <a href="/h9-carte-temporaire" class="submenu-link" title="Afficher la carte de Dùralas">Carte</a>
+      <span class="submenu-separation"></span>
+      <a href="/t7-descriptions-et-explications-des-differentes-races" class="submenu-link" title="Lire les descriptifs des races">Les races</a>
+      <a href="/t2415-les-hybridations" class="submenu-link" title="En apprendre plus sur l'hybridation">Hybridations</a>
+      <span class="submenu-separation"></span>
+      <a href="/t8-descriptions-et-explications-des-classes" class="submenu-link" title="Consulter les descriptifs et explications des classes">Les classes</a>
+      <a href="/t1649-le-systeme-politique-de-duralas-1-2-les-factions" class="submenu-link" title="Découvrir les factions">Les factions</a>
+      <a href="/t1679-le-systeme-politique-de-duralas-2-2-les-guildes" class="submenu-link" title="Découvrir les guildes">Les guildes</a>
+      <span class="submenu-separation"></span>
+      <a href="/t63-liste-des-equipements-disponibles" class="submenu-link" title="Consulter la liste des équipements">Les équipements</a>
+      <span class="submenu-link no-link" title="À venir...">Les métiers</span>
+      <a href="/f48-l-hotel-de-vente" class="submenu-link" title="Parcourir les comptoirs commerciaux de l'hôtel des ventes">L'hôtel des ventes</a>
+      <span class="submenu-separation"></span>
+      <a href="/f46-la-bibliotheque" class="submenu-link" title="« Le savoir c'est le pouvoir » ; explorer la bibliothèque">Bibliothèque</a>
+      <a href="/f130-le-phenix-enchaine" class="submenu-link" title="Lire la gazette de Dùralas : Le Phénix Enchaîné">Le Phénix Enchaîné</a>
+    </div>
+
+    <div id="subLeJeu" class="submenu">
+      <a href="/t6-reglement-du-rp-des-combats" class="submenu-link" title="Prendre connaissance du règlement RP">Règlement RP</a>
+      <a href="/t97-les-quetes-speciales" class="submenu-link" title="Découvrir les quêtes spéciales">Quêtes spéciales</a>
+      <a href="/t1843-tutoriel-des-metiers" class="submenu-link" title="Jeter un œil au tutoriel des métiers">Tutoriel des métiers</a>
+      <span class="submenu-separation"></span>
+      <a href="/f119-demandes-de-rp" class="submenu-link" title="Visualiser les sujets des demandes de RP">Demandes de RP</a>
+      <a href="/f118-bureau-des-reclamations" class="submenu-link" title="Visualiser les sujets du bureau des réclamations">Bureau des réclamations</a>
+      <span class="submenu-separation"></span>
+      <a href="/t65-finalisation-de-duralas" class="submenu-link" title="Découvrir les dernières informations de la finalisation de Dùralas">Finalisation</a>
+    </div>
+
+    <div id="subProfil" class="submenu">
+      <a href="/f67-journal-de-bord" class="submenu-link" title="Consulter les journaux de bord disponibles">Journaux de bord</a>
+      <a href="/f162-genealogie" class="submenu-link" title="Consulter les généalogies disponibles">Généalogies</a>
+      <span class="submenu-separation"></span>
+      <a href="{U_MEMBERLIST}" class="submenu-link" title="Afficher la liste des membres">Membres</a>
+      <a href="{U_GROUP_CP}" class="submenu-link" title="Afficher la liste des groupes">Groupes</a>
+    </div>
+
   </div>
    
 <!-- BEGIN hitskin_preview -->
