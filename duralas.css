@@ -1115,6 +1115,13 @@ a.topictitle {
   content: url(http://image.noelshack.com/fichiers/2018/48/4/1543454537-commandant.png);
 }
 
+/*********** Actions ***********/
+.icon-action-aqueous::before {
+  content: url(http://image.noelshack.com/fichiers/2019/33/7/1566126650-action-aqueous.png);
+}
+.icon-action-sprint::before {
+  content: url(http://image.noelshack.com/fichiers/2019/33/7/1566126650-action-sprint.png);
+}
 
 /*********** Autres ***********/
 .icon-todo::before {
