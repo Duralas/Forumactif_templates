@@ -1,0 +1,1930 @@
+@import url('https://fonts.googleapis.com/css?family=Philosopher');
+
+/********************* Correction page d'inscription *********************/
+#password_reg {
+  float: none;
+}
+#cont_pwd {
+  display: inline-block;
+  float: none;
+}
+
+/**************************************************************************Design du fond**************************************************************************/
+html {
+  background-color: #000;
+}
+body {
+  background-repeat: no-repeat;
+background-attachment: fixed;
+overflow-y:scroll !important;
+  /*width: 100%;*/
+}
+ 
+.site_description{
+ padding-top:50px;
+}
+
+.table {
+	display: table;
+}
+.table-row {
+	display: table-row;
+}
+.table-cell {
+	display: table-cell;
+}
+ 
+/*header*/
+#i_bg {
+  position: absolute;
+  top: 0px;
+  left:0px;
+  right:0px;
+}
+ 
+/*logo*/
+#i_logo {
+  z-index: 900;
+  position:relative; 
+}
+
+
+/*corps central*/
+.bodylinewidth{
+    box-shadow: 0px 0px 20px #000;
+      background:url('');
+  padding-bottom:0px;
+  margin-top:-750px;
+}
+
+.bodyline {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Liste des actions (notamment icones) */
+.top_action_list {
+  margin: 15px 0 5px;
+}
+
+/*categories*/
+.forumline{
+  padding: 3px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px black;
+  border:3px solid #000;
+}
+.forumline {
+  background-color: #1a120980 !important;
+}
+.forumline td.catLeft {
+  background-color: unset;
+}
+td.catTop,
+td.catRight,
+td.catBottom,
+td.catLeft {
+  border-width: 0 0 0 0;
+}
+.catBottom {
+  background-color: transparent !important;
+}
+.secondarytitle,
+.catHead,
+.forumline th {
+  background-color: unset !important;
+  border: 0 !important;
+}
+
+/* Qui est en ligne ? */
+.wio {
+  margin-top: 30px;
+}
+.wio .catHead {
+  text-align: center;
+}
+.wio .catHead,
+.wio .cattitle {
+  font-size: 22px;
+  text-align: center;
+}
+.wio .row1 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.forumline a.forumlink {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* Subrillance lors du survol */
+.wio:hover .cattitle,
+.forumline tr:hover a.forumlink {
+  color: #FFF;
+  letter-spacing: 0
+  text-shadow: 1px 1px 10px #FFF;
+}
+  
+  
+/*barre de navigation*/
+.navig {
+ background:#1A1209;
+ font:philosopher;
+  left:0px;
+  right:0px;
+  top:0px;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding: 10px 0 6px 0;
+  opacity: 0.8;
+    filter: alpha(opacity=100);
+  box-shadow :0px 0px 3px #000;
+}
+
+.navbar_expanding {
+  display: table;
+}
+.navbar_container_block {
+  display: table-cell;
+}
+.navbar_container_block + .navbar_container_block {
+  padding-left: 15px;
+}
+.navbar_block {
+  display: table;
+}
+.mainmenu {
+  cursor: pointer;
+  display: table-row;
+}
+.submenu {
+  background-color: #1A1209;
+  bottom: unset;
+  display: none;
+  left: unset;
+  padding: 5px 10px;
+  position: fixed;
+  right: unset;
+  text-align: left;
+  top: unset;
+}
+
+.mainmenu-link,
+.mainmenu-item {
+  color: #f7e9c9;
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow :0px 0px 3px #000;
+}
+.mainmenu-link:focus,
+.mainmenu-link:hover,
+.mainmenu-item:focus,
+.mainmenu-item:hover {
+  font-size: 18px;
+  font-weight: 700;
+}
+.mainmenu-link:focus,
+.mainmenu-link:hover {
+  color:#FFF;
+  text-shadow :0px 0px 3px #FFF;
+}
+
+.navbar_expanding a.mainmenu-link.nouveau_message {
+  color: #F00;
+}
+.no-link {
+  cursor: not-allowed;
+}
+
+.submenu > a,
+.submenu > span {
+  display: block;
+}
+.submenu-link + .submenu-linkn {
+  margin-top: 5px;
+}
+.submenu-separation {
+  border-bottom: 2px solid #f7e9c9;
+  margin: 10px 0;
+  width: 100%;
+}
+
+ 
+/*corps du post*/
+.postbody {
+  text-align : justify;
+  padding :10px;
+}
+ 
+/*encadre dernier post*/
+.dernierpost {
+  border-left:5px solid #1a1209;
+  border-right:50px solid #1a1209;
+  border-top:1px solid #1a1209;
+  border-bottom:1px solid #1a1209;
+  margin-top:0px;
+  margin-bottom:-30px;
+  margin-right:10px;
+  padding: 5px;
+  padding-top:15px;
+  height:50px;
+  width:150px;
+}
+ 
+/*compteur messages et sujets*/
+.messagesetposts {
+color: #1a1209
+margin-left:-60px;
+}
+ 
+.messagesetposts_dernierpost {
+  margin-top:-20px;
+}
+ 
+/*mini avatars*/
+.lastpost-avatar {
+  margin-top:-42px;
+  margin-left:165px;
+}
+
+.lastpost-avatar img {
+width: 45px;
+height: 72px;
+}
+
+
+/*titre de categorie*/
+.titre_categorie{
+  margin-top:-65px;
+}
+ 
+/*liens de categories en dessous de descr*/
+.liens_categories {
+  width:580px;
+  margin-bottom:10px;
+}
+/* o Images des nouveaux messages*/
+.liens_categories > a > img {
+  	margin-right: 5px;
+}
+ 
+/*zone description des categories*/
+.descr {
+  margin-top:-75px;
+  padding-bottom:10px;
+  height:80px;
+  width :600px;
+}
+
+/* Partenaires */
+.partenaire_logo {
+  height: 35px;
+  opacity: 0.2;
+}
+.partenaire_logo:focus,
+.partenaire_logo:hover {
+  opacity: 1;
+}
+
+/* Liens du footer */
+#page-footer .gen a {
+  color: #664c32;
+  font-size: 12px;
+}
+#page-footer .gen a:focus,
+#page-footer .gen a:hover {
+  color: #FFF;
+}
+
+a[title="WebAnalytics"] {
+  display: none;
+}
+ 
+ 
+/*intitule chatbox*/
+#frame_chatbox {
+	font-family: 'Philosopher';
+}
+
+#chatbox_header .cattitle strong {
+  font-size: 0px;
+}
+/*Titre Personnalisé*/
+#chatbox_header .cattitle:before {
+  content: "Bienvenue à la Taverne de Dùralas";
+  font-family: 'Philosopher';
+  font-size: 15px;
+}
+
+/*#chatbox_header .catBottom {
+  background-color: transparent;
+}*/
+
+/* Message de connexion CB */
+.msg span[style*="green"] strong {
+    color: #77b300; /* couleur */
+    font-variant: small-caps; /* petites majuscules */
+}
+
+/* Message de déconnexion CB */
+.msg span[style*="red"] strong {
+    color: #7d738c; /* couleur */
+    font-variant: small-caps; /* petites majuscules */
+}
+
+body.chatbox {
+  overflow-y: unset !important;
+}
+
+/* Césure des mots dans la CB pour ne pas avoir une barre de navigation horizontale */
+#chatbox {
+  word-wrap: break-word;
+}
+ 
+ /* */
+.erreur {
+	border-bottom: 1px solid #D00;
+	color: #D00;
+}
+
+/************************************************************************Mise en page**************************************************************************/
+
+
+/*liens*/
+.postbody a { text-shadow : 0px 0px 3px #A4BC83}
+
+a {
+text-decoration: none;
+  -moz-transition:all 0.5s; /* Mozilla Firefox */
+-webkit-transition:all 0.5s; /* Safari et Google Chrome */
+-o-transition:all 0.5s; /* Opera */
+transition:all 0.5s;
+}
+ 
+a:hover {
+text-decoration: none !important;
+text-transformation: none !important;
+color:#FFF;
+}
+ 
+a:link {text-decoration: none;
+-moz-transition:all 0.5s; /* Mozilla Firefox */
+-webkit-transition:all 0.5s; /* Safari et Google Chrome */
+-o-transition:all 0.5s; /* Opera */
+transition:all 0.5s;}
+ 
+a:link:hover {
+text-decoration: none !important;
+text-transformation: none !important;
+color:#FFF;
+}
+ 
+url {
+text-decoration: none;
+text-transformation:none;
+}
+
+a.forumlink {
+  margin-top:-25px;}
+ 
+ 
+a.forumlink{
+-moz-transition:all 0.5s; /* Mozilla Firefox */
+-webkit-transition:all 0.5s; /* Safari et Google Chrome */
+-o-transition:all 0.5s; /* Opera */
+transition:all 0.5s;
+}
+ 
+a.forumlink:hover{
+  color:#FFF;
+}
+ 
+/*barre de separation hr*/
+hr {  border:1px solid #A4BC83; }
+ 
+/*code*/
+.code{
+ border-radius: 0px 20px 0px 20px;
+  color:#B0C4DE;
+  padding:15px;
+  background:url('http://html-color.org/191D0F.jpg');
+}
+ 
+/*selecion code*/
+.selectCode {
+  float:right;
+  cursor:pointer;
+  font-size:12px;
+  margin-right:25px;
+  color: #B0C4DE;}
+div.cont_code { clear: right; }
+ 
+/*citations*/
+.quote{
+ border-radius: 0px 20px 0px 20px;
+  color:#B0C4DE;
+  padding:15px;
+    background:url('https://redcdn.net/hpimg11/pics/4796325395.jpg');
+}
+
+/* boutons haut/bas */
+.navTopBottom {
+  cursor: pointer;
+}
+
+/************************************************************************************Mise en page********************************************************************/
+.titre {
+  background:#0f1400;text-align:center; font-size:20px; text-shadow:1px 1px 3px #000;padding:10px;
+}
+.titrerace {
+  background:#12150e;text-align:center; font-size:20px; text-shadow:1px 1px 3px #000;padding:5px;
+}
+.titre-subcat {
+  background-color: #12150E;
+  font-size: 16px;
+  margin: 15px 0 5px;
+  padding: 5px;
+}
+
+.titre2{
+  font-size:16px;font-variant:small-caps;background:url('https://i.servimg.com/u/f37/15/33/58/83/textur10.png'); padding:5px;
+}
+
+.titre3{
+  font-size:14px;text-decoration:underline;
+}
+
+
+.encadre{
+  background:#0f1400;padding:10px;
+}
+
+.corps{
+  padding-left:15px;padding-right:15px;
+}
+
+/* Titre des catégories */
+th.secondarytitle h2,
+.cattitle {
+  font-size: 20px;
+  font-variant: small-caps;
+}
+
+/* Titre des sujets */
+a.topictitle {
+  	font-size: 14px;
+}
+
+/**************************************************** RÈGLEMENTS ****************************************************/
+/********************* Général *********************/
+.rules .rules-categ-underline {
+  border-color: #01a2bb94;
+}
+.rules .rule-frame {
+  background-color: #1B1714;
+  border-color: #002a3c75;
+}
+.rule-enum .rule-enum-subcontent,
+.quest-notum-enum-subitem {
+  padding: 0 22px;
+}
+.rule-enum-subcontent:before,
+.quest-notum-enum-subitem:before {
+  color: #FFF;
+  content: "o";
+  padding-right: 7px;
+}
+.rules .rule-scope {
+  background-color: #716a5987;
+}
+.rule-scope > ul {
+  padding-left: 10px;
+}
+.rule-scope-details {
+  margin: auto;
+  width: 90%;
+}
+.rules .reward-inter {
+  text-align: left;
+}
+
+.rule-em {
+  color: #FFF;
+  font-size: 10px;
+  font-style: italic;
+}
+.rule-example {
+  color: #ACACAC;
+  font-size: 12px;
+}
+
+/*********** Nordiens ***********/
+.rules-nord .rule-frame {
+  background-color: #499ab163;
+}
+.rules-nord .rule-scope {
+  background-color: #648e9a5c;
+}
+
+/*********** Djöllfulins ***********/
+.rules-djöllfulin .rule-frame {
+  background-color: #1919198c;
+  border-color: #6100008c;
+}
+.rules-djöllfulin .rule-title {
+  border-color: #6100008c;
+}
+.rules-djöllfulin .rule-scope {
+  /*background-color: #648e9a5c;*/
+}
+
+/********************* Description des races *********************/
+.race-description-image {
+  border:1px solid;
+  float:left;
+  margin:10px;
+}
+.race-description-contenu {
+  min-height: 190px;
+  margin-bottom: 10px;
+}
+
+/********************* Tableaux pour la section des Règles *********************/
+.table-rules {
+	text-align: center;
+}
+.table-rules th,
+.table-rules td {
+	padding: 5px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #fff;
+}
+.tutoriel-table-head {
+  text-align: center;
+}
+
+/********************* Bestiaire *********************/
+.bestiaire-nom {
+  color: #ddd;
+  font-size: 15px;
+  font-weight: 700;
+  text-shadow: 0 0 6px #aaaaaa;
+}
+.bestiaire .caractéristique,
+.bestiaire-caractéristique,
+.bestiaire-champ {
+  text-decoration: underline;
+}
+.bestiaire-séparation {
+  border-bottom: 1px solid;
+  height: 15px;
+  margin: auto;
+  width: 50px;
+}
+
+/********************* Combat *********************/
+.combat-vaincu {
+  font-style: italic;
+  text-decoration: line-through;
+}
+.combat-vaincu span:first-child,
+.combat-vaincu strong:first-child {
+  text-decoration: none;
+}
+.combat-vaincu .vitalité {
+  color: #D00 !important;
+}
+
+/********************* Quêtes *********************/
+.quests-categ,
+.rules-categ {
+  color: #F2F2F2;
+  font-family: Italianno;
+  font-size: 60px;
+  height: 200px;
+  overflow: auto;
+  padding-left: 20px;
+  text-shadow: 1px 1px 0px #000;
+  width: 100%;
+}
+.quests-categ-underline,
+.rules-categ-underline {
+  border-bottom: 1px solid #0DF;
+  display: block;
+  margin-top: 3px;
+  width: 100%;
+}
+.quests-banner,
+.rules-banner {
+  text-align: center;
+}
+.quests-intro {
+  color: #BCC4C7;
+  font-size: 12px;
+  font-style: italic;
+  margin: 0 40px 5px;
+  text-align: center;
+}
+.quest-frame,
+.rule-frame {
+  background-color: #1B2C32;
+  border: 2px solid #555C5F;
+  font-size: 13px;
+  line-height: 18px;
+  margin: auto;
+  padding: 20px;
+  width: 600px;
+}
+.quest:hover .quest-title,
+.rule:hover .rule-title {
+  color: #FFF;
+  letter-spacing: 0
+  text-shadow: 1px 1px 10px #FFF;
+  transition: 1s;
+}
+.quest-title,
+.rule-title {
+  border-bottom: 1px solid #00CBD417;
+  color: #F2F2F2;
+  font-family: Cinzel Decorative;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 auto 7px;
+  text-align: center;
+  transition: 1s;
+  width: 75%
+}
+.quest-field,
+.rule-field {
+  color: #FFF;
+  font-family: Cinzel Decorative;
+}
+.quest a {
+  color: #00A7C3;
+  text-shadow: none;
+}
+.indice:hover {
+  text-shadow: 1px 1px 3px #4472C4;
+}
+.quest-objectus,
+.rule-ena {
+  display: table;
+  margin: auto;
+  width: 80%;
+}
+.quest-objecta,
+.rule-enum {
+  display: table-row;
+}
+.quest-objecta-icon {
+  display: table-cell;
+  width: 30px;
+}
+.quest-objecta-todo {
+  background-color: #CDCDCD;
+  border: 1px solid #000;
+  height: 20px;
+  margin: 0 auto;
+  vertical-align: top;
+  width: 20px;
+}
+.quest-objecta-content,
+.rule-enum-content {
+  display: table-cell;
+  padding: 0 15px;
+  vertical-align: top;
+}
+.quest-objecta-scope,
+.rule-scope {
+  background-color: #A8ECFF61;
+  border: 1px solid;
+  box-shadow: -2px 3px 4px #000;
+  margin: 10px 5px 5px;
+  padding: 5px 10px;
+}
+.quest-enigma {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+.quest-rewards {
+  display: table;
+  margin: 5px auto 10px;
+  width: 80%;
+}
+.quest-reward {
+  display: table-row;
+}
+.quest-reward-icon {
+  display: table-cell;
+  height: 50px;
+  vertical-align: middle;
+  width: 50px;
+}
+.quest-reward-desc {
+  display: table-cell;
+  padding: 5px 15px;
+  vertical-align: middle;
+}
+.quest-reward-inter,
+.reward-inter {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: underline;
+}
+.quest-reward-inter > div {
+  display: table-cell;
+}
+.quest-nota,
+.rule-nota {
+  border-color: #ffffff0d;
+  border-style: solid;
+  border-width: 0 1px;
+  display: table;
+  margin: 5px auto 10px;
+  padding: 0 10px;
+  width: 80%;
+}
+.quest-notum,
+.rule-notum {
+  display: table-row;
+}
+.quest-notum-i,
+.rule-notum-i {
+  color: #DCDCDC;
+  display: table-cell;
+  padding: 3px;
+}
+.quest-notum-item,
+.rule-notum-item {
+  display: table-cell;
+  vertical-align: top;
+}
+
+/*********** Djöllfulins ***********/
+.quests-djöllfulins .quests-categ-underline {
+  border-color: #b73200d9;
+}
+.quests-djöllfulins .quest-frame {
+  background-color: #1919198c;
+}
+.quests-djöllfulins .quest-title {
+  border-color: #6100008c;
+}
+.quests-djöllfulins .quest-field {
+  color: #e83700d1;
+}
+.quests-djöllfulins .quest a {
+  color: #ff7800;
+}
+.quests-djöllfulins .quest a:hover {
+  color: #FFF;
+}
+.quests-djöllfulins .icon-todo::before {
+  content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user18.png);
+}
+
+/*********** Gardiens **************/
+.quests-garde .quests-categ-underline {
+  border-color: #e0cda9;
+}
+.quests-garde .quest-frame {
+  background-color: #1919198c;
+  border-color: #e0cda9;
+  color: #BCC4C7;
+  width: 650px;
+}
+.quests-garde .quest-title {
+  border-color: #e0cda9;
+}
+.quests-garde .quest-field {
+  color: #e0cda9;
+}
+.quests-garde .quest a {
+  color: #e0cda9;
+}
+.quests-garde .quest a:hover {
+  color: #FFF;
+}
+.quests-garde .quest-nota {
+  width: 90%;
+}
+.quests-garde .quest-notum-i {
+  color: #e0cda9;
+  text-align: center;
+}
+
+/********************* Icones *********************/
+.icon-xp-sm::before {
+  	content: url(https://i.servimg.com/u/f11/19/50/65/15/xp-sm10.jpg);
+}
+.icon-50px-xp-sm::before {
+  	content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_x12.png);
+}
+.icon-xp-md::before {
+    content: url(https://wiki.guildwars2.com/images/9/93/Celestial_Infusion_%28Blue%29.png);
+}
+.icon-50px-xp-md::before {
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_x11.png);
+}
+.icon-xp-lg::before {
+    content: url(https://wiki.guildwars2.com/images/0/04/Celestial_Infusion_%28Red%29.png);
+}
+.icon-50px-xp-lg::before {
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user16.png);
+}
+.icon-xp-xtr::before {
+    content: url(https://wiki.guildwars2.com/images/5/53/Experienced_Infusion.png);
+}
+.icon-gold-sm::before {
+  	content: url(https://i.servimg.com/u/f11/19/50/65/15/gold-s10.png);
+}
+.icon-gold-md::before {
+  	content: url(https://wiki.guildwars2.com/images/0/02/Bag_of_Coins.png);
+}
+.icon-gold-lg::before {
+    content: url(https://wiki.guildwars2.com/images/b/b6/Heavy_Bag_of_Coins.png);
+}
+.icon-50px-gold-lg::before {
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/gold-510.png);
+}
+
+.icon-power::before {
+  content: url(https://wiki.guildwars2.com/images/e/e2/Bloodstone_Empowerment.png);
+}
+
+.icon-weapon-nord-exotique::before {
+    content: url(https://wiki.guildwars2.com/images/c/cd/Corrupted_Spear.png);
+}
+.icon-50px-weapon-nord-exotique::before {
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user15.png);
+}
+
+.icon-weapon-djöl-exotique::before {
+    content: url(https://wiki.guildwars2.com/images/8/80/Marjory%27s_Everliving_Blade.png);
+}
+.icon-50px-weapon-djöl-exotique::before {
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_w11.png);
+}
+
+.icon-dagger::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_shortblade_15.jpg);
+}
+.icon-claw::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_hand_21.jpg);
+}
+.icon-bow::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_bow_05.jpg);
+}
+.icon-crossbow::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_crossbow_04.jpg);
+}
+.icon-tonfa::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/ability_sap.jpg);
+}
+.icon-flail::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_mace_1h_pandung_c_01.jpg);
+}
+.icon-sword::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_sword_27.jpg);
+}
+.icon-spear::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_polearm_2h_draenorquest95_b_01.jpg);
+}
+.icon-axe::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_halberd_06.jpg);
+}
+.icon-scythe::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_staff_78.jpg);
+}
+.icon-mace::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_mace_1h_draenorquest_b_01.jpg);
+}
+.icon-hammer::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_hammer_07.jpg);
+}
+.icon-staff-arcanic::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_staff_13.jpg);
+}
+.icon-staff-ether::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_staff_draenei_a_03.jpg);
+}
+.icon-scepter::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_staff_07.jpg);
+}
+.icon-shield::before {
+  	content: url(https://wiki.guildwars2.com/images/c/cf/Shield.png);
+}
+.icon-shield-exotique::before {
+  	content: url(https://wiki.guildwars2.com/images/f/f2/Grimward.png);
+}
+.icon-mechanical_weapon::before {
+  content: url(http://image.noelshack.com/fichiers/2019/30/6/1564243318-technophile-gadget.png);
+}
+.icon-rifle::before {
+  content: url(https://wiki.guildwars2.com/images/d/d9/Mystic_Rifle.png);
+}
+.icon-turret::before {
+  content: url(http://image.noelshack.com/fichiers/2019/30/7/1564338700-technophile-turret.png);
+}
+.icon-deck::before {
+  content: url(http://media.blizzard.com/wow/icons/56/inv_misc_ticket_tarot_maelstrom_01.jpg);
+}
+.icon-ring::before {
+  content: url(https://wiki.guildwars2.com/images/4/4e/Druid%27s_Circle.png);
+}
+.icon-gauntlet::before {
+  content: url(https://wiki.guildwars2.com/images/b/b8/Mistward_Warfists.png);
+}
+.icon-instrument::before {
+  content: url(https://wiki.guildwars2.com/images/f/f6/Gift_of_The_Minstrel.png);
+}
+.icon-music_sheet::before {
+  content: url(https://wiki.guildwars2.com/images/e/ea/Covington%27s_Sea_Song.png);
+}
+.icon-armor-light::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_shirt_01.jpg);
+}
+.icon-armor-intermediary::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_chest_leather_10.jpg);
+}
+.icon-armor-heavy::before {
+  	content: url(http://media.blizzard.com/wow/icons/56/inv_chest_plate16.jpg);
+}
+.icon-boots::before {
+    content: url(https://wiki.guildwars2.com/images/9/90/Leather_Shoes.png);
+}
+.icon-horseshoe::before {
+  	content: url(https://wow.zamimg.com/images/wow/icons/large/inv_blacksmith_leystonehoofplates_red.jpg);
+}
+.icon-helm::before {
+  	content: url(https://wiki.guildwars2.com/images/9/93/Militia_Helm.png);
+}
+.icon-aquabreather::before {
+  	content: url(https://wiki.guildwars2.com/images/4/4c/Aqua_Breather.png);
+}
+.icon-aquabreather-quality::before {
+  	content: url(https://wiki.guildwars2.com/images/e/ee/Benthic_Breather.png);
+}
+.icon-aquabreather-exotique::before {
+  	content: url(https://wiki.guildwars2.com/images/3/31/Rime-Rimmed_Mariner%27s_Rebreather.png);
+}
+
+.icon-pendant::before {
+	content: url(https://wiki.guildwars2.com/images/8/8f/Amulet.png);
+}
+.icon-pendant-exotique::before {
+	content: url(https://wiki.guildwars2.com/images/9/9c/Mark_of_the_Tethyos_Houses.png);
+}
+.icon-50px-pendant-exotique::before {
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user17.png);
+}
+.icon-trinket::before {
+	content: url(https://wiki.guildwars2.com/images/9/94/Sam.png);
+}
+.icon-trinket-exotique::before {
+  content: url(https://wiki.guildwars2.com/images/c/c1/Feather_of_the_Owl.png);
+}
+.icon-50px-trinket-exotique::before {
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user14.png);
+}
+
+.icon-seal-exotique::before {
+  content: url(https://wiki.guildwars2.com/images/7/71/Seal_of_the_Shaman.png);
+}
+.icon-50px-seal-exotique::before {
+  content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_s10.png);
+}
+
+.icon-mount::before {
+  content: url(https://wiki.guildwars2.com/images/4/44/Mini_Lunar_%22Horse%22.png);
+}
+.icon-mount-exotique::before {
+  content: url(https://wiki.guildwars2.com/images/9/96/Pyroclast.png);
+}
+.icon-50px-mount-exotique::before {
+  content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_m10.png);
+}
+.icon-minion::before {
+  content: url(https://wiki.guildwars2.com/images/7/75/Mini_Orange_Tabby_Cat.png);
+}
+
+/*********** Butin ***********/
+.icon-book::before {
+  content : url(https://wiki.guildwars2.com/images/4/4c/Tome_of_Knowledge.png);
+}
+.icon-cloth::before {
+    content: url(https://wiki.guildwars2.com/images/b/bc/Silk_Scrap.png);
+}
+.icon-50px-cloth::before {
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_c10.png);
+}
+.icon-clue::before {
+    content: url(https://wiki.guildwars2.com/images/3/30/Crumpled_Pages.png);
+}
+.icon-fin::before {
+    content: url(https://wiki.guildwars2.com/images/8/82/Fin.png);
+}
+.icon-flask::before {
+    content: url(https://render-eu.worldofwarcraft.com/icons/56/inv_alchemy_crystalvial.jpg);
+}
+.icon-gemstone::before {
+    content: url(https://wiki.guildwars2.com/images/b/b5/Chrysocola_Orb.png);
+}
+.icon-50px-gemstone::before {
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_g10.png);
+}
+.icon-jaw::before {
+    content: url(https://i.servimg.com/u/f11/11/12/92/75/jaw10.png);
+}
+.icon-thorn::before {
+    content: url(https://wiki.guildwars2.com/images/3/3f/Barbed_Thorn.png);
+}
+
+/*********** Nourriture ***********/
+.icon-candy::before {
+    content: url(https://wiki.guildwars2.com/images/7/72/Blackberry_Cookie.png);
+}
+.icon-candy-exotique::before {
+    content: url(https://wiki.guildwars2.com/images/c/cd/Cinnamon_Pinwheel.png);
+}
+.icon-50px-candy-exotique::before {
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user13.png);
+}
+
+/*********** Récompenses à débloquer ***********/
+.icon-access::before {
+  content: url(https://wiki.guildwars2.com/images/a/a3/Current_Events.png);
+}
+.icon-achievement::before {
+  content: url(https://wiki.guildwars2.com/images/8/8f/Koda%27s_Warmth_Enrichment.png);
+}
+.icon-50px-achievement::before {
+  content: url(https://i.servimg.com/u/f13/11/12/92/75/achiev10.png);
+}
+.icon-achievement-exotique::before {
+  content: url(https://wiki.guildwars2.com/images/f/f0/Karmic_Infusion.png);
+}
+.icon-50px-achievement-exotique::before {
+  content: url(https://i.servimg.com/u/f13/11/12/92/75/achiev11.png);
+}
+.icon-politique::before {
+  content: url(http://pile.randimg.net/2/26/131614/emblems.png);
+}
+.icon-50px-politique::before {
+  content: url(http://pile.randimg.net/2/31/132790/emblems_50px.png);
+}
+.icon-reput::before {
+	content: url(https://wiki.guildwars2.com/images/7/77/Daybreak.png);
+}
+
+/*********** Factions / Guildes ***********/
+.icon-faction-siege_weapon::before {
+  content: url(https://wiki.guildwars2.com/images/a/a6/Decoration-_Catapult.png);
+}
+.icon-faction-supply::before {
+  content: url(https://wiki.guildwars2.com/images/d/d7/Basic_Crate.png);
+}
+
+/*********** Événements ***********/
+/****** Ynatlatt ******/
+.icon-ynatlatt-plant-faction::before {
+  content: url(https://wiki.guildwars2.com/images/2/27/Potted_Blue_Moa_Fern.png);
+}
+.icon-ynatlatt-trophy-faction::before {
+  content: url(https://wiki.guildwars2.com/images/6/6a/Cowrie_League_Caravan%27s_Scales.png);
+}
+
+/*********** Habillage ***********/
+/****** Altération ******/
+.icon.alt-sprst::before {
+  content: url(http://image.noelshack.com/fichiers/2019/04/7/1548625398-alt-sprst.png);
+}
+
+/****** Statut ******/
+.icon.archi-boss::before {
+  content: url(http://image.noelshack.com/fichiers/2018/48/4/1543454851-boss-archi.png);
+}
+.icon.boss::before {
+  content: url(http://image.noelshack.com/fichiers/2018/48/4/1543454851-boss.png);
+}
+.icon.commandant::before {
+  content: url(http://image.noelshack.com/fichiers/2018/48/4/1543454537-commandant.png);
+}
+
+
+/*********** Autres ***********/
+.icon-todo::before {
+  content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user12.png);
+}
+
+/********************* Description des PNJ jouables *********************/
+.pnj-nom {
+    text-align: center;
+    font-size: 20px;
+    padding: 7px 0;
+    border: 3px solid #3c3200;
+}
+.pnj-race {
+    display: block;
+    font-size: 24px;
+    padding: 0 15px 5px;
+    background-color: #000;
+}
+.pnj-nom .pnj-titre {
+    display: block;
+    font-style: italic;
+    color: #a4bc83;
+}
+
+.pnj-credentials {
+    display: table;
+    list-style: none;
+    padding: 0;
+}
+.pnj-credentials li {
+    display: table-row;
+    list-style-type: unset;
+}
+.credentials-badge-login,
+.credentials-login,
+.credentials-badge-pass,
+.credentials-pass {
+    display: table-cell;
+    vertical-align: middle;
+}
+.credentials-badge-login,
+.credentials-badge-pass {
+    height: 30px;
+    text-align: center;
+    width: 30px;
+}
+.credentials-badge-login:before {
+    content: '>';
+}
+.credentials-badge-pass:before {
+    content: '#';
+}
+
+/********************* Event *********************/
+.event-contexte {
+  border-bottom: 2px solid #413425;
+  color: #ccc7ba;
+  font-style: italic;
+  margin: 10px 20px;
+  padding: 0 30px 15px;
+}
+.event-progression {
+  margin: auto;
+  text-align: center;
+  width: 400px;
+}
+.event-progression + .event-progression {
+  margin-top: 20px;
+}
+.event-progression-titre {
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+.event-progression-barre {
+  border: 1px solid;
+  height: 20px;
+}
+.event-progression-barre > div {
+  color: #000;
+  font-size: 12px;
+  height: 100%;
+}
+
+
+/**************************************************** LE MARCHAND ****************************************************/
+/********************* Tableau pour les ventes et achats dans les magasins (PNJ) *********************/
+.shop  {
+	margin: 0 auto; /* Centrer */
+	text-align: center;
+	border-collapse: collapse;
+}
+.shop tr {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #202b02;
+}
+.shop td {
+	padding: 10px;
+}
+tr.shop_last {
+	border-bottom-style: dashed; /* Pointillés */
+	border-bottom-color: #fff;
+}
+tr.shop_total {
+	border-top-width: 0px;
+}
+.shop_total td{
+	padding: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700; /* Gras */
+}
+
+/********************* Boutique *********************/
+.boutique-règles {
+  font-size: 12px;
+  margin: auto;
+  width: 400px;
+}
+
+
+/*********** Nord ***********/
+.boutique-nord .titre {
+  background-color: #1E779A;
+  color: #FFF;
+  font-family: Italianno;
+  font-size: 48px;
+}
+.boutique-nord .titrerace {
+  background-color: #0a293cc7;
+  font-family: cinzel decorative;
+}
+
+
+
+.boutique-titre {
+	background-color: #0092FF;
+	text-align: center;
+}
+.boutique-titre h1 {
+	color: #fff;
+	font-size: 14px;
+	padding: 2px 0;
+}
+p.boutique-description {
+	font-family: roman; 
+	font-size: 16px; 
+	margin: 10px 20px;
+}
+.boutique {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+	display: table;
+}
+.boutique-objet {
+	display: table-row;
+}
+.boutique-objet-icon, .boutique-objet-description {
+	display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.boutique-objet-description {
+  	width: 500px;
+}
+
+.boutique-objet-icon {
+	border: 3px solid rgba(0, 145, 255, 0.33);
+  	height: 70px;
+  	width: 70px;
+}
+.boutique-objet-icon > .icon {
+	display: inline-block;
+}
+.boutique-objet-void {
+  	width: 20px;
+}
+.boutique-objet-description {
+	border-color: rgba(0, 145, 255, 0.33);
+	border-style: solid;
+	border-width: 0 0 3px 3px;
+  	padding: 10px;
+}
+
+.boutique-objet-nom {
+	color: #FFDDC4;
+}
+.boutique-objet-nom > strong {
+	display: block;
+}
+.boutique-objet-prix {
+	
+}
+
+
+/**************************************************** LE JUGE ****************************************************/
+/********************* Fiches de combat *********************/
+.vitalité,
+.dégâts,
+.feu,
+.vitesse,
+.poison,
+.venin {
+  font-weight: 700;
+}
+.vitalité {
+  color: #090 !important;
+}
+.dégâts {
+  color: #F00 !important;
+}
+.feu {
+  color: #E2AA17 !important;
+}
+.vitesse {
+  color: #FC0 !important;
+}
+.poison {
+  color: #60F !important;
+}
+.venin {
+  color: #CE0 !important;
+}
+
+.stat-bonus {
+  color: #0A0 !important;  
+}
+.stat-malus {
+  color: #A00 !important;  
+}
+
+
+/**************************************************** COULEURS ****************************************************/
+/********************* Altération *********************/
+.alt-sprst {
+  color: #9a9275 !important;
+}
+/********************* Entités *********************/
+.archi-boss,
+.boss {
+  color: #D00 !important;
+}
+
+.commandant {
+  color: #075ac1 !important;
+}
+
+/********************* Races *********************/
+.abyssal {
+  color: #0091FF !important;
+}
+.banni,
+.prisonnier, 
+.blessé, 
+.mort {
+  color: #8A8585 !important;
+  font-style: italic;
+}
+.djöllfulin {
+  color: #FF2D00 !important;
+}
+.elfe {
+  color: #0C8A1F !important;
+}
+.géant {
+  color: #D9D923 !important;
+}
+.humain {
+  color: #F00 !important;
+}
+.hybride,
+.centaure,
+.minotaure,
+.satyre {
+  color: #4D3A1A !important;
+}
+.naga {
+  color: #9326C9 !important;
+}
+.nain {
+  color: #2B2BC2 !important;
+}
+.gobelin,
+.orc,
+.peau-verte {
+  color: #024F23 !important;
+}
+.pnj {
+  color: #806B00 !important;
+}
+.stryge-blanc {
+  color: #FCFCFC !important;
+}
+.stryge-noir {
+  color: #3D3D3D !important;
+}
+.thérianthrope,
+.loup-garou {
+  color: #AD6A05 !important;
+}
+.vampire {
+  color: #A10000 !important;
+}
+
+.arlequin {
+  color: #540054a1;
+}
+.corrompu {
+  color: #072b07;
+}
+.technophile {
+  color: #0000ff82;
+}
+.virtuose {
+  color: #d2691e;
+}
+
+/********************* Factions / Guildes / Réputations *********************/
+.nordien {
+  color: #4472c4 !important;
+}
+
+/******************** Créatures *********************/
+.perrack { 
+  color: #663 !important;
+}
+.skarnien { 
+  color: #603 !important;
+}
+
+/********************* Diverses couleurs *********************/
+.hardcore {
+  color: #853894 !important;
+}
+
+.exotique {
+  color: #0FF !important;
+}
+.semi-légendaire {
+  color: #DAA500 !important;
+}
+.légendaire {
+  color: #F0E !important;
+}
+
+.récompense {
+  color: #0C0 !important;
+}
+.enchantement {
+  color: #09F !important;
+}
+
+.important {
+  color: #D00;
+  font-weight: 700;
+}
+
+
+/**************************************************** PRÉSENTATIONS ****************************************************/
+/********************* Modèles de présentation *********************/
+.fiche-champ {
+  text-decoration: underline;
+}
+
+.fiche-personnage {
+  background-color: #FFF3E0;
+  box-shadow: 0px 0px 5px #FFE4C4;
+  color: #261A0D;
+  font-size: 13px;
+  margin: auto;
+  width: 600px;
+}
+.fiche-personnage-contenu {
+  padding: 0 20px 30px;
+}
+.fiche-personnage-contenu img.fiche-personnage-light {
+  opacity: 0.7;
+}
+.fiche-personnage-contenu .fiche-personnage-partie:hover img.fiche-personnage-light {
+  opacity: 1;
+}
+.fiche-personnage-contenu a {
+  color: #4D2E00;
+}
+.fiche-personnage-contenu a:link:active, 
+.fiche-personnage-contenu a:link:focus, 
+.fiche-personnage-contenu a:link:hover {
+  color: #B35900;
+}
+.fiche-personnage-img-border {
+  border-bottom: 1px solid #8f7d00; 
+  margin: auto;
+  width: 80%;
+}
+
+.fiche-joueur {
+  background-color: #1A0D00; 
+  border : 2px solid #331A00; 
+  font-size: 13px;
+  margin: auto; 
+  padding: 20px;
+  width: 560px; 
+}
+.fiche-joueur-titre {
+  color: #B35900;
+  font-family: Tangerine;
+  font-size: 38px;
+  letter-spacing: 2px; 
+  line-height: 18px; 
+  text-align: center; 
+  text-shadow: 2px 0px 2px;
+}
+
+
+/********************* Couleurs pour présentations *********************/
+.bg-vert_présentation {
+	background-color: #519F3C;
+}
+
+.bdc-vert_présentation {
+	border-color: #519F3C;
+}
+
+.color-vert_présentation {
+	color: #519F3C;
+}
+
+
+/********************* Récompenses des présentations - VSTD *********************/
+.récompenses-présentation.vstd {
+	margin: 0 auto;
+	width: 400px;
+}
+
+.récompenses-présentation.vstd .récompense-accroche {
+	border-style: solid;
+	border-width: 2px;
+	color: #FC0;
+	font-family: lucida calligraphy;
+	padding: 5px 0;
+	text-align: center;
+}
+.récompenses-présentation.vstd > tbody > tr > td {
+	border-style: solid;
+	border-width: 0 2px;
+}
+.récompenses-présentation.vstd > tbody > tr:last-child > td {
+	border-width: 0 2px 2px;
+}
+
+.récompenses-présentation.vstd .récompense-description {
+	display: table;
+}
+
+.récompenses-présentation.vstd .récompense-description .récompense-icon {
+	display: table-cell;
+	border-right-style: solid;
+	border-right-width: 2px;
+  	text-align: center;
+  	vertical-align: middle;
+  	width: 70px;
+}
+.récompenses-présentation.vstd .récompense-description .récompense-contenu {
+	display: table-cell;
+	padding: 5px 10px 0;
+}
+
+.récompenses-présentation.vstd .récompense-contenu .récompense-texte {
+	color: #CDD4A1;
+	font-style: italic;
+}
+.récompenses-présentation.vstd .récompense-contenu .récompense {
+	border-style: solid;
+	border-width: 2px 2px 0 2px;
+	margin-top: 10px;
+	padding: 3px 0;
+	text-align: center;
+}
+
+
+/********************* Récompenses des présentations - VSPE *********************/
+.récompenses-présentation {
+	border-collapse: collapse;
+}
+
+.récompenses-présentation.vspé {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.récompenses-présentation.vspé > tbody > tr > td {
+	border-color: #519F3C;
+	border-style: solid;
+	border-width: 0 2px 2px;
+	padding: 0 0 15px;
+}
+.récompenses-présentation.vspé .tour {
+	background-color: #519F3C;
+	border-color: #519F3C;
+	border-style: solid;
+	border-width: 0 2px;
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.récompenses-présentation.vpsé .tiers-titre {
+	padding-right: 15px;
+}
+.récompenses-présentation.vspé .tiers-titre .tiers-badge {
+	background-color: #FC0;
+	border-color: #519F3C;
+	border-style: solid;
+	border-width: 1px 2px 2px 1px;
+	color: #000;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 700;
+	height: 22px;
+	text-align: center;
+	width: 30px;
+}
+.récompenses-présentation.vspé .tiers-titre .tiers-accroche {
+	color: #FC0;
+	font-family: lucida calligraphy;
+	padding-left: 10px;
+}
+
+.récompenses-présentation.vspé .tiers-contenu {
+	display: table;
+	margin: 5px 16px;
+}
+
+.récompenses-présentation.vspé .tiers-contenu .tiers-cadre {
+	border-bottom: 2px solid #519F3C;
+	border-left: 2px solid #519F3C;
+	display: table-cell;
+  	width: 25px;
+}
+.récompenses-présentation.vspé .tiers-contenu .tiers-texte {
+	color: #CDD4A1;
+	display: table-cell;
+	font-style: italic;
+	padding: 0 5px 5px;
+}
+
+.récompenses-présentation.vspé .tiers-récompense {
+	border: 1px solid #FFF;
+	color: #FFF;
+	font-weight: 700;
+	margin: 10px 15px 0;
+	padding: 5px;
+	text-align: center;
+}
+
+/**************************************************** COMMUNICATIONS ****************************************************/
+/********************* Phénix *********************/
+.gazette-classement-titre {
+  color: #261A0D;
+  font-size: 20px;
+  text-align: center;
+}
+table.gazette-classement {
+  border-collapse: collapse;
+  margin: 0 auto;
+  text-align: center;
+  width: 700px;
+}
+table.gazette-classement th {
+  color: #FFF3E0;
+  font-size: 18px;
+  padding: 5px;
+  text-shadow: 1px 1px 3px #261A0D;
+}
+table.gazette-classement td {
+  border-color: #261A0D;
+  border-style: solid;
+  border-width: 1px 0;
+  font-size: 12px;
+  padding: 3px;
+}
+table.gazette-classement td + td {
+  border-left-width: 1px;
+}
+table.gazette-classement td[rowspan] {
+  border-right-width: 1px;
+  font-size: 15px;
+  font-weight: 700;
+}
+table.gazette-classement .banni {
+  font-size: 10px;
+  text-decoration: line-through;
+}
+
+/******************************************************************************TEST*********************************************************************************/
+
+a.sceditor-button.active
+{
+  background: #A4BC83 !important;
+}
+a.sceditor-button:hover
+{
+  background: #A4BC83 !important;
+}
+
+.sceditor-container iframe, .sceditor-container textarea {
+  color: #fff !important;
+}
+
+.sceditor-toolbar .sceditor-group,
+.sceditor-toolbar .sceditor-button.sceditor-button-source {
+	background-color: #ddd;
+}
+
+/************************************************FONTAWESOME*********************************************************************************************************/
+
+    /* Ajoute Font Awesome aux polices de la textarea pour que les icônes soient visibles */
+    .sceditor-container textarea { font-family:Verdana, Arial, Helvetica, sans-serif, FontAwesome !important }
+    /* Image du bouton */
+    .sceditor-button-fontawesome div { background:url(https://i.servimg.com/u/f19/19/06/98/92/fa-f10.png) !important }
+     
+    /* Popup */
+    .sceditor-fontawesome {
+      width:220px;
+      height:250px;
+      overflow-y:auto;
+    }
+     
+    /* Icônes */
+    .sceditor-fontawesome i {
+      color:#333;
+      font-size:20px;
+      text-align:center;
+      cursor:pointer;
+      padding:3px 0;
+      width:25%;
+    }
+    .sceditor-fontawesome i:hover { color:#333 }
+
+/************************************************TOOLBAR************************************************************************************/
+
+div#fa_toolbar {
+    background-color: #1A1209;  /* Couleur de fond */
+    border-radius: 0 0 50px 50px;  /* Arrondis les bords de la toolbar */
+    box-shadow: 0 0 5px #000000;  /* Affiche une ombre */
+    margin: auto;  /* Centre la toolbar */
+    width: 100%;  /* Modifie la longueur de la toolbar */
+    position: fixed;
+}
+ 
+div#fa_toolbar div, div#fa_toolbar span {
+    margin: 0 15px;  /* Repositionne correctement le contenu de la toolbar */
+}
+/********************************************COULEUR FICHE***************************************************************************************/
+
+.postdetails.poster-profile textarea {
+color:#ffffff;}
+
+/******************************************CURSEUR*****************************************************************************************/
+
+body {
+    cursor: url(http://www.k-upload.fr/afficher-fichier-2018-02-18-124dd5ea7cursor.cur), auto;
+}
+
+/******************************************BACKGROUND QUI S'ADAPTE*****************************************************************************************/
+
+body {
+  background-image:urlhttps://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-152466.jpg);
+  background-size: 100% auto;
+}
+
+/************************************************DEFILEMENT HAUT BAS*************************************************************************/
+
+/*fleche haut/bas java et overall_header template*/
+                .bouhautbas {
+            bottom: 10px;
+            right: 10px; /* remplacez left par right pour afficher les boutons à droite */
+            position: fixed;
+            z-index: 100;
+        }
+
+
+/************************************************MESSAGE ADMIN*************************************************************************/
+
+.post.bgAdministrateur {
+    background-image: url('http://www.allo-image.net/stockimg/upload/1596903058560f823ddb78cbleuvert.png');
+}
+
+/*******************************COULEUR MP*********************************************************************************/
+$(function(){
+$('img#i_icon_mini_new_message').parent().css('color','#FF0000');
+});
+
+
+/******************************REPONSE RAPIDE AVATAR*************************************************************/
+#av_quickreply img {
+    left: 15px;
+    position: relative;
+    top: 35px;
+}
+ 
+#av_quickreply {
+    float: left;
+    position : absolute;
+}
+
+/*******************************BOUTON SUIVANT PRECEDENT SUR MP*************************************************************************/
+#navMP{
+    height:16px;
+    height:1rem;
+}
+#navMP>a{
+    display:inline-block;
+    padding-left:.75em;
+    padding-right:.75em;
+    font-size:1.2em;
+    line-height:1.2em;
+    color:#000000;
+    background:#ffffff;
+    text-decoration:none !important;
+    border:1px solid #aaa;
+}
+#navMP>a:hover{
+    color:#ffffff;
+    background:#000000;
+    text-decoration:none !important;
+}
+#navMP-precedent{
+    float:left;
+    border-radius:.6em 0 0 .6em;
+}
+#navMP-suivant{
+    float:right;
+    border-radius:0 1.2em 1.2em 0;
+}
+#navMP-precedent::before{
+    content:"Précédent";
+}
+#navMP-suivant::before{
+    content:"Suivant";
+}
+
+/* Template pour les mentions d'utilisateur */
+.tooltipster-content {
+  padding: 0 !important;
+}
+
+/**************************************************ALERTE****************************************************************************/
+.realTime_alert{
+background:#FDFDFD no-repeat 10px center;
+-webkit-background-size:50px;
+  -moz-background-size:50px;
+    -o-background-size:50px;
+        background-size:50px;
+-webkit-box-shadow:0 0 4px rgba(0,0,0,.6);
+  -moz-box-shadow:0 0 4px rgba(0,0,0,.6);
+        box-shadow:0 0 4px rgba(0,0,0,.6);
+position:fixed;
+top:50px;
+right:20px;
+min-height:60px;
+font-size:13px;
+width:200px;
+padding:10px 10px 10px 70px;
+font-family:Helvetica;
+color:#474747;
+}
+.realTime_alert b{
+display:block;
+margin-bottom:5px;
+font-size:15px;
+}
+.realTime_alert .close{
+position:absolute;
+right:10px;
+top:5px;
+font-size:15px;
+-webkit-border-radius:50px;
+  -moz-border-radius:50px;
+        border-radius:50px;
+height:16px;
+width:16px;
+text-align:center;
+line-height:13px;
+cursor:pointer;
+}
+.realTime_alert .close:hover{
+color:#FFF;
+background:#666;
+}
+#ebtzd .tooltip{
+opacity:0;
+position:relative;
+overflow:visible;
+z-index:100!important;
+display:inline-block;
+top:5px;
+-webkit-transition-duration:500ms;
+  -moz-transition-duration:500ms;
+    -o-transition-duration:500ms;
+        transition-duration:500ms;
+background:rgba(0, 0, 0, .8);
+padding:10px;
+-webkit-border-radius:3px;
+  -moz-border-radius:3px;
+        border-radius:3px;
+font-family:Helvetica;
+letter-spacing:1px;
+font-size:13px;
+width:300px;
+color:#fff;
+}
