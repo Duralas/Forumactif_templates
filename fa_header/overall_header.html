@@ -217,19 +217,19 @@
   <script type="text/javascript">
     $(document).ready(function(){    
       /* Récupération des variables */
-      let navContext = document.createRange().createContextualFragment(`{GENERATED_NAV_BAR}`);
-      let aMessagerie = $(navContext).children(`a[href*='{U_PRIVATEMSGS}']`);
+      var navContext = document.createRange().createContextualFragment(`{GENERATED_NAV_BAR}`);
+      var aMessagerie = $(navContext).children(`a[href*='{U_PRIVATEMSGS}']`);
       if (!aMessagerie.length) {
         return;
       }
 
       /* Vérification du nombre de messages */
-      let iNew = $(aMessagerie).children("#i_icon_mini_new_message");
+      var iNew = $(aMessagerie).children("#i_icon_mini_new_message");
       if (!iNew.length) { /* Pas de nouveau message */
         return;
       }
-      let countNew = $(iNew).attr("title").replace(/^([1-9][0-9]*) .*$/,"$1");
-      let message = parseInt(countNew) > 1 ? countNew + " nouvelles missives" : countNew + " nouvelle missive";
+      var countNew = $(iNew).attr("title").replace(/^([1-9][0-9]*) .*$/,"$1");
+      var message = parseInt(countNew) > 1 ? countNew + " nouvelles missives" : countNew + " nouvelle missive";
       $("#navMessagerie").text(message);
       $("#navMessagerie").addClass("nouveau_message");
     });
@@ -240,9 +240,9 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $(".mainmenu, .submenu").hover(function(){
-        let $this = $(this);
-        let navContBlock = null;
-        let target = null;
+        var $this = $(this);
+        var navContBlock = null;
+        var target = null;
         if ($this.hasClass("mainmenu")) {
           target = $this.data("submenu");
           navContBlock = $this.parents('.navbar_container_block')[0];
@@ -254,12 +254,12 @@
         }
         $(target).css("display", "inline-block");
         if (navContBlock) {
-          let offset = $(navContBlock).offset();
+          var offset = $(navContBlock).offset();
           $(target).css("left", offset.left);
         }
       }, function(){
-        let $this = $(this);
-        let target = null;
+        var $this = $(this);
+        var target = null;
         if ($this.hasClass("mainmenu")) {
           target = $this.data("submenu");
         } else if ($this.hasClass("submenu")) {
@@ -309,14 +309,21 @@
             <!-- END switch_user_logged_in -->
 
             <!-- BEGIN switch_user_logged_out -->
-              <span class="mainmenu-item">Contact</span>
+              <span class="mainmenu-item">Personnages</span>
             <!-- END switch_user_logged_out -->
           </div>
         </div>
       </div>
+      <!-- BEGIN switch_user_logged_in -->
+        <div class="navbar_container_block">
+          <div class="navbar_block">
+            <div class="mainmenu"><a id="navMessagerie" href="{U_PRIVATEMSGS}" class="mainmenu-link" title="Consulter le pigeonnier de vos missives privées.">Missives privées</a></div>
+          </div>
+        </div>
+      <!-- END switch_user_logged_in -->
       <div class="navbar_container_block">
         <div class="navbar_block">
-          <div class="mainmenu"><a id="navMessagerie" href="{U_PRIVATEMSGS}" class="mainmenu-link" title="Consulter le pigeonnier de vos missives privées.">Missives privées</a></div>
+          <div class="mainmenu" data-submenu="#subCommunaute"><span class="mainmenu-item">Communauté</span></div>
         </div>
       </div>
       <!-- BEGIN switch_user_logged_out -->
@@ -336,7 +343,6 @@
     <!-- SUBMENUS -->
     <div id="subPreambule" class="submenu">
       <a href="/t3-reglement-general-du-forum" class="submenu-link" title="Prendre connaissance du règlement général">Règlement général</a>
-      <a href="/t6-reglement-du-rp-des-combats" class="submenu-link" title="Prendre connaissance du règlement RP">Règlement RP</a>
       <a href="/f177-chartes-duralassiennes" class="submenu-link" title="Visualiser les chartes dùralassiennes">Chartes Dùralassiennes</a>
       <span class="submenu-separation"></span>
       <span class="submenu-link no-link" title="Découvrir le staff.">Staff</span>
@@ -359,7 +365,6 @@
       <a href="/t1679-le-systeme-politique-de-duralas-2-2-les-guildes" class="submenu-link" title="Découvrir les guildes">Les guildes</a>
       <span class="submenu-separation"></span>
       <a href="/t63-liste-des-equipements-disponibles" class="submenu-link" title="Consulter la liste des équipements">Les équipements</a>
-      <span class="submenu-link no-link" title="À venir...">Les métiers</span>
       <a href="/f48-l-hotel-de-vente" class="submenu-link" title="Parcourir les comptoirs commerciaux de l'hôtel des ventes">L'hôtel des ventes</a>
       <span class="submenu-separation"></span>
       <a href="/f46-la-bibliotheque" class="submenu-link" title="« Le savoir c'est le pouvoir » ; explorer la bibliothèque">Bibliothèque</a>
@@ -369,7 +374,7 @@
     <div id="subLeJeu" class="submenu">
       <a href="/t6-reglement-du-rp-des-combats" class="submenu-link" title="Prendre connaissance du règlement RP">Règlement RP</a>
       <a href="/t97-les-quetes-speciales" class="submenu-link" title="Découvrir les quêtes spéciales">Quêtes spéciales</a>
-      <a href="/t1843-tutoriel-des-metiers" class="submenu-link" title="Jeter un œil au tutoriel des métiers">Tutoriel des métiers</a>
+      <a href="/t1843-tutoriel-des-metiers" class="submenu-link" title="Jeter un œil au tutoriel des métiers">Les métiers</a>
       <span class="submenu-separation"></span>
       <a href="/f119-demandes-de-rp" class="submenu-link" title="Visualiser les sujets des demandes de RP">Demandes de RP</a>
       <a href="/f118-bureau-des-reclamations" class="submenu-link" title="Visualiser les sujets du bureau des réclamations">Bureau des réclamations</a>
@@ -378,11 +383,21 @@
     </div>
 
     <div id="subProfil" class="submenu">
+      <a href="/f2-presentations-des-membres" class="submenu-link" title="Accéder aux fiches de présentation des membres">Fiches</a>
       <a href="/f67-journal-de-bord" class="submenu-link" title="Consulter les journaux de bord disponibles">Journaux de bord</a>
       <a href="/f162-genealogie" class="submenu-link" title="Consulter les généalogies disponibles">Généalogies</a>
-      <span class="submenu-separation"></span>
+    </div>
+
+    <div id="subCommunaute" class="submenu">
       <a href="{U_MEMBERLIST}" class="submenu-link" title="Afficher la liste des membres">Membres</a>
       <a href="{U_GROUP_CP}" class="submenu-link" title="Afficher la liste des groupes">Groupes</a>
+      <span class="submenu-separation"></span>
+      <a href="/search" class="submenu-link" title="Réaliser une recherche sur le forum">Rechercher</a>
+      <span class="submenu-separation"></span>
+      <a href="/f124-boite-a-questions-a-idees" class="submenu-link" title="Partager des idées / parcourir les idées">Boîte à idées</a>
+      <a href="/t431-fiche-des-votes-pour-les-top-sites" class="submenu-link" title="Afficher les informations des top-sites">Top-sites</a>
+      <span class="submenu-separation"></span>
+      <a href="/f113-partenaires-demandes-de-partenariat" class="submenu-link" title="Consulter le salon du partenariat">Partenariat</a>
     </div>
 
   </div>
@@ -441,7 +456,7 @@
                      <!-- END switch_logo_center -->
                      <div class="maintitle">{MAIN_SITENAME}</div>
                      <br />
-                                                  <span class="gen"><div class="site_description">{SITE_DESCRIPTION}<br />  </div></span>
+                     <span class="gen"><div class="site_description">{SITE_DESCRIPTION}<br />  </div></span>
                   </td>
                   <!-- BEGIN switch_logo_right -->
                   <td><a href="{U_INDEX}"><img src="{LOGO}" id="i_logo" border="0" alt="{L_INDEX}" vspace="1" /></a></td>
