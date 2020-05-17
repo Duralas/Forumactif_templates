@@ -52,6 +52,7 @@ body {
 /*corps central*/
 .bodylinewidth{
   box-shadow: 0 0 20px #000;
+  background:url('');
   padding-bottom:0;
   margin-top:-750px;
 }
@@ -402,7 +403,7 @@ a.forumlink:hover{
 hr {  border:1px solid #A4BC83; }
 
 /*code*/
-.code{
+.code {
   border-radius: 0 20px 0 20px;
   color:#B0C4DE;
   padding:15px;
@@ -423,7 +424,7 @@ div.cont_code { clear: right; }
   border-radius: 0 20px 0 20px;
   color:#B0C4DE;
   padding:15px;
-  background:url('https://redcdn.net/hpimg11/pics/4796325395.jpg');
+  background:url('https://2img.net/r/hpimg11/pics/4796325395.jpg');
 }
 
 /* boutons haut/bas */
@@ -970,6 +971,29 @@ a.topictitle {
 .quests-garde .quest-notum-i {
   color: #e0cda9;
   text-align: center;
+}
+
+/*********** Nordiens ***********/
+.quests-nordiens .quests-categ-underline {
+  border-color: #0DF;
+}
+.quests-nordiens .quest-frame {
+  background-color: #1B2C32;
+}
+.quests-nordiens .quest-title {
+  border-color: #00CBD417;
+}
+.quests-nordiens .quest-field {
+  color: #FFF;
+}
+.quests-nordiens .quest a {
+  color: #00A7C3;
+}
+.quests-nordiens .quest a:hover {
+  color: #FFF;
+}
+.quests-nordiens .icon-todo::before {
+  content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user12.png);
 }
 
 /********************* Icones *********************/
@@ -2029,6 +2053,7 @@ body {
 /******************************************BACKGROUND QUI S'ADAPTE*****************************************************************************************/
 
 body {
+  background-image:urlhttps://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-152466.jpg);
   background-size: 100% auto;
 }
 
