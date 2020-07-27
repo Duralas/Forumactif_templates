@@ -34,6 +34,21 @@ body {
   display: table-cell;
 }
 
+quote {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 90%;
+}
+quote small {
+  border-top: 1px dashed;
+  display: block;
+  margin: 7px auto 0;
+  padding-top: 5px;
+  text-align: right;
+  width: 80%;
+}
+
 /*header*/
 #i_bg {
   position: absolute;
@@ -1055,6 +1070,12 @@ a.topictitle {
 .icon-claw::before {
   content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_hand_21.jpg);
 }
+.icon-cesta::before {
+  content: url(https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_17.jpg);
+}
+.icon-slingshot::before {
+  content: url(https://wiki-fr.guildwars2.com/images/4/4c/Fronde.png);
+}
 .icon-bow::before {
   content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_bow_05.jpg);
 }
@@ -1139,7 +1160,8 @@ a.topictitle {
 .icon-horseshoe::before {
   content: url(https://wow.zamimg.com/images/wow/icons/large/inv_blacksmith_leystonehoofplates_red.jpg);
 }
-.icon-helm::before {
+.icon-helm::before,
+.icon-helmet::before {
   content: url(https://wiki.guildwars2.com/images/9/93/Militia_Helm.png);
 }
 .icon-aquabreather::before {
@@ -1337,6 +1359,11 @@ a.topictitle {
 .icon.commandant::before {
   content: url(https://2img.net/image.noelshack.com/fichiers/2018/48/4/1543454537-commandant.png);
 }
+
+.icon.blessure::before {
+  content: url(https://i.servimg.com/u/f36/15/33/58/83/patte_10.png);
+}
+
 
 /*********** Actions ***********/
 .icon-action-aqueous::before {
