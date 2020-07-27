@@ -228,7 +228,7 @@
       if (!iNew.length) { /* Pas de nouveau message */
         return;
       }
-      var countNew = $(iNew).attr("title").replace(/^([1-9][0-9]*) .*$/,"$1");
+      var countNew = $(iNew).attr("title").replace(/([1-9][0-9]*) .*$/,"$1");
       var message = parseInt(countNew) > 1 ? countNew + " nouvelles missives" : countNew + " nouvelle missive";
       $("#navMessagerie").text(message);
       $("#navMessagerie").addClass("nouveau_message");
