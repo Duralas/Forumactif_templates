@@ -213,6 +213,137 @@
   </script>
   <!-- END google_analytics_code -->
 
+  <!-- /begin Fusion navbar / toolbar -->
+  <script type="text/javascript">
+    $(function () {
+      /* Sous-menu */
+      const $notificationList = $("#notification_list");
+
+      /* Cacher la toolbar */
+      $("#fa_toolbar").hide();
+      $("#fa_toolbar_hidden").hide();
+
+      /* Fonctions utiles */
+      /**
+       * Demande la suppression de la notification et enlève l'élément HTML.
+       * 
+       * @param  {HTMLElement} element Élément portant les informations de suppression.
+       * 
+       * @return {void} Requête la suppression et modifie l'affichage.
+       */
+      const deleteNotification = function (element) {
+        const $element = $(this);
+        const $content = $element.parents(".content").first();
+
+        const notifChannel = $content.data("notif_channel");
+        const notifId      = $content.data("notif_id");
+
+        /* Requête */
+        $.ajax("/notif", {
+          type: "DELETE",
+          data: {
+            channel: notifChannel, 
+            id: notifId
+          }
+        })
+          .success(function(response) {
+            const notifications = response.store;
+            let deleteInSuccess = true;
+
+            notifications.forEach(function (notification) {
+              if (notification.text.id === notifId && notification.channel === notifChannel) {
+                deleteInSuccess = false;
+                return;
+              }
+            });
+
+            if (deleteInSuccess) {
+              $content.fadeOut(300, function(){ $(this).remove();});
+              updateNewNotificationCount();
+            }
+          })
+        ;
+      };
+
+      /**
+       * Met à jour le compteur des nouvelles notifications.
+       * 
+       * @return {void} Compte les nouvelles notifications a donne l'indication.
+       */
+      const updateNewNotificationCount = function () {
+        const newCount = $notificationList.find(".unread").length;
+        if (newCount > 0) {
+          $("#notificationCount").html("(" + newCount + ")");
+        }
+      };
+
+      /* Récupération des notifications */
+      fetch("/notif")
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(json) {
+          const notifications = json.store;
+          $notificationList.empty(); /* Délestage automatique */
+          if ($notificationList.next().hasClass("submenu-separation") === false) {
+            $notificationList.after(`<span class="submenu-separation"></span>`);            
+          }
+
+          if (notifications.length === 0) {
+            $notificationList.append("<div>Rien de nouveau...</div>");
+          }
+          /* Action pour chaque notification */
+          notifications.forEach(function (notification) {
+            /* Récupération des données */
+            const channel = notification.channel;
+            const isRead  = Boolean(notification.read);
+            const content = notification.text;
+            const from    = content.from;
+
+            /* Récupération des valeurs du template */
+            const unread = isRead === false ? "unread" : "";
+            const author = "<a href=\"/u" + from.id + "\">" + from.name + "</a>";
+
+            const post     = content.post ?? "";
+            const start    = (post.start ?? 0) > 0 ? ("p" + post.start) : "";
+            const postHref = post ? ("/t"  + post.topic_id + start + "-" + post.topic_name + "#" + post.post_id) : "";
+
+            let notifContent = "";
+            switch(content.type) {
+              case 0: /* MP */
+                notifContent = "Une <a href=\"/privmsg?folder=inbox&mode=read&p=" + content.msg_id + "\">missive</a> vous a été envoyée par " + author + ".";
+                break;
+              case 7: /* Sujet suivi */
+                notifContent = author + " a écrit dans un <a href=\"" + postHref + "\">lieu surveillé</a>.";
+                break;
+              case 8: /* Tag @ */
+                notifContent = "Vous êtes demandé dans ce <a href=\"" + postHref + "\">coin</a> par " + author + ".";
+                break;
+              default: /* À faire MDR */
+                notifContent = "Demande à Dougal pourquoi il a pas codé cette notif (liée à " + from.name + ") !";
+                console.log("Tiens, donne ces infos à Dougal : ", content);
+            }
+
+            /* Template */
+            $notificationList.append(
+              "<div class=\"content\" data-notif_channel=\"" + channel + "\" data-notif_id=\"" + content.id + "\">" +
+                "<div class=\"notification " + unread + "\">" + notifContent + "</div>" + 
+                "<div><img class=\"deleter pointer\" src=\"https://i.ibb.co/n6YSSz4/fire.png\" title=\"Effacer les preuves\"></div>" +
+              "</div>"
+              );
+          });
+
+          /* Bind la suppression */
+          $notificationList.find(".deleter").on("click", deleteNotification);
+
+          /* Count des nouveaux */
+          updateNewNotificationCount();
+        })
+      ;
+    });
+  </script>
+  <!-- /end Fusion navbar / toolbar -->
+
   <!-- /begin messagerie -->
   <script type="text/javascript">
     $(document).ready(function(){    
@@ -320,6 +451,11 @@
             <div class="mainmenu"><a id="navMessagerie" href="{U_PRIVATEMSGS}" class="mainmenu-link" title="Consulter le pigeonnier de vos missives privées.">Missives privées</a></div>
           </div>
         </div>
+        <div class="navbar_container_block">
+          <div class="navbar_block">
+            <div class="mainmenu" data-submenu="#subNotifications"><span class="mainmenu-item">Tour de guet</span> <span id="notificationCount"></span></div>
+          </div>
+        </div>
       <!-- END switch_user_logged_in -->
       <div class="navbar_container_block">
         <div class="navbar_block">
@@ -386,6 +522,11 @@
       <a href="/f2-presentations-des-membres" class="submenu-link" title="Accéder aux fiches de présentation des membres">Fiches</a>
       <a href="/f67-journal-de-bord" class="submenu-link" title="Consulter les journaux de bord disponibles">Journaux de bord</a>
       <a href="/f162-genealogie" class="submenu-link" title="Consulter les généalogies disponibles">Généalogies</a>
+    </div>
+
+    <div id="subNotifications" class="submenu" style="max-width: 200px;">
+      <div id="notification_list"></div>
+      <a href="/profile?mode=editprofile&page_profil=notifications" class="submenu-link" title="Consulter les derniers renseignements et leur définition">Recueil des informations</a>
     </div>
 
     <div id="subCommunaute" class="submenu">

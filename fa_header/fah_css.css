@@ -58,9 +58,20 @@
   font-weight: 700;
 }
 .mainmenu-link:focus,
-.mainmenu-link:hover {
-  color:#FFF;
-  text-shadow :0px 0px 3px #FFF;
+.mainmenu-link:hover,
+#notification_list .unread {
+  color: #FFF;
+  text-shadow: 0px 0px 3px #FFF;
+}
+#notification_list .unread:focus,
+#notification_list .unread:hover {
+  color: inherit;
+  text-shadow: none;  
+}
+#notification_list .content {
+  align-content: space-between;
+  align-items: center;
+  display: flex;
 }
 
 .navbar_expanding a.mainmenu-link.nouveau_message {
