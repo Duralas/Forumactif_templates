@@ -1,22 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" id="min-width" lang="{L_LANG_HTML}" xml:lang="{L_LANG_HTML}" {NAMESPACE_FB_LIKE} {NAMESPACE_FB} {NAMESPACE_BBCODE}>
-<head>  
-  
-        <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore|Homemade+Apple|Over+the+Rainbow|Cedarville+Cursive|Meddon' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Redressed' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Jim+Nightshade' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Eagle Lake' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Slatemate' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Uncial Antiqua' rel='stylesheet' type='text/css'>
-  <head><title>{SITENAME_TITLE}{PAGE_TITLE}</title>
+<head>
+  <title>{SITENAME_TITLE}{PAGE_TITLE}</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Aladin|Calligraffitti|Cedarville+Cursive|Cinzel+Decorative|Eagle+Lake|Homemade+Apple|Italianno|Jim+Nightshade|La+Belle+Aurore|Meddon|Montez|Over+the+Rainbow|Parisienne|Philosopher|Redressed|Tangerine:400,700|Uncial+Antiqua|IM+Fell+English+SC' rel='stylesheet' type='text/css'>
+  <link href='https://www.aht.li/3557703/stylesheet.css?family=carta_marinaregular' rel='stylesheet' type='text/css'>
+
   <meta http-equiv="content-type" content="text/html; charset={S_CONTENT_ENCODING}" />
   <meta http-equiv="content-script-type" content="text/javascript" />
   <meta http-equiv="content-style-type" content="text/css" />
@@ -273,7 +262,7 @@
       const updateNewNotificationCount = function () {
         const newCount = $notificationList.find(".unread").length;
         if (newCount > 0) {
-          $("#notificationCount").html("(" + newCount + ")");
+          $("#hasNotification").css("display", "inline-block");
         }
       };
 
@@ -376,17 +365,17 @@
         var target = null;
         if ($this.hasClass("mainmenu")) {
           target = $this.data("submenu");
-          navContBlock = $this.parents('.navbar_container_block')[0];
+          navContBlock = $this.parents('.navbar_block').first();
         } else if ($this.hasClass("submenu")) {
           target = "#" + this.id;
-          navContBlock = $('.mainmenu[data-submenu*="' + this.id + '"]').parents('.navbar_container_block')[0];
+          navContBlock = $('.mainmenu[data-submenu*="' + this.id + '"]').parents('.navbar_block').first();
         } else {
           return;
         }
         $(target).css("display", "inline-block");
         if (navContBlock) {
           var offset = $(navContBlock).offset();
-          $(target).css("left", offset.left);
+          $(target).css("left", offset.left + (($(navContBlock).width() - $(target).outerWidth()) / 2));
         }
       }, function(){
         var $this = $(this);
@@ -453,7 +442,7 @@
         </div>
         <div class="navbar_container_block">
           <div class="navbar_block">
-            <div class="mainmenu" data-submenu="#subNotifications"><span class="mainmenu-item">Tour de guet</span> <span id="notificationCount"></span></div>
+            <div class="mainmenu" data-submenu="#subNotifications"><span class="mainmenu-item">Tour de guet</span> <img src="https://i.ibb.co/F489ccS/tour-de-guet.png" id="hasNotification" style="display: none;"></div>
           </div>
         </div>
       <!-- END switch_user_logged_in -->
@@ -545,7 +534,7 @@
    
 <!-- BEGIN hitskin_preview -->
   <div id="hitskin_preview" style="display: block;">
-      <h1><img src="https://illiweb.com/fa/hitskin/hitskin_logo.png" alt="" /> Hit<em>skin</em>.com</h1>
+      <h1><img src="https://2img.net/i/fa/hitskin/hitskin_logo.png" alt="" /> Hit<em>skin</em>.com</h1>
       <div class="content">
         <p>
             {hitskin_preview.L_THEME_SITE_PREVIEW}
