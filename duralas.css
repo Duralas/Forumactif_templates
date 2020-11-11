@@ -72,7 +72,6 @@ quote small {
 /*corps central*/
 .bodylinewidth{
   box-shadow: 0 0 20px #000;
-  background:url('');
   padding-bottom:0;
   margin-top:-750px;
 }
@@ -261,7 +260,7 @@ td.catLeft {
 
 /*compteur messages et sujets*/
 .messagesetposts {
-  color: #1a1209
+  color: #1a1209;
   margin-left:-60px;
 }
 
@@ -734,7 +733,7 @@ a.topictitle {
 .capacité_spéciale.non_réalisable > .recharge {
   display: none;
 }
-.capacité-spéciale:not(.blocage >) .blocage,
+.capacité-spéciale:not(.blocage) > .blocage,
 .capacité_spéciale:not(.en_recharge) > .en_recharge {
   display: none;
 }
@@ -2099,7 +2098,6 @@ body {
 /******************************************BACKGROUND QUI S'ADAPTE*****************************************************************************************/
 
 body {
-  background-image:urlhttps://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-152466.jpg);
   background-size: 100% auto;
 }
 
