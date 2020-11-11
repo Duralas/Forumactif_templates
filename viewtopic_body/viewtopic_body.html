@@ -49,9 +49,9 @@
 			</span>
     </td>
     <td class="nav" valign="middle" width="100%">
-			<span class="nav">
-                <a class="nav" href="{U_INDEX}"><span>{L_INDEX}</span></a>
-        <!--{NAV_SEP}<a class="nav" href="{U_ALBUM}"><span>{L_ALBUM}</span></a>-->
+			<span class="nav" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a class="nav" href="{U_INDEX}" itemprop="url"><span itemprop="title">{L_INDEX}</span></a>
+        <!--{NAV_SEP}<a class="nav" href="{U_ALBUM}" itemprop="url"><span itemprop="title">{L_ALBUM}</span></a>-->
                 {NAV_CAT_DESC_SECOND}
             </span>
     </td>
@@ -59,15 +59,6 @@
 
       <span class="gensmall bold">
 				<!-- BEGIN switch_plus_menu -->
-				&nbsp;
-				<div id="addthis-toolbar" style="display: inline-block;">
-					<div class="btn-floating-left" tabindex="100">
-						{L_SHARE}
-					</div>
-					<div class="addthis-toolbar-btn" style="display:none;">
-						{switch_plus_menu.SOCIAL_BUTTONS}
-					</div>
-				</div>
 				&nbsp;|&nbsp;
 				<script type="text/javascript">//<![CDATA[
         var url_favourite = '{U_FAVOURITE_JS_PLUS_MENU}';
@@ -75,10 +66,10 @@
         var url_egosearch = '{U_EGOSEARCH_JS_PLUS_MENU}';
         var url_unanswered = '{U_UNANSWERED_JS_PLUS_MENU}';
         var url_watchsearch = '{U_WATCHSEARCH_JS_PLUS_MENU}';
+
         insert_plus_menu('f{FORUM_ID}&amp;t={TOPIC_ID}','{JS_SESSION_ID}', {JS_AUTH_FAVOURITES});
         //]]>
 				</script>
-				{switch_plus_menu.JS_SOCIAL_BUTTONS}
         <!-- END switch_plus_menu -->
 			</span>
     </td>
@@ -87,19 +78,14 @@
 
 <table class="forumline" width="100%" border="0" cellspacing="1" cellpadding="0" >
   <tr align="right">
-    <td class="catHead" colspan="2" height="28">
+    <td class="catHead" colspan="3" height="28">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td width="9%" class="noprint">&nbsp;</td>
           <td align="center" class="t-title">
             <h1 class="cattitle">&nbsp;{TOPIC_TITLE}</h1>
           </td>
-          <td align="right" width="9%" class="browse-arrows">
-            <!-- BEGIN switch_isconnect -->
-            <a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a>&nbsp;<a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a>&nbsp;
-            <!-- END switch_isconnect -->
-            <a href="#bottom">{L_GOTO_DOWN}</a>&nbsp;
-          </td>
+          <td align="right" width="9%" class="browse-arrows"><a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a>&nbsp;<a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a>&nbsp;<a href="#bottom">{L_GOTO_DOWN}</a>&nbsp;</td>
         </tr>
       </table>
     </td>
@@ -112,18 +98,18 @@
   {POLL_DISPLAY}
   <tr>
     <th class="thLeft" nowrap="nowrap" width="150px" height="26">{L_AUTHOR}</th>
-    <th class="thRight" nowrap="nowrap">{L_MESSAGE}</th>
+    <th class="thRight" nowrap="nowrap" colspan="2">{L_MESSAGE}</th>
   </tr>
   <!-- BEGIN postrow -->
   <!-- BEGIN hidden -->
   <tr>
-    <td class="postdetails {postrow.hidden.ROW_CLASS}" colspan="2" align="center">{postrow.hidden.MESSAGE}</td>
+    <td class="postdetails {postrow.hidden.ROW_CLASS}" colspan="3" align="center">{postrow.hidden.MESSAGE}</td>
   </tr>
   <!-- END hidden -->
   <!-- BEGIN displayed -->
   <tr class="post post--{postrow.displayed.U_POST_ID}" id="p{postrow.displayed.U_POST_ID}" style="{postrow.displayed.DISPLAYABLE_STATE}">
     <td class="{postrow.displayed.ROW_CLASS}"{postrow.displayed.THANK_BGCOLOR} valign="top" width="150">
-      <span class="name"><a name="{postrow.displayed.U_POST_ID}" style="position: relative; top: -30px; width: 1px;" id="{postrow.displayed.U_POST_ID}"></a><strong>{postrow.displayed.POSTER_NAME}</strong></span><br />
+      <span class="name"><a name="{postrow.displayed.U_POST_ID}" style="position: relative; top: -30px; width: 1px;" id="{postrow.displayed.U_POST_ID}"></a><strong><center><font size="3">{postrow.displayed.POSTER_NAME}</font></center></strong></span>
       <span class="postdetails poster-profile">
 				{postrow.displayed.POSTER_RANK}<br />
 				{postrow.displayed.RANK_IMAGE}{postrow.displayed.POSTER_AVATAR}<br /><br />
@@ -132,10 +118,10 @@
         <!-- END profile_field -->
 				{postrow.displayed.POSTER_RPG}
 			</span><br />
-      <img src="https://2img.net/i/empty.gif" alt="" style="width:150px;height:1px" />
+      <img src="https://2img.net/i/fa/empty.gif" alt="" style="width:150px;height:1px" />
     </td>
-    <td class="{postrow.displayed.ROW_CLASS}"{postrow.displayed.THANK_BGCOLOR} valign="top" width="100%" height="100%">
-      <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+    <td class="{postrow.displayed.ROW_CLASS}"{postrow.displayed.THANK_BGCOLOR} valign="top" width="100%" height="28" colspan="2">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td><span class="postdetails"><img src="{postrow.displayed.MINI_POST_IMG}" alt="{postrow.displayed.L_MINI_POST_ALT}" title="{postrow.displayed.L_MINI_POST_ALT}" border="0" />{L_POST_SUBJECT}: {postrow.displayed.POST_SUBJECT}&nbsp; &nbsp;<img src="{postrow.displayed.MINI_TIME_IMG}" alt="" border="0" />{postrow.displayed.POST_DATE}</span></td>
           <td valign="top" nowrap="nowrap" class="post-options">
@@ -147,7 +133,7 @@
             <hr />
           </td>
         </tr>
-        <tr height="100%" valign="top">
+        <tr>
           <td colspan="2">
             <!-- BEGIN switch_vote_active -->
             <div class="vote gensmall">
@@ -224,6 +210,7 @@
                 {postrow.displayed.SIGNATURE}
               </div>
               <!-- END switch_signature -->
+
             </div>
             <span class="gensmall">{postrow.displayed.EDITED_MESSAGE}</span>
           </td>
@@ -258,23 +245,18 @@
   <!-- END postrow -->
   <!-- BEGIN no_post -->
   <tr align="center">
-    <td class="row1" colspan="2" height="28">
+    <td class="row1" colspan="3" height="28">
       <span class="genmed">{no_post.L_NO_POST}</span>
     </td>
   </tr>
   <!-- END no_post -->
   <tr align="right">
-    <td class="catBottom" colspan="2" height="28">
+    <td class="catBottom" colspan="3" height="28">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td width="9%" class="noprint">&nbsp;</td>
-          <td align="center" class="t-title"><a name="bottomtitle"></a><div class="cattitle">{TOPIC_TITLE}</div></td>
-          <td align="right" nowrap="nowrap" width="9%" class="browse-arrows">
-            <!-- BEGIN switch_isconnect -->
-            <a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a>&nbsp;<a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a>&nbsp;
-            <!-- END switch_isconnect -->
-            <a href="#top">{L_BACK_TO_TOP}</a>&nbsp;
-          </td>
+          <td align="center" class="t-title"><a name="bottomtitle"></a><h1 class="cattitle">{TOPIC_TITLE}</h1></td>
+          <td align="right" nowrap="nowrap" width="9%" class="browse-arrows"><a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a>&nbsp;<a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a>&nbsp;<a href="#top">{L_BACK_TO_TOP}</a>&nbsp;</td>
         </tr>
       </table>
     </td>
@@ -302,7 +284,7 @@
     <td class="catBottom" height="28">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td valign="top"><div class="cattitle">&nbsp;{PROMOT_TRAFIC_TITLE}</div></td>
+          <td valign="top"><h1 class="cattitle">&nbsp;{PROMOT_TRAFIC_TITLE}</h1></td>
           <td align="right" valign="middle" width="10"><span class="gensmall"><a href="javascript:ShowHideLayer('ptrafic_open','ptrafic_close');"><img src="{TABS_MORE_IMG}" alt="+" align="middle" border="0" /></a></span></td>
         </tr>
       </table>
@@ -315,7 +297,7 @@
     <td class="catBottom" height="28">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td valign="top"><div class="cattitle">&nbsp;{PROMOT_TRAFIC_TITLE}</div></td>
+          <td valign="top"><h1 class="cattitle">&nbsp;{PROMOT_TRAFIC_TITLE}</h1></td>
           <td align="right" valign="middle" width="10"><span class="gensmall"><a href="javascript:ShowHideLayer('ptrafic_open','ptrafic_close');"><img src="{TABS_LESS_IMG}" alt="-" align="middle" border="0" /></a></span></td>
         </tr>
       </table>
@@ -340,7 +322,7 @@
         <tbody>
         <tr>
           <td valign="top">
-            <div class="cattitle">&nbsp;{L_FORUM_RULES}</div>
+            <h1 class="cattitle">&nbsp;{L_FORUM_RULES}</h1>
           </td>
         </tr>
         </tbody>
@@ -436,7 +418,9 @@
 			</span>
       </td>
 
+      <!-- BEGIN viewtopic_bottom -->
       <td align="right" nowrap="nowrap"><span class="gensmall">{L_JUMP_TO}:&nbsp;{S_JUMPBOX_SELECT}&nbsp;<input class="liteoption" type="submit" value="{L_GO}" /></span></td>
+      <!-- END viewtopic_bottom -->
 
       <!-- BEGIN moderation_panel -->
       <td align="center">
@@ -474,3 +458,4 @@
   //]]>
 </script>
 <!-- END switch_image_resize -->
+<script src="{JS_DIR}addthis/addthis_widget.js" type="text/javascript"></script>
