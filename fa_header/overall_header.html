@@ -39,91 +39,91 @@
   <!-- BEGIN switch_ticker_new -->
   <script src="{JS_DIR}jquery/jcarousel/jquery.jcarousel.js" type="text/javascript"></script>
   <script type="text/javascript">//<![CDATA[
-      /* Definir le sens de direction en fonction du panneau admin */
-      var tickerDirParam = "{switch_ticker.DIRECTION}";
-      var slid_vert = false;
-      var auto_dir = 'next';
-      var h_perso = parseInt({switch_ticker.HEIGHT});
+  /* Definir le sens de direction en fonction du panneau admin */
+  var tickerDirParam = "{switch_ticker.DIRECTION}";
+  var slid_vert = false;
+  var auto_dir = 'next';
+  var h_perso = parseInt({switch_ticker.HEIGHT});
 
-      switch( tickerDirParam )
+  switch( tickerDirParam )
+  {
+      case 'top' :
+          slid_vert = true;
+          break;
+
+      case 'left':
+          break;
+
+      case 'bottom':
+          slid_vert = true;
+          auto_dir = 'prev';
+          break;
+
+      case 'right':
+          auto_dir = 'prev';
+          break;
+
+      default:
+          slid_vert = true;
+  }
+
+  $(document).ready(function() {
+      var w_cont = $('#fa_ticker_container').width();
+
+      if (w_cont > 0)
       {
-        case 'top' :
-            slid_vert = true;
-            break;
+          $('#fa_ticker_container').width(w_cont);
 
-        case 'left':
-            break;
+          /* Affichage de la liste */
+          $('#fa_ticker_content').css('display','block');
 
-        case 'bottom':
-            slid_vert = true;
-            auto_dir = 'prev';
-            break;
+          /* Calcul des dimensions du conteneur et des elements */
+          var width_max = $('ul#fa_ticker_content').width();
+          var width_item = Math.floor(width_max / {switch_ticker.SIZE});
+          var height_max = h_perso;
 
-        case 'right':
-            auto_dir = 'prev';
-            break;
-
-        default:
-            slid_vert = true;
-      }
-
-      $(document).ready(function() {
-        var w_cont = $('#fa_ticker_container').width();
-
-        if (w_cont > 0)
-        {
-            $('#fa_ticker_container').width(w_cont);
-
-            /* Affichage de la liste */
-            $('#fa_ticker_content').css('display','block');
-
-            /* Calcul des dimensions du conteneur et des elements */
-            var width_max = $('ul#fa_ticker_content').width();
-            var width_item = Math.floor(width_max / {switch_ticker.SIZE});
-            var height_max = h_perso;
-
-            /* Calcul de la hauteur maximale du conteneur en fonction des elements et de la hauteur personnalisee dans l'admin */
-            $('ul#fa_ticker_content li').each( function () {
+          /* Calcul de la hauteur maximale du conteneur en fonction des elements et de la hauteur personnalisee dans l'admin */
+          $('ul#fa_ticker_content li').each( function () {
               if ($(this).height() > height_max)
               {
                   height_max = $(this).height();
               }
-            } );
+          } );
 
-            /* Redimensionnement des elements et des images trop larges */
-            $('ul#fa_ticker_content li').width(width_item).height(height_max).find('img').each(function () {
+          /* Redimensionnement des elements et des images trop larges */
+          $('ul#fa_ticker_content li').width(width_item).height(height_max).find('img').each(function () {
               if ($(this).width() > width_item)
               {
-              var ratio      = $(this).width() / width_item;
-              var new_height = Math.round($(this).height() / ratio);
-              $(this).height(new_height).width(width_item);
+                  var ratio      = $(this).width() / width_item;
+                  var new_height = Math.round($(this).height() / ratio);
+                  $(this).height(new_height).width(width_item);
               }
-            });
+          });
 
-            /* Redimensionnement et centrage du conteneur en mode vertical */
-            if (slid_vert)
-            {
+          /* Redimensionnement et centrage du conteneur en mode vertical */
+          if (slid_vert)
+          {
               $('ul#fa_ticker_content').width(width_item).height(height_max).css('marginLeft','auto').css('marginRight','auto');
-            }
+          }
 
-            /* Initialisation du caroussel */
-            $('#fa_ticker_content').jcarousel({
-                  vertical: slid_vert,
+          /* Initialisation du caroussel */
+          $('#fa_ticker_content').jcarousel({
+              vertical: slid_vert,
               wrap: 'circular',
               auto: {switch_ticker.STOP_TIME},
               auto_direction: auto_dir,
-            scroll: 1,
-            size: {switch_ticker.SIZE},
-            height_max: height_max,
-            animation: {switch_ticker.SPEED}
-            });
-        }
-        else
-        {
-            $('ul#fa_ticker_content li:not(:first)').css('display','none');
-            $('ul#fa_ticker_content li:first').css('list-style','none').css('text-align','center');
-        }
-      });
+              scroll: 1,
+              size: {switch_ticker.SIZE},
+              height_max: height_max,
+              animation: {switch_ticker.SPEED}
+          });
+      }
+      else
+      {
+          $('ul#fa_ticker_content li:not(:first)').css('display','none');
+          $('ul#fa_ticker_content li:first').css('list-style','none').css('text-align','center');
+      }
+  });
   //]]>
   </script>
   <!-- END switch_ticker_new -->
@@ -131,32 +131,32 @@
   <script type="text/javascript">//<![CDATA[
   $(document).ready(function(){
       <!-- BEGIN switch_enable_pm_popup -->
-        pm = window.open('{U_PRIVATEMSGS_POPUP}', '_faprivmsg', 'HEIGHT=225,resizable=yes,WIDTH=400');
-        if(pm != null) { pm.focus(); }
+      pm = window.open('{U_PRIVATEMSGS_POPUP}', '_faprivmsg', 'HEIGHT=225,resizable=yes,WIDTH=400');
+      if(pm != null) { pm.focus(); }
       <!-- END switch_enable_pm_popup -->
       <!-- BEGIN switch_report_popup -->
-        report = window.open('{switch_report_popup.U_REPORT_POPUP}', '_phpbbreport', 'HEIGHT={switch_report_popup.S_HEIGHT},resizable=yes,scrollbars=no,WIDTH={switch_report_popup.S_WIDTH}');
-        if(report != null) { report.focus(); }
+      report = window.open('{switch_report_popup.U_REPORT_POPUP}', '_phpbbreport', 'HEIGHT={switch_report_popup.S_HEIGHT},resizable=yes,scrollbars=no,WIDTH={switch_report_popup.S_WIDTH}');
+      if(report != null) { report.focus(); }
       <!-- END switch_report_popup -->
       <!-- BEGIN switch_ticker -->
-        ticker_start({switch_ticker.HEIGHT}, {switch_ticker.SPACING}, {switch_ticker.SPEED}, '{switch_ticker.DIRECTION}', {switch_ticker.STOP_TIME});
+      ticker_start({switch_ticker.HEIGHT}, {switch_ticker.SPACING}, {switch_ticker.SPEED}, '{switch_ticker.DIRECTION}', {switch_ticker.STOP_TIME});
       <!-- END switch_ticker -->
   });
 
   <!-- BEGIN switch_login_popup -->
-      var logInPopUpLeft, logInPopUpTop, logInPopUpWidth = {LOGIN_POPUP_WIDTH}, logInPopUpHeight = {LOGIN_POPUP_HEIGHT}, logInBackgroundResize = true, logInBackgroundClass = false;
+  var logInPopUpLeft, logInPopUpTop, logInPopUpWidth = {LOGIN_POPUP_WIDTH}, logInPopUpHeight = {LOGIN_POPUP_HEIGHT}, logInBackgroundResize = true, logInBackgroundClass = false;
   <!-- END switch_login_popup -->
 
   <!-- BEGIN switch_login_popup -->
   $(document).ready( function() {
       $(window).resize(function() {
-        var windowWidth = document.documentElement.clientWidth;
-        var popupWidth = $("#login_popup").width();
-        var mypopup = $("#login_popup");
+          var windowWidth = document.documentElement.clientWidth;
+          var popupWidth = $("#login_popup").width();
+          var mypopup = $("#login_popup");
 
-        $("#login_popup").css({
-        "left": windowWidth/2 - popupWidth/2
-            });
+          $("#login_popup").css({
+              "left": windowWidth/2 - popupWidth/2
+          });
       });
   });
   <!-- END switch_login_popup -->
@@ -165,501 +165,514 @@
   {GREETING_POPUP}
   <!-- BEGIN switch_ticker_new -->
   <style>
-  .jcarousel-skin-tango .jcarousel-item {
-      text-align:center;
-      width: 10px;
-  }
+      .jcarousel-skin-tango .jcarousel-item {
+          text-align:center;
+          width: 10px;
+      }
 
-  .jcarousel-skin-tango .jcarousel-item-horizontal {
+      .jcarousel-skin-tango .jcarousel-item-horizontal {
       margin-right: {switch_ticker.SPACING}px;
-  }
+      }
 
-  .jcarousel-skin-tango .jcarousel-item-vertical {
+      .jcarousel-skin-tango .jcarousel-item-vertical {
       margin-bottom: {switch_ticker.SPACING}px;
-  }
+      }
   </style>
   <!-- END switch_ticker_new -->
   {HOSTING_JS}
   <!-- BEGIN google_analytics_code -->
   <script type="text/javascript">
-  //<![CDATA[
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', '{G_ANALYTICS_ID}']);
-    _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
+      //<![CDATA[
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{G_ANALYTICS_ID}']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
 
-  <!-- BEGIN google_analytics_code_bis -->
-  _gaq.push(['b._setAccount', '{G_ANALYTICS_ID_BIS}']);
-  _gaq.push(['b._trackPageview']);
-  <!-- END google_analytics_code_bis -->
+      <!-- BEGIN google_analytics_code_bis -->
+      _gaq.push(['b._setAccount', '{G_ANALYTICS_ID_BIS}']);
+      _gaq.push(['b._trackPageview']);
+      <!-- END google_analytics_code_bis -->
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  //]]>
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+      //]]>
   </script>
   <!-- END google_analytics_code -->
 
   <!-- /begin Fusion navbar / toolbar -->
   <script type="text/javascript">
-    $(function () {
-      /* Sous-menu */
-      const $notificationList = $("#notification_list");
+      $(function () {
+          /* Sous-menu */
+          const $notificationList = $("#notification_list");
 
-      /* Cacher la toolbar */
-      $("#fa_toolbar").hide();
-      $("#fa_toolbar_hidden").hide();
+          /* Cacher la toolbar */
+          $("#fa_toolbar").hide();
+          $("#fa_toolbar_hidden").hide();
 
-      /* Fonctions utiles */
-      /**
-       * Demande la suppression de la notification et enlève l'élément HTML.
-       * 
-       * @param  {HTMLElement} element Élément portant les informations de suppression.
-       * 
-       * @return {void} Requête la suppression et modifie l'affichage.
-       */
-      const deleteNotification = function (element) {
-        const $element = $(this);
-        const $content = $element.parents(".content").first();
+          /* Fonctions utiles */
+          /**
+           * Demande la suppression de la notification et enlève l'élément HTML.
+           *
+           * @param  {HTMLElement} element Élément portant les informations de suppression.
+           *
+           * @return {void} Requête la suppression et modifie l'affichage.
+           */
+          const deleteNotification = function (element) {
+              const $element = $(this);
+              const $content = $element.parents(".content").first();
 
-        const notifChannel = $content.data("notif_channel");
-        const notifId      = $content.data("notif_id");
+              const notifChannel = $content.data("notif_channel");
+              const notifId      = $content.data("notif_id");
 
-        /* Requête */
-        $.ajax("/notif", {
-          type: "DELETE",
-          data: {
-            channel: notifChannel, 
-            id: notifId
-          }
-        })
-          .success(function(response) {
-            const notifications = response.store;
-            let deleteInSuccess = true;
+              /* Requête */
+              $.ajax("/notif", {
+                  type: "DELETE",
+                  data: {
+                      channel: notifChannel,
+                      id: notifId
+                  }
+              })
+                  .success(function(response) {
+                      const notifications = response.store;
+                      let deleteInSuccess = true;
 
-            notifications.forEach(function (notification) {
-              if (notification.text.id === notifId && notification.channel === notifChannel) {
-                deleteInSuccess = false;
-                return;
+                      notifications.forEach(function (notification) {
+                          if (notification.text.id === notifId && notification.channel === notifChannel) {
+                              deleteInSuccess = false;
+                              return;
+                          }
+                      });
+
+                      if (deleteInSuccess) {
+                          $content.fadeOut(300, function(){ $(this).remove();});
+                          updateNewNotificationCount();
+                      }
+                  })
+              ;
+          };
+
+          /**
+           * Met à jour le compteur des nouvelles notifications.
+           *
+           * @return {void} Compte les nouvelles notifications a donne l'indication.
+           */
+          const updateNewNotificationCount = function () {
+              const newCount = $notificationList.find(".unread").length;
+              if (newCount > 0) {
+                  $("#hasNotification").css("display", "inline-block");
               }
-            });
+          };
 
-            if (deleteInSuccess) {
-              $content.fadeOut(300, function(){ $(this).remove();});
-              updateNewNotificationCount();
-            }
-          })
-        ;
-      };
+          /* Récupération des notifications */
+          fetch("/notif")
+              .then(function(response) {
+                  return response.json();
+              })
+              .then(function(json) {
+                  const notifications = json.store;
+                  $notificationList.empty(); /* Délestage automatique */
+                  if ($notificationList.next().hasClass("submenu-separation") === false) {
+                      $notificationList.after(`<span class="submenu-separation"></span>`);
+                  }
 
-      /**
-       * Met à jour le compteur des nouvelles notifications.
-       * 
-       * @return {void} Compte les nouvelles notifications a donne l'indication.
-       */
-      const updateNewNotificationCount = function () {
-        const newCount = $notificationList.find(".unread").length;
-        if (newCount > 0) {
-          $("#hasNotification").css("display", "inline-block");
-        }
-      };
+                  if (notifications.length === 0) {
+                      $notificationList.append("<div>Rien de nouveau...</div>");
+                  }
+                  /* Action pour chaque notification */
+                  notifications.forEach(function (notification) {
+                      /* Récupération des données */
+                      const channel = notification.channel;
+                      const isRead  = Boolean(notification.read);
+                      const content = notification.text;
+                      const from    = content.from;
 
-      /* Récupération des notifications */
-      fetch("/notif")
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(json) {
-          const notifications = json.store;
-          $notificationList.empty(); /* Délestage automatique */
-          if ($notificationList.next().hasClass("submenu-separation") === false) {
-            $notificationList.after(`<span class="submenu-separation"></span>`);            
-          }
+                      /* Récupération des valeurs du template */
+                      const unread = isRead === false ? "unread" : "";
+                      const author = "<a href=\"/u" + from.id + "\">" + from.name + "</a>";
 
-          if (notifications.length === 0) {
-            $notificationList.append("<div>Rien de nouveau...</div>");
-          }
-          /* Action pour chaque notification */
-          notifications.forEach(function (notification) {
-            /* Récupération des données */
-            const channel = notification.channel;
-            const isRead  = Boolean(notification.read);
-            const content = notification.text;
-            const from    = content.from;
+                      const post     = content.post ?? "";
+                      const start    = (post.start ?? 0) > 0 ? ("p" + post.start) : "";
+                      const postHref = typeof post === "object" ? ("/t"  + post.topic_id + start + "-" + post.topic_name + "#" + post.post_id) : "";
+                      const postLabel = typeof post === "object" ? post.topic_title : "";
 
-            /* Récupération des valeurs du template */
-            const unread = isRead === false ? "unread" : "";
-            const author = "<a href=\"/u" + from.id + "\">" + from.name + "</a>";
+                      const forum = content.forum ?? "";
+                      const forumHref = typeof forum === "object" ? ("/f" + forum.forum_id + "-" + forum.forum_name) : "";
+                      const forumLabel = typeof forum === "object" ? forum.forum_title : "";
 
-            const post     = content.post ?? "";
-            const start    = (post.start ?? 0) > 0 ? ("p" + post.start) : "";
-            const postHref = post ? ("/t"  + post.topic_id + start + "-" + post.topic_name + "#" + post.post_id) : "";
+                      let notifContent = "";
+                      switch(content.type) {
+                          case 0: /* MP */
+                              notifContent = "Une <a href=\"/privmsg?folder=inbox&mode=read&p=" + content.msg_id + "\">missive</a> vous a été envoyée par " + author + ".";
+                              break;
+                          case 2: /* Demande d'ami */
+                                notifContent = author + " souhaite boire la coupe de l'amitié avec vous.";
 
-            let notifContent = "";
-            switch(content.type) {
-              case 0: /* MP */
-                notifContent = "Une <a href=\"/privmsg?folder=inbox&mode=read&p=" + content.msg_id + "\">missive</a> vous a été envoyée par " + author + ".";
-                break;
-              case 7: /* Sujet suivi */
-                notifContent = author + " a écrit dans un <a href=\"" + postHref + "\">lieu surveillé</a>.";
-                break;
-              case 8: /* Tag @ */
-                notifContent = "Vous êtes demandé dans ce <a href=\"" + postHref + "\">coin</a> par " + author + ".";
-                break;
-              default: /* À faire MDR */
-                notifContent = "Demande à Dougal pourquoi il a pas codé cette notif (liée à " + from.name + ") !";
-                console.log("Tiens, donne ces infos à Dougal : ", content);
-            }
+                                break;
+                          case 7: /* Sujet suivi */
+                              notifContent = author + " a écrit dans un <a href=\"" + postHref + "\">lieu surveillé</a>.";
+                              break;
+                          case 8: /* Tag @ */
+                              notifContent = "Vous êtes demandé dans ce <a href=\"" + postHref + "\">coin</a> par " + author + ".";
+                              break;
+                          case 13: /* Nouveau sujet dans un forum surveillé */
+                              notifContent = author + " a créé l'activité <a href=\"" + postHref + "\">" + postLabel + "</a> dans <a href=\"" + forumHref + "\">" + forumLabel + "</a>";
 
-            /* Template */
-            $notificationList.append(
-              "<div class=\"content\" data-notif_channel=\"" + channel + "\" data-notif_id=\"" + content.id + "\">" +
-                "<div class=\"notification " + unread + "\">" + notifContent + "</div>" + 
-                "<div><img class=\"deleter pointer\" src=\"https://i.ibb.co/n6YSSz4/fire.png\" title=\"Effacer les preuves\"></div>" +
-              "</div>"
-              );
-          });
+                              break;
+                          default: /* À faire MDR */
+                              notifContent = "Demande à Dougal pourquoi il a pas codé cette notif (liée à " + from.name + ") !";
+                              console.log("Tiens, donne ces infos à Dougal : ", content);
+                      }
 
-          /* Bind la suppression */
-          $notificationList.find(".deleter").on("click", deleteNotification);
+                      /* Template */
+                      $notificationList.append(
+                          "<div class=\"content\" data-notif_channel=\"" + channel + "\" data-notif_id=\"" + content.id + "\">" +
+                          "<div class=\"notification " + unread + "\">" + notifContent + "</div>" +
+                          "<div><img class=\"deleter pointer\" src=\"https://i.ibb.co/n6YSSz4/fire.png\" title=\"Effacer les preuves\"></div>" +
+                          "</div>"
+                      );
+                  });
 
-          /* Count des nouveaux */
-          updateNewNotificationCount();
-        })
-      ;
-    });
+                  /* Bind la suppression */
+                  $notificationList.find(".deleter").on("click", deleteNotification);
+
+                  /* Count des nouveaux */
+                  updateNewNotificationCount();
+              })
+          ;
+      });
   </script>
   <!-- /end Fusion navbar / toolbar -->
 
   <!-- /begin messagerie -->
   <script type="text/javascript">
-    $(document).ready(function(){    
-      /* Récupération des variables */
-      var navContext = document.createRange().createContextualFragment(`{GENERATED_NAV_BAR}`);
-      var aMessagerie = $(navContext).children(`a[href*='{U_PRIVATEMSGS}']`);
-      if (!aMessagerie.length) {
-        return;
-      }
+      $(document).ready(function(){
+          /* Récupération des variables */
+          var navContext = document.createRange().createContextualFragment(`{GENERATED_NAV_BAR}`);
+          var aMessagerie = $(navContext).children(`a[href*='{U_PRIVATEMSGS}']`);
+          if (!aMessagerie.length) {
+              return;
+          }
 
-      /* Vérification du nombre de messages */
-      var iNew = $(aMessagerie).children("#i_icon_mini_new_message");
-      if (!iNew.length) { /* Pas de nouveau message */
-        return;
-      }
-      var countNew = $(iNew).attr("title").replace(/^.*([1-9][0-9]*) .*$/,"$1");
-      var message = parseInt(countNew) > 1 ? countNew + " nouvelles missives" : countNew + " nouvelle missive";
-      $("#navMessagerie").text(message);
-      $("#navMessagerie").addClass("nouveau_message");
-    });
+          /* Vérification du nombre de messages */
+          var iNew = $(aMessagerie).children("#i_icon_mini_new_message");
+          if (!iNew.length) { /* Pas de nouveau message */
+              return;
+          }
+          var countNew = $(iNew).attr("title").replace(/^.*([1-9][0-9]*) .*$/,"$1");
+          var message = parseInt(countNew) > 1 ? countNew + " nouvelles missives" : countNew + " nouvelle missive";
+          $("#navMessagerie").text(message);
+          $("#navMessagerie").addClass("nouveau_message");
+      });
   </script>
   <!--  /end  messagerie -->
 
   <!-- /begin navbar_expanding -->
   <script type="text/javascript">
-    $(document).ready(function(){
-      $(".mainmenu, .submenu").hover(function(){
-        var $this = $(this);
-        var navContBlock = null;
-        var target = null;
-        if ($this.hasClass("mainmenu")) {
-          target = $this.data("submenu");
-          navContBlock = $this.parents('.navbar_block').first();
-        } else if ($this.hasClass("submenu")) {
-          target = "#" + this.id;
-          navContBlock = $('.mainmenu[data-submenu*="' + this.id + '"]').parents('.navbar_block').first();
-        } else {
-          return;
-        }
-        $(target).css("display", "inline-block");
-        if (navContBlock) {
-          var offset = $(navContBlock).offset();
-          $(target).css("left", offset.left + (($(navContBlock).width() - $(target).outerWidth()) / 2));
-        }
-      }, function(){
-        var $this = $(this);
-        var target = null;
-        if ($this.hasClass("mainmenu")) {
-          target = $this.data("submenu");
-        } else if ($this.hasClass("submenu")) {
-          target = "#" + this.id;
-        } else {
-          return;
-        }
-        $(target).css("display", "none");
+      $(document).ready(function(){
+          $(".mainmenu, .submenu").hover(function(){
+              var $this = $(this);
+              var navContBlock = null;
+              var target = null;
+              if ($this.hasClass("mainmenu")) {
+                  target = $this.data("submenu");
+                  navContBlock = $this.parents('.navbar_block').first();
+              } else if ($this.hasClass("submenu")) {
+                  target = "#" + this.id;
+                  navContBlock = $('.mainmenu[data-submenu*="' + this.id + '"]').parents('.navbar_block').first();
+              } else {
+                  return;
+              }
+              $(target).css("display", "inline-block");
+              if (navContBlock) {
+                  var offset = $(navContBlock).offset();
+                  $(target).css("left", offset.left + (($(navContBlock).width() - $(target).outerWidth()) / 2));
+              }
+          }, function(){
+              var $this = $(this);
+              var target = null;
+              if ($this.hasClass("mainmenu")) {
+                  target = $this.data("submenu");
+              } else if ($this.hasClass("submenu")) {
+                  target = "#" + this.id;
+              } else {
+                  return;
+              }
+              $(target).css("display", "none");
+          });
       });
-    });
   </script>
   <!--  /end  navbar_expanding -->
-</head> 
-          <div id="i_bg">
-    <div><img src=""/></div>
+</head>
+<div id="i_bg">
+  <div><img src=""/></div>
 </div>
-          
- <body background="{T_BODY_BACKGROUND}" bgcolor="{T_BODY_BGCOLOR}" text="{T_BODY_TEXT}" link="{T_BODY_LINK}" vlink="{T_BODY_VLINK}">
-   <div style="display: none; height: 0;">{GENERATED_NAV_BAR}</div>
-  <div class="navig" align="{MENU_POSITION}">
-    <div class="navbar_expanding">
-      <div class="navbar_container_block">
-        <div class="navbar_block">
-          <div class="mainmenu"><a href="{U_INDEX}" class="mainmenu-link">{L_HOME}</a></div>
-        </div>
-      </div>
-      <div class="navbar_container_block">
-        <div class="navbar_block">
-          <div class="mainmenu" data-submenu="#subPreambule"><span class="mainmenu-item">Préambule</span></div>
-        </div>
-      </div>
-      <div class="navbar_container_block">
-        <div class="navbar_block">
-          <div class="mainmenu" data-submenu="#subLeMonde"><span class="mainmenu-item">Le monde</span></div>
-        </div>
-      </div>
-      <div class="navbar_container_block">
-        <div class="navbar_block">
-          <div class="mainmenu" data-submenu="#subLeJeu"><span class="mainmenu-item">Le jeu</span></div>
-        </div>
-      </div>
-      <div class="navbar_container_block">
-        <div class="navbar_block">
-          <div class="mainmenu" data-submenu="#subProfil">
-            <!-- BEGIN switch_user_logged_in -->
-              <a href="{U_PROFILE}" class="mainmenu-link" title="Consulter votre profil">{L_PROFILE}</a>
-            <!-- END switch_user_logged_in -->
 
-            <!-- BEGIN switch_user_logged_out -->
-              <span class="mainmenu-item">Personnages</span>
-            <!-- END switch_user_logged_out -->
-          </div>
-        </div>
+<body background="{T_BODY_BACKGROUND}" bgcolor="{T_BODY_BGCOLOR}" text="{T_BODY_TEXT}" link="{T_BODY_LINK}" vlink="{T_BODY_VLINK}">
+<div style="display: none; height: 0;">{GENERATED_NAV_BAR}</div>
+<div class="navig" align="{MENU_POSITION}">
+  <div class="navbar_expanding">
+    <div class="navbar_container_block">
+      <div class="navbar_block">
+        <div class="mainmenu"><a href="{U_INDEX}" class="mainmenu-link">{L_HOME}</a></div>
       </div>
-      <!-- BEGIN switch_user_logged_in -->
-        <div class="navbar_container_block">
-          <div class="navbar_block">
-            <div class="mainmenu"><a id="navMessagerie" href="{U_PRIVATEMSGS}" class="mainmenu-link" title="Consulter le pigeonnier de vos missives privées.">Missives privées</a></div>
-          </div>
-        </div>
-        <div class="navbar_container_block">
-          <div class="navbar_block">
-            <div class="mainmenu" data-submenu="#subNotifications"><span class="mainmenu-item">Tour de guet</span> <img src="https://i.ibb.co/F489ccS/tour-de-guet.png" id="hasNotification" style="display: none;"></div>
-          </div>
-        </div>
-      <!-- END switch_user_logged_in -->
-      <div class="navbar_container_block">
-        <div class="navbar_block">
-          <div class="mainmenu" data-submenu="#subCommunaute"><span class="mainmenu-item">Communauté</span></div>
-        </div>
+    </div>
+    <div class="navbar_container_block">
+      <div class="navbar_block">
+        <div class="mainmenu" data-submenu="#subPreambule"><span class="mainmenu-item">Préambule</span></div>
       </div>
-      <!-- BEGIN switch_user_logged_out -->
-        <div class="navbar_container_block">
-          <div class="navbar_block">
-            <div class="mainmenu"><a href="{U_REGISTER}" class="mainmenu-link" title="Inscrivez-vous sur Dùralas.">{L_REGISTER}</a></div>
-          </div>
-        </div>
-      <!-- END switch_user_logged_out -->
-      <div class="navbar_container_block">
-        <div class="navbar_block">
-          <div class="mainmenu"><a href="{U_LOGIN_LOGOUT}" class="mainmenu-link">{L_LOGIN_LOGOUT}</a></div>
+    </div>
+    <div class="navbar_container_block">
+      <div class="navbar_block">
+        <div class="mainmenu" data-submenu="#subLeMonde"><span class="mainmenu-item">Le monde</span></div>
+      </div>
+    </div>
+    <div class="navbar_container_block">
+      <div class="navbar_block">
+        <div class="mainmenu" data-submenu="#subLeJeu"><span class="mainmenu-item">Le jeu</span></div>
+      </div>
+    </div>
+    <div class="navbar_container_block">
+      <div class="navbar_block">
+        <div class="mainmenu" data-submenu="#subProfil">
+          <!-- BEGIN switch_user_logged_in -->
+          <a href="{U_PROFILE}" class="mainmenu-link" title="Consulter votre profil">{L_PROFILE}</a>
+          <!-- END switch_user_logged_in -->
+
+          <!-- BEGIN switch_user_logged_out -->
+          <span class="mainmenu-item">Personnages</span>
+          <!-- END switch_user_logged_out -->
         </div>
       </div>
     </div>
-
-    <!-- SUBMENUS -->
-    <div id="subPreambule" class="submenu">
-      <a href="/t3-reglement-general-du-forum" class="submenu-link" title="Prendre connaissance du règlement général">Règlement général</a>
-      <a href="/f177-chartes-duralassiennes" class="submenu-link" title="Visualiser les chartes dùralassiennes">Chartes Dùralassiennes</a>
-      <span class="submenu-separation"></span>
-      <span class="submenu-link no-link" title="Découvrir le staff.">Staff</span>
-      <a href="/faq" class="submenu-link" title="Consulter la FAQ de Dùralas">FAQ</a>
-      <a href="/t2427-credits" class="submenu-link" title="Prendre note des crédits de Dùralas">Crédits</a>
-      <span class="submenu-separation"></span>
-      <span class="submenu-link no-link" title="À venir...">Guide des nouveaux</span>
+    <!-- BEGIN switch_user_logged_in -->
+    <div class="navbar_container_block">
+      <div class="navbar_block">
+        <div class="mainmenu"><a id="navMessagerie" href="{U_PRIVATEMSGS}" class="mainmenu-link" title="Consulter le pigeonnier de vos missives privées.">Missives privées</a></div>
+      </div>
     </div>
-
-    <div id="subLeMonde" class="submenu">
-      <a href="/t1139-contexte-de-duralas" class="submenu-link" title="Lire le contexte de Dùralas">Contexte</a>
-      <a href="/t556-bestiaire-de-duralas" class="submenu-link" title="Consulter le bestiaire de Dùralas">Bestiaire</a>
-      <a href="/h9-carte-temporaire" class="submenu-link" title="Afficher la carte de Dùralas">Carte</a>
-      <span class="submenu-separation"></span>
-      <a href="/t7-descriptions-et-explications-des-differentes-races" class="submenu-link" title="Lire les descriptifs des races">Les races</a>
-      <a href="/t2415-les-hybridations" class="submenu-link" title="En apprendre plus sur l'hybridation">Hybridations</a>
-      <span class="submenu-separation"></span>
-      <a href="/t8-descriptions-et-explications-des-classes" class="submenu-link" title="Consulter les descriptifs et explications des classes">Les classes</a>
-      <a href="/t1649-le-systeme-politique-de-duralas-1-2-les-factions" class="submenu-link" title="Découvrir les factions">Les factions</a>
-      <a href="/t1679-le-systeme-politique-de-duralas-2-2-les-guildes" class="submenu-link" title="Découvrir les guildes">Les guildes</a>
-      <span class="submenu-separation"></span>
-      <a href="/t63-liste-des-equipements-disponibles" class="submenu-link" title="Consulter la liste des équipements">Les équipements</a>
-      <a href="/f48-l-hotel-de-vente" class="submenu-link" title="Parcourir les comptoirs commerciaux de l'hôtel des ventes">L'hôtel des ventes</a>
-      <span class="submenu-separation"></span>
-      <a href="/f46-la-bibliotheque" class="submenu-link" title="« Le savoir c'est le pouvoir » ; explorer la bibliothèque">Bibliothèque</a>
-      <a href="/f130-le-phenix-enchaine" class="submenu-link" title="Lire la gazette de Dùralas : Le Phénix Enchaîné">Le Phénix Enchaîné</a>
+    <div class="navbar_container_block">
+      <div class="navbar_block">
+        <div class="mainmenu" data-submenu="#subNotifications"><span class="mainmenu-item">Tour de guet</span> <img src="https://i.ibb.co/F489ccS/tour-de-guet.png" id="hasNotification" style="display: none;"></div>
+      </div>
     </div>
-
-    <div id="subLeJeu" class="submenu">
-      <a href="/t6-reglement-du-rp-des-combats" class="submenu-link" title="Prendre connaissance du règlement RP">Règlement RP</a>
-      <a href="/t97-les-quetes-speciales" class="submenu-link" title="Découvrir les quêtes spéciales">Quêtes spéciales</a>
-      <a href="/t1843-tutoriel-des-metiers" class="submenu-link" title="Jeter un œil au tutoriel des métiers">Les métiers</a>
-      <span class="submenu-separation"></span>
-      <a href="/f119-demandes-de-rp" class="submenu-link" title="Visualiser les sujets des demandes de RP">Demandes de RP</a>
-      <a href="/f118-bureau-des-reclamations" class="submenu-link" title="Visualiser les sujets du bureau des réclamations">Bureau des réclamations</a>
-      <span class="submenu-separation"></span>
-      <a href="/t65-finalisation-de-duralas" class="submenu-link" title="Découvrir les dernières informations de la finalisation de Dùralas">Finalisation</a>
+    <!-- END switch_user_logged_in -->
+    <div class="navbar_container_block">
+      <div class="navbar_block">
+        <div class="mainmenu" data-submenu="#subCommunaute"><span class="mainmenu-item">Communauté</span></div>
+      </div>
     </div>
-
-    <div id="subProfil" class="submenu">
-      <a href="/f2-presentations-des-membres" class="submenu-link" title="Accéder aux fiches de présentation des membres">Fiches</a>
-      <a href="/f67-journal-de-bord" class="submenu-link" title="Consulter les journaux de bord disponibles">Journaux de bord</a>
-      <a href="/f162-genealogie" class="submenu-link" title="Consulter les généalogies disponibles">Généalogies</a>
+    <!-- BEGIN switch_user_logged_out -->
+    <div class="navbar_container_block">
+      <div class="navbar_block">
+        <div class="mainmenu"><a href="{U_REGISTER}" class="mainmenu-link" title="Inscrivez-vous sur Dùralas.">{L_REGISTER}</a></div>
+      </div>
     </div>
-
-    <div id="subNotifications" class="submenu" style="max-width: 200px;">
-      <div id="notification_list"></div>
-      <a href="/profile?mode=editprofile&page_profil=notifications" class="submenu-link" title="Consulter les derniers renseignements et leur définition">Recueil des informations</a>
+    <!-- END switch_user_logged_out -->
+    <div class="navbar_container_block">
+      <div class="navbar_block">
+        <div class="mainmenu"><a href="{U_LOGIN_LOGOUT}" class="mainmenu-link">{L_LOGIN_LOGOUT}</a></div>
+      </div>
     </div>
-
-    <div id="subCommunaute" class="submenu">
-      <a href="{U_MEMBERLIST}" class="submenu-link" title="Afficher la liste des membres">Membres</a>
-      <a href="{U_GROUP_CP}" class="submenu-link" title="Afficher la liste des groupes">Groupes</a>
-      <span class="submenu-separation"></span>
-      <a href="/search" class="submenu-link" title="Réaliser une recherche sur le forum">Rechercher</a>
-      <span class="submenu-separation"></span>
-      <a href="/f124-boite-a-questions-a-idees" class="submenu-link" title="Partager des idées / parcourir les idées">Boîte à idées</a>
-      <a href="/t431-fiche-des-votes-pour-les-top-sites" class="submenu-link" title="Afficher les informations des top-sites">Top-sites</a>
-      <span class="submenu-separation"></span>
-      <a href="/f113-partenaires-demandes-de-partenariat" class="submenu-link" title="Consulter le salon du partenariat">Partenariat</a>
-    </div>
-
   </div>
-   
+
+  <!-- SUBMENUS -->
+  <div id="subPreambule" class="submenu">
+    <a href="/t3-reglement-general-du-forum" class="submenu-link" title="Prendre connaissance du règlement général">Règlement général</a>
+    <a href="/f177-chartes-duralassiennes" class="submenu-link" title="Visualiser les chartes dùralassiennes">Chartes Dùralassiennes</a>
+    <span class="submenu-separation"></span>
+    <span class="submenu-link no-link" title="Découvrir le staff.">Staff</span>
+    <a href="/faq" class="submenu-link" title="Consulter la FAQ de Dùralas">FAQ</a>
+    <a href="/t2427-credits" class="submenu-link" title="Prendre note des crédits de Dùralas">Crédits</a>
+    <span class="submenu-separation"></span>
+    <span class="submenu-link no-link" title="À venir...">Guide des nouveaux</span>
+  </div>
+
+  <div id="subLeMonde" class="submenu">
+    <a href="/t1139-contexte-de-duralas" class="submenu-link" title="Lire le contexte de Dùralas">Contexte</a>
+    <a href="/t556-bestiaire-de-duralas" class="submenu-link" title="Consulter le bestiaire de Dùralas">Bestiaire</a>
+    <a href="/h9-carte-temporaire" class="submenu-link" title="Afficher la carte de Dùralas">Carte</a>
+    <span class="submenu-separation"></span>
+    <a href="/t7-descriptions-et-explications-des-differentes-races" class="submenu-link" title="Lire les descriptifs des races">Les races</a>
+    <a href="/t2415-les-hybridations" class="submenu-link" title="En apprendre plus sur l'hybridation">Hybridations</a>
+    <span class="submenu-separation"></span>
+    <a href="/t8-descriptions-et-explications-des-classes" class="submenu-link" title="Consulter les descriptifs et explications des classes">Les classes</a>
+    <a href="/t1649-le-systeme-politique-de-duralas-1-2-les-factions" class="submenu-link" title="Découvrir les factions">Les factions</a>
+    <a href="/t1679-le-systeme-politique-de-duralas-2-2-les-guildes" class="submenu-link" title="Découvrir les guildes">Les guildes</a>
+    <span class="submenu-separation"></span>
+    <a href="/t63-liste-des-equipements-disponibles" class="submenu-link" title="Consulter la liste des équipements">Les équipements</a>
+    <a href="/f48-l-hotel-de-vente" class="submenu-link" title="Parcourir les comptoirs commerciaux de l'hôtel des ventes">L'hôtel des ventes</a>
+    <span class="submenu-separation"></span>
+    <a href="/f46-la-bibliotheque" class="submenu-link" title="« Le savoir c'est le pouvoir » ; explorer la bibliothèque">Bibliothèque</a>
+    <a href="/f130-le-phenix-enchaine" class="submenu-link" title="Lire la gazette de Dùralas : Le Phénix Enchaîné">Le Phénix Enchaîné</a>
+  </div>
+
+  <div id="subLeJeu" class="submenu">
+    <a href="/t6-reglement-du-rp-des-combats" class="submenu-link" title="Prendre connaissance du règlement RP">Règlement RP</a>
+    <a href="/t97-les-quetes-speciales" class="submenu-link" title="Découvrir les quêtes spéciales">Quêtes spéciales</a>
+    <a href="/t1843-tutoriel-des-metiers" class="submenu-link" title="Jeter un œil au tutoriel des métiers">Les métiers</a>
+    <span class="submenu-separation"></span>
+    <a href="/f119-demandes-de-rp" class="submenu-link" title="Visualiser les sujets des demandes de RP">Demandes de RP</a>
+    <a href="/f118-bureau-des-reclamations" class="submenu-link" title="Visualiser les sujets du bureau des réclamations">Bureau des réclamations</a>
+    <span class="submenu-separation"></span>
+    <a href="/t65-finalisation-de-duralas" class="submenu-link" title="Découvrir les dernières informations de la finalisation de Dùralas">Finalisation</a>
+  </div>
+
+  <div id="subProfil" class="submenu">
+    <a href="/f2-presentations-des-membres" class="submenu-link" title="Accéder aux fiches de présentation des membres">Fiches</a>
+    <a href="/f67-journal-de-bord" class="submenu-link" title="Consulter les journaux de bord disponibles">Journaux de bord</a>
+    <a href="/f162-genealogie" class="submenu-link" title="Consulter les généalogies disponibles">Généalogies</a>
+  </div>
+
+  <div id="subNotifications" class="submenu" style="max-width: 200px;">
+    <div id="notification_list"></div>
+    <a href="/profile?mode=editprofile&page_profil=notifications" class="submenu-link" title="Consulter les derniers renseignements et leur définition">Recueil des informations</a>
+  </div>
+
+  <div id="subCommunaute" class="submenu">
+    <a href="{U_MEMBERLIST}" class="submenu-link" title="Afficher la liste des membres">Membres</a>
+    <a href="{U_GROUP_CP}" class="submenu-link" title="Afficher la liste des groupes">Groupes</a>
+    <span class="submenu-separation"></span>
+    <a href="/search" class="submenu-link" title="Réaliser une recherche sur le forum">Rechercher</a>
+    <span class="submenu-separation"></span>
+    <a href="/f124-boite-a-questions-a-idees" class="submenu-link" title="Partager des idées / parcourir les idées">Boîte à idées</a>
+    <a href="/t431-fiche-des-votes-pour-les-top-sites" class="submenu-link" title="Afficher les informations des top-sites">Top-sites</a>
+    <span class="submenu-separation"></span>
+    <a href="/f113-partenaires-demandes-de-partenariat" class="submenu-link" title="Consulter le salon du partenariat">Partenariat</a>
+  </div>
+
+</div>
+
 <!-- BEGIN hitskin_preview -->
-  <div id="hitskin_preview" style="display: block;">
-      <h1><img src="https://2img.net/i/fa/hitskin/hitskin_logo.png" alt="" /> Hit<em>skin</em>.com</h1>
-      <div class="content">
-        <p>
-            {hitskin_preview.L_THEME_SITE_PREVIEW}
-            <br />
-            <span>{hitskin_preview.U_INSTALL_THEME}<a href="https://{hitskin_preview.U_RETURN_THEME}">{hitskin_preview.L_RETURN_THEME}</a></span>
-        </p>
-      </div>
+<div id="hitskin_preview" style="display: block;">
+  <h1><img src="https://2img.net/i/fa/hitskin/hitskin_logo.png" alt="" /> Hit<em>skin</em>.com</h1>
+  <div class="content">
+    <p>
+      {hitskin_preview.L_THEME_SITE_PREVIEW}
+      <br />
+      <span>{hitskin_preview.U_INSTALL_THEME}<a href="https://{hitskin_preview.U_RETURN_THEME}">{hitskin_preview.L_RETURN_THEME}</a></span>
+    </p>
   </div>
-  <!-- END hitskin_preview -->
-  <!-- BEGIN switch_login_popup -->
-   <div id="login_popup">
-      <table class="forumline" width="{LOGIN_POPUP_WIDTH}" height="{LOGIN_POPUP_HEIGHT}" border="0" cellspacing="1" cellpadding="0">
-         <tr height="25">
-            <td class="catLeft">
-               <span class="genmed module-title">{SITENAME}</span>
-            </td>
-         </tr>
-         <tr height="{LOGIN_POPUP_MSG_HEIGHT}">
-            <td class="row1" align="left" valign="top">
-               <div id="login_popup_buttons">
-                  <form action="{S_LOGIN_ACTION}" method="get">
-                     <input type="submit" class="mainoption" value="{L_LOGIN}" />
-                     <input type="button" class="mainoption" value="{L_REGISTER}" onclick="parent.location='{U_REGISTER}';" />
-                     <input id="login_popup_close" type="button" class="button" value="{L_DONT_DISPLAY_AGAIN}" />
-                  </form>
-               </div>
-               <span class="genmed">{LOGIN_POPUP_MSG}</span>
-            </td>
-         </tr>
+</div>
+<!-- END hitskin_preview -->
+<!-- BEGIN switch_login_popup -->
+<div id="login_popup">
+  <table class="forumline" width="{LOGIN_POPUP_WIDTH}" height="{LOGIN_POPUP_HEIGHT}" border="0" cellspacing="1" cellpadding="0">
+    <tr height="25">
+      <td class="catLeft">
+        <span class="genmed module-title">{SITENAME}</span>
+      </td>
+    </tr>
+    <tr height="{LOGIN_POPUP_MSG_HEIGHT}">
+      <td class="row1" align="left" valign="top">
+        <div id="login_popup_buttons">
+          <form action="{S_LOGIN_ACTION}" method="get">
+            <input type="submit" class="mainoption" value="{L_LOGIN}" />
+            <input type="button" class="mainoption" value="{L_REGISTER}" onclick="parent.location='{U_REGISTER}';" />
+            <input id="login_popup_close" type="button" class="button" value="{L_DONT_DISPLAY_AGAIN}" />
+          </form>
+        </div>
+        <span class="genmed">{LOGIN_POPUP_MSG}</span>
+      </td>
+    </tr>
+  </table>
+</div>
+<!-- END switch_login_popup -->
+
+<a name="top"></a>
+{JAVASCRIPT}
+
+<table class="bodylinewidth" width="{T_BODY_TABLE_WIDTH}" cellspacing="0" cellpadding="10" border="0" align="center">
+  <tr>
+    <td class="bodyline">
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <!-- BEGIN switch_logo_left -->
+          <td><a href="{U_INDEX}"><img src="{LOGO}" id="i_logo" border="0" alt="{L_INDEX}" vspace="1" /></a></td>
+          <!-- END switch_logo_left -->
+          <td align="center" width="100%" valign="middle">
+            <!-- BEGIN switch_logo_center -->
+            <a href="{U_INDEX}"><img src="{LOGO}" id="i_logo" border="0" alt="{L_INDEX}" vspace="1" /></a>
+            <br />
+            <!-- END switch_logo_center -->
+            <div class="maintitle">{MAIN_SITENAME}</div>
+            <br />
+            <span class="gen"><div class="site_description">{SITE_DESCRIPTION}<br />  </div></span>
+          </td>
+          <!-- BEGIN switch_logo_right -->
+          <td><a href="{U_INDEX}"><img src="{LOGO}" id="i_logo" border="0" alt="{L_INDEX}" vspace="1" /></a></td>
+          <!-- END switch_logo_right -->
+        </tr>
       </table>
-   </div>
-   <!-- END switch_login_popup -->
 
-   <a name="top"></a>
-   {JAVASCRIPT}
+      <div style="clear: both;"></div>
 
-   <table class="bodylinewidth" width="{T_BODY_TABLE_WIDTH}" cellspacing="0" cellpadding="10" border="0" align="center">
-      <tr>
-         <td class="bodyline">
-            <table width="100%" cellspacing="0" cellpadding="0" border="0">
-               <tr>
-                  <!-- BEGIN switch_logo_left -->
-                  <td><a href="{U_INDEX}"><img src="{LOGO}" id="i_logo" border="0" alt="{L_INDEX}" vspace="1" /></a></td>
-                  <!-- END switch_logo_left -->
-                  <td align="center" width="100%" valign="middle">
-                     <!-- BEGIN switch_logo_center -->
-                     <a href="{U_INDEX}"><img src="{LOGO}" id="i_logo" border="0" alt="{L_INDEX}" vspace="1" /></a>
-                     <br />
-                     <!-- END switch_logo_center -->
-                     <div class="maintitle">{MAIN_SITENAME}</div>
-                     <br />
-                     <span class="gen"><div class="site_description">{SITE_DESCRIPTION}<br />  </div></span>
-                  </td>
-                  <!-- BEGIN switch_logo_right -->
-                  <td><a href="{U_INDEX}"><img src="{LOGO}" id="i_logo" border="0" alt="{L_INDEX}" vspace="1" /></a></td>
-                  <!-- END switch_logo_right -->
-               </tr>
-            </table>
+      <!-- BEGIN switch_ticker_new -->
+      <div id="fa_ticker_block" style="margin-top:4px;margin-bottom:4px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="forumline">
+          <tr>
+            <td align="left" class="row1">
+              <div id="fa_ticker_container">
+                <ul id="fa_ticker_content" class="jcarousel-skin-tango" style="display:none;">
+                  <!-- BEGIN ticker_row -->
+                  <li>{switch_ticker.ticker_row.ELEMENT}</li>
+                  <!-- END ticker_row -->
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- END switch_ticker_new -->
 
-            <div style="clear: both;"></div>
+      <!-- BEGIN switch_ticker -->
+      <div id="fa_ticker_block" style="margin-top:4px;margin-bottom:4px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="forumline">
+          <tr>
+            <td align="left" class="row1">
+              <div id="fa_ticker_container">
+                <div id="fa_ticker" style="height:{switch_ticker.HEIGHT}px;">
+                  <div class="fa_ticker_content">
+                    <!-- BEGIN ticker_row -->
+                    <div>{switch_ticker.ticker_row.ELEMENT}</div>
+                    <!-- END ticker_row -->
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- END switch_ticker -->
 
-            <!-- BEGIN switch_ticker_new -->
-            <div id="fa_ticker_block" style="margin-top:4px;margin-bottom:4px;">
-               <table width="100%" border="0" cellspacing="0" cellpadding="0" class="forumline">
-                  <tr>
-                     <td align="left" class="row1">
-                        <div id="fa_ticker_container">
-                           <ul id="fa_ticker_content" class="jcarousel-skin-tango" style="display:none;">
-                              <!-- BEGIN ticker_row -->
-                              <li>{switch_ticker.ticker_row.ELEMENT}</li>
-                              <!-- END ticker_row -->
-                           </ul>
-                        </div>
-                     </td>
-                  </tr>
-               </table>
-            </div>
-            <!-- END switch_ticker_new -->
-
-            <!-- BEGIN switch_ticker -->
-            <div id="fa_ticker_block" style="margin-top:4px;margin-bottom:4px;">
-               <table width="100%" border="0" cellspacing="0" cellpadding="0" class="forumline">
-                  <tr>
-                     <td align="left" class="row1">
-                        <div id="fa_ticker_container">
-                           <div id="fa_ticker" style="height:{switch_ticker.HEIGHT}px;">
-                              <div class="fa_ticker_content">
-                                 <!-- BEGIN ticker_row -->
-                                 <div>{switch_ticker.ticker_row.ELEMENT}</div>
-                                 <!-- END ticker_row -->
-                              </div>
-                           </div>
-                        </div>
-                     </td>
-                  </tr>
-               </table>
-            </div>
-            <!-- END switch_ticker -->
-
-            <div id="page-body">
-               <div id="{ID_CONTENT_CONTAINER}"{CLASS_CONTENT_CONTAINER}>
-                  <table cellpadding="0" cellspacing="0" width="100%" class="three-col">
-                     <tbody>
-                        <tr>
-                           <td valign="top" width="{C1SIZE}">
-                              <div id="{ID_LEFT}">
-                                 <!-- BEGIN giefmod_index1 -->
-                                 {giefmod_index1.MODVAR}
-                                    <!-- BEGIN saut -->
-                                    <div style="height:{SPACE_ROW}px"></div>
-                                    <!-- END saut -->
-                                 <!-- END giefmod_index1 -->
-                              </div>
-                           </td>
-                           <td valign="top" width="100%">
-<!-- BEGIN html_validation -->
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-            </div>
-         </td>
-      </tr>
-   </table>
+      <div id="page-body">
+        <div id="{ID_CONTENT_CONTAINER}"{CLASS_CONTENT_CONTAINER}>
+          <table cellpadding="0" cellspacing="0" width="100%" class="three-col">
+            <tbody>
+            <tr>
+              <td valign="top" width="{C1SIZE}">
+                <div id="{ID_LEFT}">
+                  <!-- BEGIN giefmod_index1 -->
+                  {giefmod_index1.MODVAR}
+                  <!-- BEGIN saut -->
+                  <div style="height:{SPACE_ROW}px"></div>
+                  <!-- END saut -->
+                  <!-- END giefmod_index1 -->
+                </div>
+              </td>
+              <td valign="top" width="100%">
+                <!-- BEGIN html_validation -->
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
 </body>
 </html>
 <!-- END html_validation -->
