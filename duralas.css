@@ -3,414 +3,461 @@
 
 /********************* Correction page d'inscription *********************/
 #password_reg {
-  float: none;
+    float: none;
 }
 #cont_pwd {
-  display: inline-block;
-  float: none;
+    display: inline-block;
+    float: none;
 }
 
 /**************************************************************************Design du fond**************************************************************************/
 html {
-  background-color: #000;
+    background-color: #000;
 }
 body {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  overflow-y:scroll !important;
-  /*width: 100%;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-y:scroll !important;
+    /*width: 100%;*/
 }
 
 .site_description{
-  padding-top:50px;
+    padding-top:50px;
 }
 
 .table {
-  display: table;
+    display: table;
 }
 .table-row {
-  display: table-row;
+    display: table-row;
 }
 .table-cell {
-  display: table-cell;
+    display: table-cell;
 }
 
 quote {
-  display: block;
-  margin: auto;
-  text-align: center;
-  width: 90%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 90%;
 }
 quote small {
-  border-top: 1px dashed;
-  display: block;
-  margin: 7px auto 0;
-  padding-top: 5px;
-  text-align: right;
-  width: 80%;
-}
-
-.pointer {
-  cursor: pointer;
+    border-top: 1px dashed;
+    display: block;
+    margin: 7px auto 0;
+    padding-top: 5px;
+    text-align: right;
+    width: 80%;
 }
 
 /*header*/
 #i_bg {
-  position: absolute;
-  top: 0;
-  left:0;
-  right:0;
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
 }
 
 /*logo*/
 #i_logo {
-  z-index: 900;
-  position:relative;
+    z-index: 900;
+    position:relative;
 }
 
 
 /*corps central*/
 .bodylinewidth{
-  box-shadow: 0 0 20px #000;
-  padding-bottom:0;
-  margin-top:-750px;
+    box-shadow: 0 0 20px #000;
+    padding-bottom:0;
+    margin-top:-750px;
 }
 
 .bodyline {
-  background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Liste des actions (notamment icones) */
 .top_action_list {
-  margin: 15px 0 5px;
+    margin: 15px 0 5px;
 }
 
 /*categories*/
 .forumline{
-  background-image: url("https://i.ibb.co/qDNZz1z/forumline-texture.jpg");
-  padding: 3px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px black;
-  border:3px solid #000;
+    background-image: url("https://i.ibb.co/qDNZz1z/forumline-texture.jpg");
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px black;
+    border:3px solid #000;
 }
 .forumline td.catLeft {
-  background-color: unset;
+    background-color: unset;
 }
 td.catTop,
 td.catRight,
 td.catBottom,
 td.catLeft {
-  border-width: 0 0 0 0;
+    border-width: 0 0 0 0;
 }
 .catBottom {
-  background-color: transparent !important;
+    background-color: transparent !important;
 }
 .secondarytitle,
 .catHead,
 .forumline th {
-  background-color: unset !important;
-  border: 0 !important;
+    background-color: unset !important;
+    border: 0 !important;
 }
 
 /* Catégories / Forums */
 .drls_categ {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.25em 1em 0 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25em 1em 0 0;
 }
 
 .drls_categ_panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 700px;
 }
 .drls_categ_panel_header {
-  align-items: flex-end;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 0.25em;
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.25em;
 }
 .drls_categ_panel_header_stats {
-  font-size: 0.6em;
+    font-size: 0.6em;
 }
 .drls_categ_panel_content {
-  display: flex;
-  flex-direction: column;
-  font-size: smaller;
-  height: 100%;
-  justify-content: space-between;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: smaller;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
 }
 .drls_categ_panel_content_sublinks {
-  background-image: url("https://i.ibb.co/qDNZz1z/forumline-texture.jpg");
-  border-top-right-radius: 5px;
-  margin-top: auto;
-  max-width: 684px;
-  opacity: 0.8;
-  padding: 0.25em 8px;
-  width: max-content;
+    background-image: url("https://i.ibb.co/qDNZz1z/forumline-texture.jpg");
+    border-top-right-radius: 5px;
+    margin-top: auto;
+    max-width: 684px;
+    opacity: 0.8;
+    padding: 0.25em 8px;
+    width: max-content;
 }
 .drls_categ_panel_content_sublinks:empty {
-  padding: unset;
+    padding: unset;
 }
 .zone-banner + .drls_categ_panel_content_sublinks {
-  bottom: 0;
-  left: 0;
-  position: absolute;
+    bottom: 0;
+    left: 0;
+    position: absolute;
 }
 
 .drls_categ_last_activity {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding-left: 0.5em;
-  text-align: center;
-  width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 0.5em;
+    text-align: center;
+    width: 15%;
 }
 .drls_categ_last_activity_desc {
-  font-size: 0.6em;
+    font-size: 0.6em;
 }
 .drls_categ_last_activity_image img {
-  border-radius: 5px;
-  height: 72px;
-  width: 45px;
+    border-radius: 5px;
+    height: 72px;
+    width: 45px;
 }
 /* ----- Titre du RP du dernier post ----- */
 .drls_categ_last_activity_desc > span > a:first-of-type {
-  font-size: 1.25em;
+    font-size: 1.25em;
+}
+
+/* ----- Zones : bannière et description ----- */
+.zone-desc {
+    font-size: 0.85em;
+    height: calc(100% - 3.5em);
+    opacity: 0;
+    overflow-y: auto;
+    position: absolute;
+    text-align: justify;
+    top: 1.5em;
+    width: 100%;
+}
+.zone-desc p {
+    margin: 0.5em 0.5em 0;
+    padding: 0 12.5%;
+}
+.zone-desc > p:first-of-type {
+    margin-top: 0.75em;
+}
+.zone-desc > p:last-of-type {
+    margin-bottom: 0.75em;
+}
+.zone-banner.has_desc:hover .zone-desc {
+    opacity: 1;
+    z-index: 1;
+}
+.zone-banner.has_desc:hover img {
+    opacity: 0.20;
+}
+.zone-banner.has_desc .zone-desc,
+.zone-banner.has_desc:hover .zone-desc,
+.zone-banner.has_desc img,
+.zone-banner.has_desc:hover img {
+    transition: 1.5s;
 }
 
 
 /* Qui est en ligne ? */
 .wio {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 .wio .catHead {
-  text-align: center;
+    text-align: center;
 }
 .wio .catHead,
 .wio .cattitle {
-  font-size: 22px;
-  text-align: center;
+    font-size: 22px;
+    text-align: center;
 }
 .wio .row1 {
-  background-image: url("https://i.ibb.co/rsPnGGR/wio-content-texture.jpg");
+    background-image: url("https://i.ibb.co/rsPnGGR/wio-content-texture.jpg");
 }
 
 .forumline a.forumlink {
-  font-size: 16px;
-  letter-spacing: 1px;
+    font-size: 16px;
+    letter-spacing: 1px;
 }
 
 /* Subrillance lors du survol */
 .wio:hover .cattitle,
 .forumline tr:hover a.forumlink {
-  color: #FFF;
-  letter-spacing: 0;
-  text-shadow: 1px 1px 10px #FFF;
+    color: #FFF;
+    letter-spacing: 0;
+    text-shadow: 1px 1px 10px #FFF;
 }
 
 
 /*barre de navigation*/
 .navig {
-  background-image: url("https://i.ibb.co/Rp7B0Xy/navbar-texture.jpg");
-  box-shadow: inset 0 -4px 5px -4px #422a12;
-  font-family: 'IM Fell English SC', serif;
-  left: 0;
-  right: 0;
-  top: 0;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  padding: 10px 0 6px 0;
-  opacity: 0.95;
+    background-image: url("https://i.ibb.co/Rp7B0Xy/navbar-texture.jpg");
+    box-shadow: inset 0 -4px 5px -4px #422a12;
+    font-family: 'IM Fell English SC', serif;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 10px 0 6px 0;
+    opacity: 0.95;
 }
 
 .navbar_expanding {
-  display: table;
+    display: table;
 }
 .navbar_container_block {
-  display: table-cell;
+    display: table-cell;
 }
 .navbar_container_block + .navbar_container_block {
-  padding-left: 25px;
+    padding-left: 25px;
 }
 .navbar_block {
-  display: table;
+    display: table;
 }
 .mainmenu {
-  cursor: pointer;
-  display: table-row;
+    cursor: pointer;
+    display: table-row;
 }
 .submenu {
-  background-color: #1A1209;
-  bottom: unset;
-  display: none;
-  left: unset;
-  padding: 5px 10px;
-  position: fixed;
-  right: unset;
-  text-align: center;
-  top: unset;
+    background-color: #1A1209;
+    bottom: unset;
+    display: none;
+    left: unset;
+    padding: 5px 10px;
+    position: fixed;
+    right: unset;
+    text-align: center;
+    top: unset;
 }
 
 .mainmenu-link,
 .mainmenu-item {
-  color: #f7e9c9;
-  font-size: 20px;
-  text-shadow :0 0 3px #000;
+    color: #f7e9c9;
+    font-size: 20px;
+    text-shadow :0 0 3px #000;
 }
 .mainmenu-link:focus,
 .mainmenu-link:hover,
 .notification.unread {
-  color: #FFF;
-  text-shadow: 0 0 3px #FFF;
+    color: #FFF;
+    text-shadow: 0 0 3px #FFF;
 }
 .notification.unread:focus,
 .notification.unread:hover {
-  color: inherit;
-  text-shadow: none;
+    color: inherit;
+    text-shadow: none;
 }
 #notification_list .content {
-  align-content: space-between;
-  align-items: center;
-  display: flex;
+    align-content: space-between;
+    align-items: center;
+    display: flex;
 }
 #notification_list .deleter {
-  height: 1em;
+    height: 1em;
 }
 #hasNotification {
-  height: 2em;
-  margin-left: 1em;
-  vertical-align: text-bottom;
+    height: 2em;
+    margin-left: 1em;
+    vertical-align: text-bottom;
 }
 
 .navbar_expanding a.mainmenu-link.nouveau_message {
-  color: #F00;
+    color: #F00;
 }
 .no-link {
-  cursor: not-allowed;
+    cursor: not-allowed;
 }
 
 .submenu > a,
 .submenu > span {
-  display: block;
+    display: block;
 }
 .submenu-link + .submenu-link {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 .submenu-separation {
-  border-bottom: 1px solid #f7e9c9a0;
-  margin: 10px auto;
-  width: 80%;
+    border-bottom: 1px solid #f7e9c9a0;
+    margin: 10px auto;
+    width: 80%;
+}
+
+@media screen and (max-width: 1275px) {
+    .navbar_container_block + .navbar_container_block {
+        padding-left: 15px;
+    }
+    .mainmenu-link,
+    .mainmenu-item {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .mainmenu-link,
+    .mainmenu-item {
+        font-size: 16px;
+    }
 }
 
 
 /*corps du post*/
 .postbody {
-  text-align : justify;
-  padding :10px;
+    text-align : justify;
+    padding :10px;
 }
 
 /*encadre dernier post*/
 .dernierpost {
-  border-left:5px solid #1a1209;
-  border-right:50px solid #1a1209;
-  border-top:1px solid #1a1209;
-  border-bottom:1px solid #1a1209;
-  margin-top:0;
-  margin-bottom:-30px;
-  margin-right:10px;
-  padding: 5px;
-  padding-top:15px;
-  height:50px;
-  width:150px;
+    border-left:5px solid #1a1209;
+    border-right:50px solid #1a1209;
+    border-top:1px solid #1a1209;
+    border-bottom:1px solid #1a1209;
+    margin-top:0;
+    margin-bottom:-30px;
+    margin-right:10px;
+    padding: 5px;
+    padding-top:15px;
+    height:50px;
+    width:150px;
 }
 
 /*compteur messages et sujets*/
 .messagesetposts {
-  color: #1a1209;
-  margin-left:-60px;
+    color: #1a1209;
+    margin-left:-60px;
 }
 
 .messagesetposts_dernierpost {
-  margin-top:-20px;
+    margin-top:-20px;
 }
 
 /*mini avatars*/
 .lastpost-avatar {
-  margin-top:-42px;
-  margin-left:165px;
+    margin-top:-42px;
+    margin-left:165px;
 }
 
 .lastpost-avatar img {
-  width: 45px;
-  height: 72px;
+    width: 45px;
+    height: 72px;
 }
 
 
 /*titre de categorie*/
 .titre_categorie{
-  margin-top:-65px;
+    margin-top:-65px;
 }
 
 /*liens de categories en dessous de descr*/
 .liens_categories {
-  width:580px;
-  margin-bottom:10px;
+    width:580px;
+    margin-bottom:10px;
 }
 /* o Images des nouveaux messages*/
 .liens_categories > a > img {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 /*zone description des categories*/
 .descr {
-  margin-top:-75px;
-  padding-bottom:10px;
-  height:80px;
-  width :600px;
+    margin-top:-75px;
+    padding-bottom:10px;
+    height:80px;
+    width :600px;
 }
 
 /* Partenaires */
 .partenaire_logo {
-  height: 35px;
-  opacity: 0.2;
+    height: 35px;
+    opacity: 0.2;
 }
 .partenaire_logo:focus,
 .partenaire_logo:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 /* Liens du footer */
 #page-footer .gen a {
-  color: #664c32;
-  font-size: 12px;
+    color: #664c32;
+    font-size: 12px;
 }
 #page-footer .gen a:focus,
 #page-footer .gen a:hover {
-  color: #FFF;
+    color: #FFF;
 }
 
 a[title="WebAnalytics"] {
-  display: none;
+    display: none;
 }
 
 
 /*intitule chatbox*/
 #frame_chatbox {
-  font-family: 'Philosopher';
+    font-family: 'Philosopher';
 }
 
 #chatbox_header .cattitle strong {
-  font-size: 0;
+    font-size: 0;
 }
 /*Titre Personnalisé*/
 #chatbox_header .cattitle:before {
-  content: "Bienvenue à la Taverne de Dùralas";
-  font-family: 'Philosopher';
-  font-size: 15px;
+    content: "Bienvenue à la Taverne de Dùralas";
+    font-family: 'Philosopher';
+    font-size: 15px;
 }
 
 /*#chatbox_header .catBottom {
@@ -419,29 +466,29 @@ a[title="WebAnalytics"] {
 
 /* Message de connexion CB */
 .msg span[style*="green"] strong {
-  color: #77b300; /* couleur */
-  font-variant: small-caps; /* petites majuscules */
+    color: #77b300; /* couleur */
+    font-variant: small-caps; /* petites majuscules */
 }
 
 /* Message de déconnexion CB */
 .msg span[style*="red"] strong {
-  color: #7d738c; /* couleur */
-  font-variant: small-caps; /* petites majuscules */
+    color: #7d738c; /* couleur */
+    font-variant: small-caps; /* petites majuscules */
 }
 
 body.chatbox {
-  overflow-y: unset !important;
+    overflow-y: unset !important;
 }
 
 /* Césure des mots dans la CB pour ne pas avoir une barre de navigation horizontale */
 #chatbox {
-  word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 /* */
 .erreur {
-  border-bottom: 1px solid #D00;
-  color: #D00;
+    border-bottom: 1px solid #D00;
+    color: #D00;
 }
 
 /************************************************************************Mise en page**************************************************************************/
@@ -451,49 +498,49 @@ body.chatbox {
 .postbody a { text-shadow : 0 0 3px #A4BC83}
 
 a {
-  text-decoration: none;
-  -moz-transition:all 0.5s; /* Mozilla Firefox */
-  -webkit-transition:all 0.5s; /* Safari et Google Chrome */
-  -o-transition:all 0.5s; /* Opera */
-  transition:all 0.5s;
+    text-decoration: none;
+    -moz-transition:all 0.5s; /* Mozilla Firefox */
+    -webkit-transition:all 0.5s; /* Safari et Google Chrome */
+    -o-transition:all 0.5s; /* Opera */
+    transition:all 0.5s;
 }
 
 a:hover {
-  text-decoration: none !important;
-  text-transformation: none !important;
-  color:#FFF;
+    text-decoration: none !important;
+    text-transformation: none !important;
+    color:#FFF;
 }
 
 a:link {text-decoration: none;
-  -moz-transition:all 0.5s; /* Mozilla Firefox */
-  -webkit-transition:all 0.5s; /* Safari et Google Chrome */
-  -o-transition:all 0.5s; /* Opera */
-  transition:all 0.5s;}
+    -moz-transition:all 0.5s; /* Mozilla Firefox */
+    -webkit-transition:all 0.5s; /* Safari et Google Chrome */
+    -o-transition:all 0.5s; /* Opera */
+    transition:all 0.5s;}
 
 a:link:hover {
-  text-decoration: none !important;
-  text-transformation: none !important;
-  color:#FFF;
+    text-decoration: none !important;
+    text-transformation: none !important;
+    color:#FFF;
 }
 
 url {
-  text-decoration: none;
-  text-transformation:none;
+    text-decoration: none;
+    text-transformation:none;
 }
 
 a.forumlink {
-  margin-top:-25px;}
+    margin-top:-25px;}
 
 
 a.forumlink{
-  -moz-transition:all 0.5s; /* Mozilla Firefox */
-  -webkit-transition:all 0.5s; /* Safari et Google Chrome */
-  -o-transition:all 0.5s; /* Opera */
-  transition:all 0.5s;
+    -moz-transition:all 0.5s; /* Mozilla Firefox */
+    -webkit-transition:all 0.5s; /* Safari et Google Chrome */
+    -o-transition:all 0.5s; /* Opera */
+    transition:all 0.5s;
 }
 
 a.forumlink:hover{
-  color:#FFF;
+    color:#FFF;
 }
 
 /*barre de separation hr*/
@@ -501,225 +548,242 @@ hr {  border:1px solid #A4BC83; }
 
 /*code*/
 .code {
-  border-radius: 0 20px 0 20px;
-  color:#B0C4DE;
-  padding:15px;
-  background:url('http://html-color.org/191D0F.jpg');
+    border-radius: 0 20px 0 20px;
+    color:#B0C4DE;
+    padding:15px;
+    background:url('http://html-color.org/191D0F.jpg');
 }
 
 /*selecion code*/
 .selectCode {
-  float:right;
-  cursor:pointer;
-  font-size:12px;
-  margin-right:25px;
-  color: #B0C4DE;}
+    float:right;
+    cursor:pointer;
+    font-size:12px;
+    margin-right:25px;
+    color: #B0C4DE;}
 div.cont_code { clear: right; }
 
 /*citations*/
 .quote{
-  border-radius: 0 20px 0 20px;
-  color:#B0C4DE;
-  padding:15px;
-  background:url('https://2img.net/r/hpimg11/pics/4796325395.jpg');
+    border-radius: 0 20px 0 20px;
+    color:#B0C4DE;
+    padding:15px;
+    background:url('https://www.colorhexa.com/222816.png');
 }
 
 /* boutons haut/bas */
 .navTopBottom {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 /* Séparateur de signature */
 .signature_div center:first-of-type > img {
-  filter: brightness(50%);
+    filter: brightness(50%);
 }
 
 /************************************************************************************Mise en page********************************************************************/
 .titre {
-  background:#0f1400;text-align:center; font-size:20px; text-shadow:1px 1px 3px #000;padding:10px;
+    background:#0f1400;text-align:center; font-size:20px; text-shadow:1px 1px 3px #000;padding:10px;
 }
 .titrerace {
-  background:#12150e;text-align:center; font-size:20px; text-shadow:1px 1px 3px #000;padding:5px;
+    background:#12150e;text-align:center; font-size:20px; text-shadow:1px 1px 3px #000;padding:5px;
 }
 .titre-subcat {
-  background-color: #12150E;
-  font-size: 16px;
-  margin: 15px 0 5px;
-  padding: 5px;
+    background-color: #12150E;
+    font-size: 16px;
+    margin: 15px 0 5px;
+    padding: 5px;
 }
 
 .titre2{
-  font-size:16px;font-variant:small-caps;background:url('https://i.servimg.com/u/f37/15/33/58/83/textur10.png'); padding:5px;
+    font-size:16px;font-variant:small-caps;background:url('https://i.servimg.com/u/f37/15/33/58/83/textur10.png'); padding:5px;
 }
 
 .titre3{
-  font-size:14px;text-decoration:underline;
+    font-size:14px;text-decoration:underline;
 }
 
 
 .encadre{
-  background:#0f1400;padding:10px;
+    background:#0f1400;padding:10px;
 }
 
 .corps{
-  padding-left:15px;padding-right:15px;
+    padding-left:15px;padding-right:15px;
 }
 
 /* Titre des catégories */
 th.secondarytitle h2,
 .cattitle {
-  font-size: 20px;
-  font-variant: small-caps;
+    font-size: 20px;
+    font-variant: small-caps;
 }
 
 /* Titre des sujets */
 a.topictitle {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 /**************************************************** RÈGLEMENTS ****************************************************/
 /********************* Général *********************/
 .rules .rules-categ-underline {
-  border-color: #01a2bb94;
+    border-color: #01a2bb94;
 }
 .rules .rule-frame {
-  background-color: #1B1714;
-  border-color: #002a3c75;
+    background-color: #1B1714;
+    border-color: #002a3c75;
 }
 .rule-enum .rule-enum-subcontent,
 .quest-notum-enum-subitem {
-  padding: 0 22px;
+    padding: 0 22px;
 }
 .rule-enum-subcontent:before,
 .quest-notum-enum-subitem:before {
-  color: #FFF;
-  content: "o";
-  padding-right: 7px;
+    color: #FFF;
+    content: "o";
+    padding-right: 7px;
 }
 .rules .rule-scope {
-  background-color: #716a5987;
+    background-color: #716a5987;
 }
 .rule-scope > ul {
-  padding-left: 10px;
+    padding-left: 10px;
 }
 .rule-scope-details {
-  margin: auto;
-  width: 90%;
+    margin: auto;
+    width: 90%;
 }
 .rules .reward-inter {
-  text-align: left;
+    text-align: left;
 }
 
 .rule-em {
-  color: #FFF;
-  font-size: 10px;
-  font-style: italic;
+    color: #FFF;
+    font-size: 10px;
+    font-style: italic;
 }
 .rule-example {
-  color: #ACACAC;
-  font-size: 12px;
+    color: #ACACAC;
+    font-size: 12px;
 }
 
 /*********** Nordiens ***********/
 .rules-nord .rule-frame {
-  background-color: #499ab163;
+    background-color: #499ab163;
 }
 .rules-nord .rule-scope {
-  background-color: #648e9a5c;
+    background-color: #648e9a5c;
 }
 
 /*********** Djöllfulins ***********/
 .rules-djöllfulin .rule-frame {
-  background-color: #1919198c;
-  border-color: #6100008c;
+    background-color: #1919198c;
+    border-color: #6100008c;
 }
 .rules-djöllfulin .rule-title {
-  border-color: #6100008c;
+    border-color: #6100008c;
 }
 .rules-djöllfulin .rule-scope {
-  /*background-color: #648e9a5c;*/
+    /*background-color: #648e9a5c;*/
+}
+
+/*********** Contact ***********/
+.contact .rules-categ-underline {
+    border-color: #b75b00;
 }
 
 /********************* Description des races *********************/
 .race-description-image {
-  border:1px solid;
-  float:left;
-  margin:10px;
+    border:1px solid;
+    float:left;
+    margin:10px;
 }
 .race-description-contenu {
-  min-height: 190px;
-  margin-bottom: 10px;
+    min-height: 190px;
+    margin-bottom: 10px;
 }
 
 /********************* Tableaux pour la section des Règles *********************/
 .table-rules {
-  text-align: center;
+    text-align: center;
 }
 .table-rules th,
 .table-rules td {
-  padding: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #fff;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
 }
 .tutoriel-table-head {
-  text-align: center;
+    text-align: center;
 }
 
 /********************* Bestiaire *********************/
 .bestiaire-nom {
-  color: #ddd;
-  font-size: 15px;
-  font-weight: 700;
-  text-shadow: 0 0 6px #aaaaaa;
+    color: #ddd;
+    font-size: 15px;
+    font-weight: 700;
+    text-shadow: 0 0 6px #aaaaaa;
 }
 [class^="bestiaire-nom "] {
-  text-shadow: none;
+    text-shadow: none;
 }
 .bestiaire .caractéristique,
 .bestiaire-caractéristique,
 .bestiaire-champ,
 .bestiaire .champ {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 .bestiaire-séparation {
-  border-bottom: 1px solid;
-  height: 15px;
-  margin: auto;
-  width: 50px;
+    border-bottom: 1px solid;
+    height: 15px;
+    margin: auto;
+    width: 50px;
 }
 
+.capacité_spéciale_ligne {
+    list-style: none;
+    margin: 0 1em;
+}
+.capacité_spéciale.annulée,
 .capacité_spéciale.bloquée,
 .capacité_spéciale.blocage,
+.capacité_spéciale.dérobade,
+.capacité_spéciale.exorcisme,
 .capacité_spéciale.utilisée,
 .capacité_spéciale.non_réalisable,
 .capacité_spéciale.inactive,
 .capacité_spéciale.en_recharge,
 .lame.utilisée {
-  color: #C7C4BB;
-  font-size: smaller;
-  font-style: italic;
-  transition: 1s;
+    color: #C7C4BB;
+    font-size: smaller;
+    font-style: italic;
+    transition: 1s;
 }
+.capacité_spéciale.annulée,
 .capacité_spéciale.bloquée,
 .capacité_spéciale.utilisée,
 .capacité_spéciale.non_réalisable,
 .lame.utilisée {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 .capacité_spéciale.blocage,
+.capacité_spéciale.dérobade,
+.capacité_spéciale.exorcisme,
 .capacité_spéciale.en_recharge {
-  font-size: inherit;
+    font-size: inherit;
 }
+.capacité_spéciale.annulée:hover,
 .capacité_spéciale.bloquée:hover,
 .capacité_spéciale.utilisée:hover,
 .capacité_spéciale.non_réalisable:hover,
 .lame.utilisée:hover {
-  font-size: inherit;
-  font-style: initial;
-  text-decoration: none;
-  transition: 1s;
+    font-size: inherit;
+    font-style: initial;
+    text-decoration: none;
+    transition: 1s;
 }
+.capacité_spéciale.annulée::after,
 .capacité_spéciale.bloquée::after,
 .capacité_spéciale.utilisée::after,
 .capacité_spéciale.non_réalisable::after,
@@ -728,936 +792,1085 @@ a.topictitle {
 .capacité_spéciale.inactive::after,
 .lame.active::after,
 .lame.utilisée::after {
-  font-weight: 700;
-  padding-left: 5px;
+    font-weight: 700;
+    padding-left: 5px;
 }
+.capacité_spéciale.annulée::after,
 .capacité_spéciale.bloquée::after,
 .capacité_spéciale.utilisée::after,
 .capacité_spéciale.non_réalisable::after,
 .lame.utilisée::after {
-  color: #DBCCA8;
-  display: inline-block;
-  font-style: initial;
+    color: #DBCCA8;
+    display: inline-block;
+    font-style: initial;
 }
 .capacité_spéciale.active::after,
 .lame.active::after {
-  color: #4A1;
-  content: "[Active]";
+    color: #4A1;
+    content: "[Active]";
 }
 .capacité_spéciale.inactive::after,
 .lame.inactive::after {
-  color: #A11;
-  content: "[Inactive]";
+    color: #A11;
+    content: "[Inactive]";
+}
+.capacité_spéciale.annulée::after {
+    content: "{Annulée}";
 }
 .capacité_spéciale.bloquée::after {
-  content: "{Bloquée}";
+    content: "{Bloquée}";
 }
 .capacité_spéciale.blocage .blocage {
-  color: #AB4034;
+    color: #AB4034;
 }
 .capacité_spéciale.blocage .blocage::before {
-  content: "[Bloquée jusqu'au tour";
-  padding-right: 3px;
+    content: "[Bloquée jusqu'au tour";
+    padding-right: 3px;
 }
 .capacité_spéciale.blocage .blocage::after {
-  content: "]";
+    content: "]";
+}
+.capacité_spéciale.dérobade .dérobade {
+    color: #9e8144;
+}
+.capacité_spéciale.dérobade .dérobade::before {
+    content: "[Dérobée par";
+    padding-right: 3px;
+}
+.capacité_spéciale.dérobade .dérobade::after {
+    content: "]";
+}
+.capacité_spéciale.exorcisme .exorcisme {
+    color: #7d48cd;
+}
+.capacité_spéciale.exorcisme .exorcisme::before {
+    content: "[Exorcisée par";
+    padding-right: 3px;
+}
+.capacité_spéciale.exorcisme .exorcisme::after {
+    content: "]";
 }
 .capacité_spéciale.utilisée::after,
 .lame.utilisée::after {
-  content: "{Utilisée}";
+    content: "{Utilisée}";
 }
 .capacité_spéciale.non_réalisable::after {
-  content: "[Conditions non remplies]";
+    content: "[Conditions non remplies]";
 }
 .capacité_spéciale.imblocable::after {
-  color: #49B;
-  content: "[Imblocable]";
+    color: #49B;
+    content: "[Imblocable]";
 }
 .capacité_spéciale.deck + .capacité_spéciale.deck,
 .capacité_spéciale.partition + .capacité_spéciale.partition {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 .capacité_spéciale .recharge {
-  color: #E0993C;
+    color: #E0993C;
 }
 .capacité_spéciale .recharge::before {
-  content: "[Effet ré-activable tous les";
-  padding-right: 3px;
+    content: "[Effet ré-activable tous les";
+    padding-right: 3px;
 }
 .capacité_spéciale .recharge::after {
-  content: "tours]";
-  padding-left: 3px;
+    content: "tours]";
+    padding-left: 3px;
 }
 .capacité_spéciale > .en_recharge {
-  color: #D3733F;
+    color: #D3733F;
 }
 .capacité_spéciale > .en_recharge::before {
-  content: "[Effet ré-activable au tour";
-  padding-right: 3px;
+    content: "[Effet ré-activable au tour";
+    padding-right: 3px;
 }
 .capacité_spéciale > .en_recharge::after {
-  content: "]";
+    content: "]";
 }
 .capacité_spéciale.en_recharge > .recharge,
 .capacité_spéciale.bloquée > .recharge,
 .capacité_spéciale.non_réalisable > .recharge {
-  display: none;
+    display: none;
 }
 .capacité-spéciale:not(.blocage) > .blocage,
 .capacité_spéciale:not(.en_recharge) > .en_recharge {
-  display: none;
+    display: none;
 }
 .lame:not(.active) {
-  display: none;
+    display: none;
 }
 .deck > .lame,
 .deck > .capacité_spéciale {
-  margin-left: 7px;
+    margin-left: 7px;
 }
 .lame::before {
-  padding-right: 5px;
+    padding-right: 5px;
 }
 .lame.cœur::before,
 .lame.coeur::before {
-  content: "♥";
+    content: "♥";
 }
 .lame.carreau::before {
-  content: "♦";
+    content: "♦";
 }
 .lame.trèfle::before {
-  content: "♣";
+    content: "♣";
 }
 .lame.piques::before {
-  content: "♠";
+    content: "♠";
 }
 .lame.royal::before {
-  content: "Royal";
+    content: "Royal";
 }
 
 /********************* Combat *********************/
 .combat-séparation {
-  border-bottom: 1px solid #CDCDCD;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0 auto 18px;
-  width: 200px;
+    border-bottom: 1px solid #CDCDCD;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto 18px;
+    width: 200px;
 }
 .combat-vaincu {
-  font-style: italic;
-  text-decoration: line-through;
+    font-style: italic;
+    text-decoration: line-through;
 }
 .combat-vaincu span:first-child,
 .combat-vaincu strong:first-child {
-  text-decoration: none;
+    text-decoration: none;
 }
 .combat-vaincu .vitalité {
-  color: #D00 !important;
+    color: #D00 !important;
 }
 
 /********************* Quêtes *********************/
 .quests-categ,
 .rules-categ {
-  color: #F2F2F2;
-  font-family: Italianno;
-  font-size: 60px;
-  height: 200px;
-  overflow: auto;
-  padding-left: 20px;
-  text-shadow: 1px 1px 0 #000;
-  width: 100%;
+    color: #F2F2F2;
+    font-family: Italianno;
+    font-size: 60px;
+    height: 200px;
+    overflow: auto;
+    padding-left: 20px;
+    text-shadow: 1px 1px 0 #000;
+    width: 100%;
 }
 .quests-categ-underline,
 .rules-categ-underline {
-  border-bottom: 1px solid #0DF;
-  display: block;
-  margin-top: 3px;
-  width: 100%;
+    border-bottom: 1px solid #0DF;
+    display: block;
+    margin-top: 3px;
+    width: 100%;
 }
 .quests-banner,
 .rules-banner {
-  text-align: center;
+    text-align: center;
 }
 .quests-intro {
-  color: #BCC4C7;
-  font-size: 12px;
-  font-style: italic;
-  margin: 0 40px 5px;
-  text-align: center;
+    color: #BCC4C7;
+    font-size: 12px;
+    font-style: italic;
+    margin: 0 40px 5px;
+    text-align: center;
 }
 .quest-frame,
 .rule-frame {
-  background-color: #1B2C32;
-  border: 2px solid #555C5F;
-  font-size: 13px;
-  line-height: 18px;
-  margin: auto;
-  padding: 20px;
-  width: 600px;
+    background-color: #1B2C32;
+    border: 2px solid #555C5F;
+    font-size: 13px;
+    line-height: 18px;
+    margin: auto;
+    padding: 20px;
+    width: 600px;
 }
 .quest:hover .quest-title,
 .rule:hover .rule-title {
-  color: #FFF;
-  letter-spacing: 0;
-  text-shadow: 1px 1px 10px #FFF;
-  transition: 1s;
+    color: #FFF;
+    letter-spacing: 0;
+    text-shadow: 1px 1px 10px #FFF;
+    transition: 1s;
 }
 .quest-title,
 .rule-title {
-  border-bottom: 1px solid #00CBD417;
-  color: #F2F2F2;
-  font-family: Cinzel Decorative;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin: 0 auto 7px;
-  text-align: center;
-  transition: 1s;
-  width: 75%
+    border-bottom: 1px solid #00CBD417;
+    color: #F2F2F2;
+    font-family: Cinzel Decorative;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 auto 7px;
+    text-align: center;
+    transition: 1s;
+    width: 75%
 }
 .quest-field,
 .rule-field {
-  color: #FFF;
-  font-family: Cinzel Decorative;
+    color: #FFF;
+    font-family: Cinzel Decorative;
 }
 .quest a {
-  color: #00A7C3;
-  text-shadow: none;
+    color: #00A7C3;
+    text-shadow: none;
 }
 .indice:hover {
-  text-shadow: 1px 1px 3px #4472C4;
+    text-shadow: 1px 1px 3px #4472C4;
 }
 .quest-objectus,
 .rule-ena {
-  display: table;
-  margin: auto;
-  width: 80%;
+    display: table;
+    margin: auto;
+    width: 80%;
 }
 .quest-objecta,
 .rule-enum {
-  display: table-row;
+    display: table-row;
 }
 .quest-objecta-icon {
-  display: table-cell;
-  width: 30px;
+    display: table-cell;
+    width: 30px;
 }
 .quest-objecta-todo {
-  background-color: #CDCDCD;
-  border: 1px solid #000;
-  height: 20px;
-  margin: 0 auto;
-  vertical-align: top;
-  width: 20px;
+    background-color: #CDCDCD;
+    border: 1px solid #000;
+    height: 20px;
+    margin: 0 auto;
+    vertical-align: top;
+    width: 20px;
 }
 .quest-objecta-content,
 .rule-enum-content {
-  display: table-cell;
-  padding: 0 15px;
-  vertical-align: top;
+    display: table-cell;
+    padding: 0 15px;
+    vertical-align: top;
 }
 .quest-objecta-scope,
 .rule-scope {
-  background-color: #A8ECFF61;
-  border: 1px solid;
-  box-shadow: -2px 3px 4px #000;
-  margin: 10px 5px 5px;
-  padding: 5px 10px;
+    background-color: #A8ECFF61;
+    border: 1px solid;
+    box-shadow: -2px 3px 4px #000;
+    margin: 10px 5px 5px;
+    padding: 5px 10px;
 }
 .quest-enigma {
-  font-size: 12px;
-  font-style: italic;
-  text-align: center;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
 }
 .quest-rewards {
-  display: table;
-  margin: 5px auto 10px;
-  width: 80%;
+    display: table;
+    margin: 5px auto 10px;
+    width: 80%;
 }
 .quest-reward {
-  display: table-row;
+    display: table-row;
 }
 .quest-reward-icon {
-  display: table-cell;
-  height: 50px;
-  vertical-align: middle;
-  width: 50px;
+    display: table-cell;
+    height: 50px;
+    vertical-align: middle;
+    width: 50px;
 }
 .quest-reward-desc {
-  display: table-cell;
-  padding: 5px 15px;
-  vertical-align: middle;
+    display: table-cell;
+    padding: 5px 15px;
+    vertical-align: middle;
 }
 .quest-reward-inter,
 .reward-inter {
-  font-size: 12px;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: underline;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
 }
 .quest-reward-inter > div {
-  display: table-cell;
+    display: table-cell;
 }
 .quest-nota,
 .rule-nota {
-  border-color: #ffffff0d;
-  border-style: solid;
-  border-width: 0 1px;
-  display: table;
-  margin: 5px auto 10px;
-  padding: 0 10px;
-  width: 80%;
+    border-color: #ffffff0d;
+    border-style: solid;
+    border-width: 0 1px;
+    display: table;
+    margin: 5px auto 10px;
+    padding: 0 10px;
+    width: 80%;
 }
 .quest-notum,
 .rule-notum {
-  display: table-row;
+    display: table-row;
 }
 .quest-notum-i,
 .rule-notum-i {
-  color: #DCDCDC;
-  display: table-cell;
-  padding: 3px;
+    color: #DCDCDC;
+    display: table-cell;
+    padding: 3px;
 }
 .quest-notum-item,
 .rule-notum-item {
-  display: table-cell;
-  vertical-align: top;
+    display: table-cell;
+    vertical-align: top;
 }
 
 /*********** Djöllfulins ***********/
 .quests-djöllfulins .quests-categ-underline {
-  border-color: #b73200d9;
+    border-color: #b73200d9;
 }
 .quests-djöllfulins .quest-frame {
-  background-color: #1919198c;
+    background-color: #1919198c;
 }
 .quests-djöllfulins .quest-title {
-  border-color: #6100008c;
+    border-color: #6100008c;
 }
 .quests-djöllfulins .quest-field {
-  color: #e83700d1;
+    color: #e83700d1;
 }
 .quests-djöllfulins .quest a {
-  color: #ff7800;
+    color: #ff7800;
 }
 .quests-djöllfulins .quest a:hover {
-  color: #FFF;
+    color: #FFF;
 }
 .quests-djöllfulins .icon-todo::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user18.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user18.png);
 }
 
 /*********** Gardiens **************/
 .quests-garde .quests-categ-underline {
-  border-color: #e0cda9;
+    border-color: #e0cda9;
 }
 .quests-garde .quest-frame {
-  background-color: #1919198c;
-  border-color: #e0cda9;
-  color: #BCC4C7;
-  width: 650px;
+    background-color: #1919198c;
+    border-color: #e0cda9;
+    color: #BCC4C7;
+    width: 650px;
 }
 .quests-garde .quest-title {
-  border-color: #e0cda9;
+    border-color: #e0cda9;
 }
 .quests-garde .quest-field {
-  color: #e0cda9;
+    color: #e0cda9;
 }
 .quests-garde .quest a {
-  color: #e0cda9;
+    color: #e0cda9;
 }
 .quests-garde .quest a:hover {
-  color: #FFF;
+    color: #FFF;
 }
 .quests-garde .quest-nota {
-  width: 90%;
+    width: 90%;
 }
 .quests-garde .quest-notum-i {
-  color: #e0cda9;
-  text-align: center;
+    color: #e0cda9;
+    text-align: center;
 }
 
 /*********** Nordiens ***********/
 .quests-nordiens .quests-categ-underline {
-  border-color: #0DF;
+    border-color: #0DF;
 }
 .quests-nordiens .quest-frame {
-  background-color: #1B2C32;
+    background-color: #1B2C32;
 }
 .quests-nordiens .quest-title {
-  border-color: #00CBD417;
+    border-color: #00CBD417;
 }
 .quests-nordiens .quest-field {
-  color: #FFF;
+    color: #FFF;
 }
 .quests-nordiens .quest a {
-  color: #00A7C3;
+    color: #00A7C3;
 }
 .quests-nordiens .quest a:hover {
-  color: #FFF;
+    color: #FFF;
 }
 .quests-nordiens .icon-todo::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user12.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user12.png);
+}
+
+/********************* Contrats *********************/
+.bounty-banner {
+    display: flex;
+    justify-content: center;
+}
+.bounty-field {
+    color: #FFF;
+    font-weight: 700;
+}
+.bounty-field::before {
+    content: "× "
+}
+.bounty-field::after {
+    content: " : "
+}
+span[class*="bounty-rank-"]::before {
+    color: #800;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 1.6em;
+}
+.bounty-rank-A::before {
+    content: "A"
+}
+.bounty-rank-A::after {
+    content: " (1-2 personnes)";
+}
+.bounty-rank-B::before {
+    content: "B"
+}
+.bounty-rank-B::after {
+    content: " (2-3 personnes)";
+}
+.bounty-rank-C::before {
+    content: "C"
+}
+.bounty-rank-C::after {
+    content: " (2-4 personnes)";
+}
+.bounty-rank-D::before {
+    content: "D"
+}
+.bounty-rank-D::after {
+    content: " (2-5 personnes)";
+}
+.bounty-rank-S::before {
+    content: "S"
+}
+.bounty-rank-S::after {
+    content: " (1-4 personnes)";
 }
 
 /********************* Icones *********************/
 .icon-xp-sm::before {
-  content: url(https://i.servimg.com/u/f11/19/50/65/15/xp-sm10.jpg);
+    content: url(https://i.servimg.com/u/f11/19/50/65/15/xp-sm10.jpg);
 }
 .icon-50px-xp-sm::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_x12.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_x12.png);
 }
 .icon-xp-md::before {
-  content: url(https://wiki.guildwars2.com/images/9/93/Celestial_Infusion_%28Blue%29.png);
+    content: url(https://wiki.guildwars2.com/images/9/93/Celestial_Infusion_%28Blue%29.png);
 }
 .icon-50px-xp-md::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_x11.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_x11.png);
 }
 .icon-xp-lg::before {
-  content: url(https://wiki.guildwars2.com/images/0/04/Celestial_Infusion_%28Red%29.png);
+    content: url(https://wiki.guildwars2.com/images/0/04/Celestial_Infusion_%28Red%29.png);
 }
 .icon-50px-xp-lg::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user16.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user16.png);
 }
 .icon-xp-xtr::before {
-  content: url(https://wiki.guildwars2.com/images/5/53/Experienced_Infusion.png);
+    content: url(https://wiki.guildwars2.com/images/5/53/Experienced_Infusion.png);
 }
 .icon-gold-sm::before {
-  content: url(https://i.servimg.com/u/f11/19/50/65/15/gold-s10.png);
+    content: url(https://i.servimg.com/u/f11/19/50/65/15/gold-s10.png);
 }
 .icon-gold-md::before {
-  content: url(https://wiki.guildwars2.com/images/0/02/Bag_of_Coins.png);
+    content: url(https://wiki.guildwars2.com/images/0/02/Bag_of_Coins.png);
+}
+.icon-50px-gold-md::before {
+    content: url(https://i.ibb.co/F67fnqq/gold-50px-md.png);
 }
 .icon-gold-lg::before {
-  content: url(https://wiki.guildwars2.com/images/b/b6/Heavy_Bag_of_Coins.png);
+    content: url(https://wiki.guildwars2.com/images/b/b6/Heavy_Bag_of_Coins.png);
 }
 .icon-50px-gold-lg::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/gold-510.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/gold-510.png);
 }
 
 .icon-power::before {
-  content: url(https://wiki.guildwars2.com/images/e/e2/Bloodstone_Empowerment.png);
+    content: url(https://wiki.guildwars2.com/images/e/e2/Bloodstone_Empowerment.png);
+}
+.icon-50px-attributes::before {
+    content: url(https://i.ibb.co/5R2Y17t/50px-attributes.png);
 }
 
 .icon-weapon-nord-exotique::before {
-  content: url(https://wiki.guildwars2.com/images/c/cd/Corrupted_Spear.png);
+    content: url(https://wiki.guildwars2.com/images/c/cd/Corrupted_Spear.png);
 }
 .icon-50px-weapon-nord-exotique::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user15.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user15.png);
 }
 
 .icon-weapon-djöl-exotique::before {
-  content: url(https://wiki.guildwars2.com/images/8/80/Marjory%27s_Everliving_Blade.png);
+    content: url(https://wiki.guildwars2.com/images/8/80/Marjory%27s_Everliving_Blade.png);
 }
 .icon-50px-weapon-djöl-exotique::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_w11.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_w11.png);
 }
 
 .icon-dagger::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_shortblade_15.jpg);
+    content: url(https://wiki.guildwars2.com/images/3/3a/Iron_Dagger.png);
 }
 .icon-claw::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_hand_21.jpg);
+    content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_hand_21.jpg);
 }
 .icon-cesta::before {
-  content: url(https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_17.jpg);
+    content: url(https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_17.jpg);
 }
 .icon-slingshot::before {
-  content: url(https://wiki-fr.guildwars2.com/images/4/4c/Fronde.png);
+    content: url(https://wiki-fr.guildwars2.com/images/4/4c/Fronde.png);
 }
 .icon-bow::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_bow_05.jpg);
+    content: url(https://wiki.guildwars2.com/images/9/9c/Soft_Wood_Short_Bow.png);
 }
 .icon-crossbow::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_crossbow_04.jpg);
+    content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_crossbow_04.jpg);
 }
 .icon-tonfa::before {
-  content: url(http://media.blizzard.com/wow/icons/56/ability_sap.jpg);
+    content: url(http://media.blizzard.com/wow/icons/56/ability_sap.jpg);
 }
 .icon-flail::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_mace_1h_pandung_c_01.jpg);
+    content: url(http://media.blizzard.com/wow/icons/56/inv_mace_1h_pandung_c_01.jpg);
 }
 .icon-sword::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_sword_27.jpg);
+    content: url(https://wiki.guildwars2.com/images/6/68/Fine_Sword.png);
 }
 .icon-spear::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_polearm_2h_draenorquest95_b_01.jpg);
+    content: url(https://wiki.guildwars2.com/images/6/6a/Steel_Spear.png);
 }
 .icon-axe::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_halberd_06.jpg);
+    content: url(https://wiki.guildwars2.com/images/b/ba/Bronze_Axe.png);
 }
 .icon-scythe::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_staff_78.jpg);
+    content: url(http://media.blizzard.com/wow/icons/56/inv_staff_78.jpg);
 }
 .icon-mace::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_mace_1h_draenorquest_b_01.jpg);
+    content: url(https://wiki.guildwars2.com/images/e/ee/Iron_Mace.png);
 }
 .icon-hammer::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_hammer_07.jpg);
+    content: url(https://wiki.guildwars2.com/images/c/c8/Bronze_Hammer.png);
 }
 .icon-staff-arcanic::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_staff_13.jpg);
+    content: url(https://wiki.guildwars2.com/images/6/63/Soft_Wood_Staff.png);
 }
 .icon-staff-ether::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_staff_draenei_a_03.jpg);
+    content: url(http://media.blizzard.com/wow/icons/56/inv_staff_draenei_a_03.jpg);
 }
 .icon-scepter::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_staff_07.jpg);
+    content: url(https://wiki.guildwars2.com/images/6/6c/Crude_Scepter.png);
 }
 .icon-shield::before {
-  content: url(https://wiki.guildwars2.com/images/c/cf/Shield.png);
+    content: url(https://wiki.guildwars2.com/images/c/cf/Shield.png);
 }
 .icon-shield-exotique::before {
-  content: url(https://wiki.guildwars2.com/images/f/f2/Grimward.png);
+    content: url(https://wiki.guildwars2.com/images/f/f2/Grimward.png);
 }
 .icon-mechanical_weapon::before {
-  content: url(https://2img.net/image.noelshack.com/fichiers/2019/30/6/1564243318-technophile-gadget.png);
+    content: url(https://2img.net/image.noelshack.com/fichiers/2019/30/6/1564243318-technophile-gadget.png);
 }
 .icon-rifle::before {
-  content: url(https://wiki.guildwars2.com/images/d/d9/Mystic_Rifle.png);
+    content: url(https://wiki.guildwars2.com/images/d/d9/Mystic_Rifle.png);
 }
 .icon-turret::before {
-  content: url(https://2img.net/image.noelshack.com/fichiers/2019/30/7/1564338700-technophile-turret.png);
+    content: url(https://2img.net/image.noelshack.com/fichiers/2019/30/7/1564338700-technophile-turret.png);
 }
 .icon-deck::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_misc_ticket_tarot_maelstrom_01.jpg);
+    content: url(http://media.blizzard.com/wow/icons/56/inv_misc_ticket_tarot_maelstrom_01.jpg);
 }
 .icon-ring::before {
-  content: url(https://wiki.guildwars2.com/images/4/4e/Druid%27s_Circle.png);
+    content: url(https://wiki.guildwars2.com/images/4/4e/Druid%27s_Circle.png);
 }
 .icon-gauntlet::before {
-  content: url(https://wiki.guildwars2.com/images/b/b8/Mistward_Warfists.png);
+    content: url(https://wiki.guildwars2.com/images/b/b8/Mistward_Warfists.png);
 }
 .icon-instrument::before {
-  content: url(https://wiki.guildwars2.com/images/f/f6/Gift_of_The_Minstrel.png);
+    content: url(https://wiki.guildwars2.com/images/f/f6/Gift_of_The_Minstrel.png);
+}
+.icon-50px-instrument-exotique::before {
+    content: url(https://i.ibb.co/V2qD5Tn/50px-instrument-exotique.png);
 }
 .icon-music_sheet::before {
-  content: url(https://wiki.guildwars2.com/images/e/ea/Covington%27s_Sea_Song.png);
+    content: url(https://wiki.guildwars2.com/images/b/b1/Burrisson%27s_Ditty.png);
+}
+.icon-music_sheet-exotique::before {
+    content: url(https://wiki.guildwars2.com/images/e/ea/Covington%27s_Sea_Song.png);
+}
+.icon-50px-music_sheet-exotique::before {
+    content: url(https://i.ibb.co/v4pq2RG/50px-music-sheet-exotique.png);
 }
 .icon-armor-light::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_shirt_01.jpg);
+    content: url(https://2img.net/h/media.blizzard.com/wow/icons/56/inv_shirt_01.jpg);
 }
 .icon-armor-intermediary::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_chest_leather_10.jpg);
+    content: url(https://2img.net/h/media.blizzard.com/wow/icons/56/inv_chest_leather_10.jpg);
 }
 .icon-armor-heavy::before {
-  content: url(http://media.blizzard.com/wow/icons/56/inv_chest_plate16.jpg);
+    content: url(https://2img.net/h/media.blizzard.com/wow/icons/56/inv_chest_plate16.jpg);
 }
 .icon-boots::before {
-  content: url(https://wiki.guildwars2.com/images/9/90/Leather_Shoes.png);
+    content: url(https://wiki.guildwars2.com/images/9/90/Leather_Shoes.png);
 }
 .icon-horseshoe::before {
-  content: url(https://wow.zamimg.com/images/wow/icons/large/inv_blacksmith_leystonehoofplates_red.jpg);
+    content: url(https://wow.zamimg.com/images/wow/icons/large/inv_blacksmith_leystonehoofplates_red.jpg);
 }
 .icon-helm::before,
 .icon-helmet::before {
-  content: url(https://wiki.guildwars2.com/images/9/93/Militia_Helm.png);
+    content: url(https://wiki.guildwars2.com/images/9/93/Militia_Helm.png);
 }
 .icon-aquabreather::before {
-  content: url(https://wiki.guildwars2.com/images/4/4c/Aqua_Breather.png);
+    content: url(https://wiki.guildwars2.com/images/4/4c/Aqua_Breather.png);
 }
 .icon-aquabreather-quality::before {
-  content: url(https://wiki.guildwars2.com/images/e/ee/Benthic_Breather.png);
+    content: url(https://wiki.guildwars2.com/images/e/ee/Benthic_Breather.png);
 }
 .icon-aquabreather-exotique::before {
-  content: url(https://wiki.guildwars2.com/images/3/31/Rime-Rimmed_Mariner%27s_Rebreather.png);
+    content: url(https://wiki.guildwars2.com/images/3/31/Rime-Rimmed_Mariner%27s_Rebreather.png);
 }
 
 .icon-pendant::before {
-  content: url(https://wiki.guildwars2.com/images/8/8f/Amulet.png);
+    content: url(https://wiki.guildwars2.com/images/8/8f/Amulet.png);
 }
 .icon-pendant-exotique::before {
-  content: url(https://wiki.guildwars2.com/images/9/9c/Mark_of_the_Tethyos_Houses.png);
+    content: url(https://wiki.guildwars2.com/images/9/9c/Mark_of_the_Tethyos_Houses.png);
 }
 .icon-50px-pendant-exotique::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user17.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user17.png);
 }
 .icon-trinket::before {
-  content: url(https://wiki.guildwars2.com/images/9/94/Sam.png);
+    content: url(https://wiki.guildwars2.com/images/9/94/Sam.png);
 }
 .icon-trinket-exotique::before {
-  content: url(https://wiki.guildwars2.com/images/c/c1/Feather_of_the_Owl.png);
+    content: url(https://wiki.guildwars2.com/images/c/c1/Feather_of_the_Owl.png);
 }
 .icon-50px-trinket-exotique::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user14.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user14.png);
 }
 
 .icon-seal-exotique::before {
-  content: url(https://wiki.guildwars2.com/images/7/71/Seal_of_the_Shaman.png);
+    content: url(https://wiki.guildwars2.com/images/7/71/Seal_of_the_Shaman.png);
 }
 .icon-50px-seal-exotique::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_s10.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_s10.png);
 }
 
 .icon-mount::before {
-  content: url(https://wiki.guildwars2.com/images/4/44/Mini_Lunar_%22Horse%22.png);
+    content: url(https://wiki.guildwars2.com/images/4/44/Mini_Lunar_%22Horse%22.png);
 }
 .icon-mount-exotique::before {
-  content: url(https://wiki.guildwars2.com/images/9/96/Pyroclast.png);
+    content: url(https://wiki.guildwars2.com/images/9/96/Pyroclast.png);
 }
 .icon-50px-mount-exotique::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_m10.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_m10.png);
 }
 .icon-minion::before {
-  content: url(https://wiki.guildwars2.com/images/7/75/Mini_Orange_Tabby_Cat.png);
+    content: url(https://wiki.guildwars2.com/images/7/75/Mini_Orange_Tabby_Cat.png);
 }
 
 /*********** Butin ***********/
 .icon-book::before {
-  content : url(https://wiki.guildwars2.com/images/4/4c/Tome_of_Knowledge.png);
+    content : url(https://wiki.guildwars2.com/images/4/4c/Tome_of_Knowledge.png);
 }
 .icon-blueprint::before {
-  content : url(https://wiki.guildwars2.com/images/a/ab/Recipe_sheet_basic_consumable_1.png);
+    content : url(https://wiki.guildwars2.com/images/a/ab/Recipe_sheet_basic_consumable_1.png);
 }
 .icon-blueprint-exotique::before {
-  content : url(https://wiki.guildwars2.com/images/b/bb/Recipe_sheet_fine_sword.png);
+    content : url(https://wiki.guildwars2.com/images/b/bb/Recipe_sheet_fine_sword.png);
 }
 .icon-50px-blueprint-exotique::before {
-  content : url(https://i.servimg.com/u/f56/20/12/86/42/50px_b10.png);
+    content : url(https://i.servimg.com/u/f56/20/12/86/42/50px_b10.png);
 }
 .icon-cloth::before {
-  content: url(https://wiki.guildwars2.com/images/b/bc/Silk_Scrap.png);
+    content: url(https://wiki.guildwars2.com/images/b/bc/Silk_Scrap.png);
 }
 .icon-50px-cloth::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_c10.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_c10.png);
 }
 .icon-clue::before {
-  content: url(https://wiki.guildwars2.com/images/3/30/Crumpled_Pages.png);
+    content: url(https://wiki.guildwars2.com/images/3/30/Crumpled_Pages.png);
+}
+.icon-50px-clue::before {
+    content: url(https://i.ibb.co/9Z2t6Zr/50px-clue.png);
+}
+.icon-dart::before {
+    content: url(https://wiki.guildwars2.com/images/c/c3/Needle.png);
 }
 .icon-fin::before {
-  content: url(https://wiki.guildwars2.com/images/8/82/Fin.png);
+    content: url(https://wiki.guildwars2.com/images/8/82/Fin.png);
 }
 .icon-flask::before {
-  content: url(https://render-eu.worldofwarcraft.com/icons/56/inv_alchemy_crystalvial.jpg);
+    content: url(https://render-eu.worldofwarcraft.com/icons/56/inv_alchemy_crystalvial.jpg);
+}
+.icon-flask-fire::before {
+    content: url(https://wiki.guildwars2.com/images/7/7c/Ever-Burning_Fuel.png);
+}
+.icon-flask-sand::before {
+    content: url(https://wiki.guildwars2.com/images/1/1b/Destroyer_Jar.png);
+}
+.icon-flask-water::before {
+    content: url(https://wiki.guildwars2.com/images/8/8c/Ancient_Spring_Water_Sample.png);
 }
 .icon-gemstone::before {
-  content: url(https://wiki.guildwars2.com/images/b/b5/Chrysocola_Orb.png);
+    content: url(https://wiki.guildwars2.com/images/b/b5/Chrysocola_Orb.png);
 }
 .icon-50px-gemstone::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_g10.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_g10.png);
 }
 .icon-jaw::before {
-  content: url(https://i.servimg.com/u/f11/11/12/92/75/jaw10.png);
+    content: url(https://i.servimg.com/u/f11/11/12/92/75/jaw10.png);
+}
+.icon-loot::before {
+    content: url(https://wiki.guildwars2.com/images/8/84/Ettin_Refuse.png);
+}
+.icon-50px-loot::before {
+    content: url(https://i.ibb.co/5W8DTzM/50px-loot.png);
+}
+.icon-50px-loot-ice_rock::before {
+    content: url(https://i.ibb.co/MP8qqrN/50px-loot-ice-rock.png);
+}
+.icon-50px-loot-rock_crystal::before {
+    content: url(https://i.ibb.co/Jry2Cj1/50px-loot-rock-crystal.png);
+}
+.icon-pearl::before {
+    content: url(https://wiki.guildwars2.com/images/9/9c/Orrian_Pearl.png);
+}
+.icon-sand::before {
+    content: url(https://wiki.guildwars2.com/images/c/c5/Burning_Ember.png);
 }
 .icon-thorn::before {
-  content: url(https://wiki.guildwars2.com/images/3/3f/Barbed_Thorn.png);
+    content: url(https://wiki.guildwars2.com/images/3/3f/Barbed_Thorn.png);
 }
 
 /*********** Nourriture ***********/
 .icon-candy::before {
-  content: url(https://wiki.guildwars2.com/images/7/72/Blackberry_Cookie.png);
+    content: url(https://wiki.guildwars2.com/images/7/72/Blackberry_Cookie.png);
 }
 .icon-candy-exotique::before {
-  content: url(https://wiki.guildwars2.com/images/c/cd/Cinnamon_Pinwheel.png);
+    content: url(https://wiki.guildwars2.com/images/c/cd/Cinnamon_Pinwheel.png);
 }
 .icon-50px-candy-exotique::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user13.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user13.png);
 }
 
 /*********** Récompenses à débloquer ***********/
 .icon-access::before {
-  content: url(https://wiki.guildwars2.com/images/a/a3/Current_Events.png);
+    content: url(https://wiki.guildwars2.com/images/a/a3/Current_Events.png);
 }
 .icon-achievement::before {
-  content: url(https://wiki.guildwars2.com/images/8/8f/Koda%27s_Warmth_Enrichment.png);
+    content: url(https://wiki.guildwars2.com/images/8/8f/Koda%27s_Warmth_Enrichment.png);
 }
 .icon-50px-achievement::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/achiev10.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/achiev10.png);
 }
 .icon-achievement-exotique::before {
-  content: url(https://wiki.guildwars2.com/images/f/f0/Karmic_Infusion.png);
+    content: url(https://wiki.guildwars2.com/images/f/f0/Karmic_Infusion.png);
 }
 .icon-50px-achievement-exotique::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/achiev11.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/achiev11.png);
 }
 .icon-politique::before {
-  content: url(http://pile.randimg.net/2/26/131614/emblems.png);
+    content: url(http://pile.randimg.net/2/26/131614/emblems.png);
 }
 .icon-50px-politique::before {
-  content: url(http://pile.randimg.net/2/31/132790/emblems_50px.png);
+    content: url(http://pile.randimg.net/2/31/132790/emblems_50px.png);
 }
 .icon-reput::before {
-  content: url(https://wiki.guildwars2.com/images/7/77/Daybreak.png);
+    content: url(https://wiki.guildwars2.com/images/7/77/Daybreak.png);
 }
 .icon-unlock::before {
-  content: url(https://wiki.guildwars2.com/images/b/b3/Living_Story.png);
+    content: url(https://wiki.guildwars2.com/images/b/b3/Living_Story.png);
 }
 
 /*********** Factions / Guildes ***********/
 .icon-faction-siege_weapon::before {
-  content: url(https://wiki.guildwars2.com/images/a/a6/Decoration-_Catapult.png);
+    content: url(https://wiki.guildwars2.com/images/a/a6/Decoration-_Catapult.png);
 }
 .icon-faction-supply::before {
-  content: url(https://wiki.guildwars2.com/images/d/d7/Basic_Crate.png);
+    content: url(https://wiki.guildwars2.com/images/d/d7/Basic_Crate.png);
 }
 
 /*********** Événements ***********/
+/****** Perle oasienne ******/
+.icon-perle_oasienne-boat::before {
+    content: url(https://wiki.guildwars2.com/images/5/50/Zephyr_Sailboat.png);
+}
+.icon-perle_oasienne-offering::before {
+    content: url(https://wiki.guildwars2.com/images/0/0b/Zephyr_Koi_Lantern.png);
+}
 /****** Ynatlatt ******/
 .icon-ynatlatt-plant-faction::before {
-  content: url(https://wiki.guildwars2.com/images/2/27/Potted_Blue_Moa_Fern.png);
+    content: url(https://wiki.guildwars2.com/images/2/27/Potted_Blue_Moa_Fern.png);
 }
 .icon-ynatlatt-trophy-faction::before {
-  content: url(https://wiki.guildwars2.com/images/6/6a/Cowrie_League_Caravan%27s_Scales.png);
+    content: url(https://wiki.guildwars2.com/images/6/6a/Cowrie_League_Caravan%27s_Scales.png);
 }
 
 /*********** Habillage ***********/
 /****** Altération ******/
 .icon.alt-sprst::before {
-  content: url(https://2img.net/image.noelshack.com/fichiers/2019/04/7/1548625398-alt-sprst.png);
+    content: url(https://2img.net/image.noelshack.com/fichiers/2019/04/7/1548625398-alt-sprst.png);
 }
 
 /****** Événements ******/
 .icon-event-birthday::before {
-  content: url(https://i.servimg.com/u/f56/20/12/86/42/event-14.png);
+    content: url(https://i.servimg.com/u/f56/20/12/86/42/event-14.png);
 }
 .icon-event-boss::before {
-  content: url(https://i.servimg.com/u/f56/20/12/86/42/event-21.png);
+    content: url(https://i.servimg.com/u/f56/20/12/86/42/event-21.png);
 }
 .icon-event-current::before {
-  content: url(https://i.servimg.com/u/f56/20/12/86/42/event-16.png);
+    content: url(https://i.servimg.com/u/f56/20/12/86/42/event-16.png);
 }
 .icon-event-community::before {
-  content: url(https://i.servimg.com/u/f56/20/12/86/42/event-15.png);
+    content: url(https://i.servimg.com/u/f56/20/12/86/42/event-15.png);
 }
 .icon-event-fest::before {
-  content: url(https://i.servimg.com/u/f56/20/12/86/42/event-17.png);
+    content: url(https://i.servimg.com/u/f56/20/12/86/42/event-17.png);
 }
 .icon-event-festival::before {
-  content: url(https://i.servimg.com/u/f56/20/12/86/42/event-22.png);
+    content: url(https://i.servimg.com/u/f56/20/12/86/42/event-22.png);
 }
 .icon-event-magistral::before {
-  content: url(https://i.servimg.com/u/f56/20/12/86/42/event-18.png);
+    content: url(https://i.servimg.com/u/f56/20/12/86/42/event-18.png);
 }
 .icon-event-phénix::before {
-  content: url(https://i.servimg.com/u/f56/20/12/86/42/event-19.png);
+    content: url(https://i.servimg.com/u/f56/20/12/86/42/event-19.png);
 }
 .icon-event-rotate::before {
-  content: url(https://i.servimg.com/u/f56/20/12/86/42/event-23.png);
+    content: url(https://i.servimg.com/u/f56/20/12/86/42/event-23.png);
 }
 .icon-event-war::before {
-  content: url(https://i.servimg.com/u/f56/20/12/86/42/event-20.png);
+    content: url(https://i.servimg.com/u/f56/20/12/86/42/event-20.png);
 }
 
 /****** Statut ******/
 .icon.archi-boss::before {
-  content: url(https://2img.net/image.noelshack.com/fichiers/2018/48/4/1543454851-boss-archi.png);
+    content: url(https://2img.net/image.noelshack.com/fichiers/2018/48/4/1543454851-boss-archi.png);
 }
 .icon.boss::before {
-  content: url(https://2img.net/image.noelshack.com/fichiers/2018/48/4/1543454851-boss.png);
+    content: url(https://2img.net/image.noelshack.com/fichiers/2018/48/4/1543454851-boss.png);
 }
 .icon.commandant::before {
-  content: url(https://2img.net/image.noelshack.com/fichiers/2018/48/4/1543454537-commandant.png);
+    content: url(https://2img.net/image.noelshack.com/fichiers/2018/48/4/1543454537-commandant.png);
 }
 
 .icon.blessure::before,
 .icon.wound::before {
-  content: url(https://i.servimg.com/u/f36/15/33/58/83/patte_10.png);
+    content: url(https://i.servimg.com/u/f36/18/25/55/28/patte_10.png);
 }
 
+.icon.limite10::before,
+.icon.wound::before {
+    content: url(https://i.servimg.com/u/f36/18/25/55/28/sans_t13.png);
+}
+
+.icon.limite15::before,
+.icon.wound::before {
+    content: url(https://i.servimg.com/u/f36/15/33/58/83/1510.png);
+}
+
+.icon.limite20::before,
+.icon.wound::before {
+    content: url(https://i.servimg.com/u/f36/15/33/58/83/2010.png);
+}
+
+.icon.limite30::before,
+.icon.wound::before {
+    content: url(https://i.servimg.com/u/f36/15/33/58/83/3010.png);
+}
 
 /*********** Actions ***********/
 .icon-action-aqueous::before {
-  content: url(https://2img.net/image.noelshack.com/fichiers/2019/33/7/1566126650-action-aqueous.png);
+    content: url(https://2img.net/image.noelshack.com/fichiers/2019/33/7/1566126650-action-aqueous.png);
 }
 .icon-action-sprint::before {
-  content: url(https://2img.net/image.noelshack.com/fichiers/2019/33/7/1566126650-action-sprint.png);
+    content: url(https://2img.net/image.noelshack.com/fichiers/2019/33/7/1566126650-action-sprint.png);
 }
 
 /*********** Règlements ***********/
 .icon-craft::before {
-  content: url(https://2img.net/image.noelshack.com/fichiers/2019/38/3/1568809824-20px-crafting-icon2.png);
+    content: url(https://2img.net/image.noelshack.com/fichiers/2019/38/3/1568809824-20px-crafting-icon2.png);
 }
 .icon-todo::before {
-  content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user12.png);
+    content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user12.png);
 }
 
 /*********** Interface ***********/
 .icon-goto::before {
-  content: url(https://wiki.guildwars2.com/images/f/fe/Scout_%28map_icon%29.png);
+    content: url(https://wiki.guildwars2.com/images/f/fe/Scout_%28map_icon%29.png);
 }
 
 /********************* Description des PNJ jouables *********************/
 .pnj-nom {
-  text-align: center;
-  font-size: 20px;
-  padding: 7px 0;
-  border: 3px solid #3c3200;
+    text-align: center;
+    font-size: 20px;
+    padding: 7px 0;
+    border: 3px solid #3c3200;
 }
 .pnj-race {
-  display: block;
-  font-size: 24px;
-  padding: 0 15px 5px;
-  background-color: #000;
+    display: block;
+    font-size: 24px;
+    padding: 0 15px 5px;
+    background-color: #000;
 }
 .pnj-nom .pnj-titre {
-  display: block;
-  font-style: italic;
-  color: #a4bc83;
+    display: block;
+    font-style: italic;
+    color: #a4bc83;
 }
 
 .pnj-credentials {
-  display: table;
-  list-style: none;
-  padding: 0;
+    display: table;
+    list-style: none;
+    padding: 0;
 }
 .pnj-credentials li {
-  display: table-row;
-  list-style-type: unset;
+    display: table-row;
+    list-style-type: unset;
 }
 .credentials-badge-login,
 .credentials-login,
 .credentials-badge-pass,
 .credentials-pass {
-  display: table-cell;
-  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 .credentials-badge-login,
 .credentials-badge-pass {
-  height: 30px;
-  text-align: center;
-  width: 30px;
+    height: 30px;
+    text-align: center;
+    width: 30px;
 }
 .credentials-badge-login:before {
-  content: '>';
+    content: '>';
 }
 .credentials-badge-pass:before {
-  content: '#';
+    content: '#';
 }
 
 /********************* Event *********************/
 .event-contexte {
-  border-bottom: 2px solid #413425;
-  color: #ccc7ba;
-  font-style: italic;
-  margin: 10px 20px;
-  padding: 0 30px 15px;
+    border-bottom: 2px solid #413425;
+    color: #ccc7ba;
+    font-style: italic;
+    margin: 10px 20px;
+    padding: 0 30px 15px;
 }
 .event-progression {
-  margin: auto;
-  text-align: center;
-  width: 400px;
+    margin: auto;
+    text-align: center;
+    width: 400px;
 }
 .event-progression + .event-progression {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 .event-progression-titre {
-  font-weight: 700;
-  margin-bottom: 7px;
+    font-weight: 700;
+    margin-bottom: 7px;
 }
 .event-progression-barre {
-  border: 1px solid;
-  height: 20px;
+    border: 1px solid;
+    height: 20px;
 }
 .event-progression-barre > div {
-  color: #000;
-  font-size: 12px;
-  height: 100%;
+    color: #000;
+    font-size: 12px;
+    height: 100%;
 }
 
 
 /**************************************************** LE MARCHAND ****************************************************/
 /********************* Tableau pour les ventes et achats dans les magasins (PNJ) *********************/
 .shop  {
-  margin: 0 auto; /* Centrer */
-  text-align: center;
-  border-collapse: collapse;
+    margin: 0 auto; /* Centrer */
+    text-align: center;
+    border-collapse: collapse;
 }
 .shop tr {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #202b02;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #202b02;
 }
 .shop td {
-  padding: 10px;
+    padding: 10px;
 }
 tr.shop_last {
-  border-bottom-style: dashed; /* Pointillés */
-  border-bottom-color: #fff;
+    border-bottom-style: dashed; /* Pointillés */
+    border-bottom-color: #fff;
 }
 tr.shop_total {
-  border-top-width: 0;
+    border-top-width: 0;
 }
 .shop_total td{
-  padding: 15px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700; /* Gras */
+    padding: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700; /* Gras */
 }
 
 /********************* Boutique *********************/
 .boutique-règles {
-  font-size: 12px;
-  margin: auto;
-  width: 400px;
+    font-size: 12px;
+    margin: auto;
+    width: 400px;
 }
 
 
 /*********** Nord ***********/
 .boutique-nord .titre {
-  background-color: #1E779A;
-  color: #FFF;
-  font-family: Italianno;
-  font-size: 48px;
+    background-color: #1E779A;
+    color: #FFF;
+    font-family: Italianno;
+    font-size: 48px;
 }
 .boutique-nord .titrerace {
-  background-color: #0a293cc7;
-  font-family: cinzel decorative;
+    background-color: #0a293cc7;
+    font-family: cinzel decorative;
 }
 
 
 
 .boutique-titre {
-  background-color: #0092FF;
-  text-align: center;
+    background-color: #0092FF;
+    text-align: center;
 }
 .boutique-titre h1 {
-  color: #fff;
-  font-size: 14px;
-  padding: 2px 0;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px 0;
 }
 p.boutique-description {
-  font-family: roman;
-  font-size: 16px;
-  margin: 10px 20px;
+    font-family: roman;
+    font-size: 16px;
+    margin: 10px 20px;
 }
 .boutique {
-  border-collapse: separate;
-  border-spacing: 0 10px;
-  display: table;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    display: table;
 }
 .boutique-objet {
-  display: table-row;
+    display: table-row;
 }
 .boutique-objet-icon, .boutique-objet-description {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 .boutique-objet-description {
-  width: 500px;
+    width: 500px;
 }
 
 .boutique-objet-icon {
-  border: 3px solid rgba(0, 145, 255, 0.33);
-  height: 70px;
-  width: 70px;
+    border: 3px solid rgba(0, 145, 255, 0.33);
+    height: 70px;
+    width: 70px;
 }
 .boutique-objet-icon > .icon {
-  display: inline-block;
+    display: inline-block;
 }
 .boutique-objet-void {
-  width: 20px;
+    width: 20px;
 }
 .boutique-objet-description {
-  border-color: rgba(0, 145, 255, 0.33);
-  border-style: solid;
-  border-width: 0 0 3px 3px;
-  padding: 10px;
+    border-color: rgba(0, 145, 255, 0.33);
+    border-style: solid;
+    border-width: 0 0 3px 3px;
+    padding: 10px;
 }
 
 .boutique-objet-nom {
-  color: #FFDDC4;
+    color: #FFDDC4;
 }
 .boutique-objet-nom > strong {
-  display: block;
+    display: block;
 }
 .boutique-objet-prix {
 
@@ -1674,445 +1887,445 @@ p.boutique-description {
 .saignement,
 .poison,
 .venin {
-  font-weight: 700;
+    font-weight: 700;
 }
 .vitalité {
-  color: #090 !important;
+    color: #090 !important;
 }
 .vitesse {
-  color: #FC0 !important;
+    color: #FC0 !important;
 }
 .dégâts {
-  color: #F00 !important;
+    color: #F00 !important;
 }
 .aura {
-  color: #1E90FF !important;
+    color: #1E90FF !important;
 }
 .feu {
-  color: #E2AA17 !important;
+    color: #E2AA17 !important;
 }
 .saignement {
-  color: #D00 !important;
+    color: #D00 !important;
 }
 .poison {
-  color: #60F !important;
+    color: #60F !important;
 }
 .venin {
-  color: #CE0 !important;
+    color: #CE0 !important;
 }
 
 .stat-bonus {
-  color: #0A0 !important;
+    color: #0A0 !important;
 }
 .stat-malus {
-  color: #A00 !important;
+    color: #A00 !important;
 }
 
 
 /**************************************************** COULEURS ****************************************************/
 /********************* Altération *********************/
 .alt-sprst {
-  color: #9a9275 !important;
+    color: #9a9275 !important;
 }
 /********************* Entités *********************/
 .archi-boss,
 .boss {
-  color: #D00 !important;
+    color: #D00 !important;
 }
 
 .commandant {
-  color: #075ac1 !important;
+    color: #075ac1 !important;
 }
 
 /********************* Races *********************/
 .abyssal {
-  color: #0091FF !important;
+    color: #0091FF !important;
 }
 .banni,
 .prisonnier,
 .blessé,
 .mort {
-  color: #8A8585 !important;
-  font-style: italic;
+    color: #8A8585 !important;
+    font-style: italic;
 }
 .djöllfulin {
-  color: #FF2D00 !important;
+    color: #FF2D00 !important;
 }
 .elfe {
-  color: #0C8A1F !important;
+    color: #0C8A1F !important;
 }
 .géant {
-  color: #D9D923 !important;
+    color: #D9D923 !important;
 }
 .humain {
-  color: #F00 !important;
+    color: #F00 !important;
 }
 .hybride,
 .centaure,
 .minotaure,
 .satyre {
-  color: #4D3A1A !important;
+    color: #4D3A1A !important;
 }
 .naga {
-  color: #9326C9 !important;
+    color: #9326C9 !important;
 }
 .nain {
-  color: #2B2BC2 !important;
+    color: #2B2BC2 !important;
 }
 .gobelin,
 .orc,
 .peau-verte {
-  color: #024F23 !important;
+    color: #024F23 !important;
 }
 .pnj {
-  color: #806B00 !important;
+    color: #806B00 !important;
 }
 .stryge-blanc {
-  color: #FCFCFC !important;
+    color: #FCFCFC !important;
 }
 .stryge-noir {
-  color: #3D3D3D !important;
+    color: #3D3D3D !important;
 }
 .thérianthrope,
 .loup-garou {
-  color: #AD6A05 !important;
+    color: #AD6A05 !important;
 }
 .vampire {
-  color: #A10000 !important;
+    color: #A10000 !important;
 }
 
 .invocation {
-  color: #666 !important;
+    color: #666 !important;
 }
 
 .arlequin {
-  color: #540054a1;
+    color: #540054a1;
 }
 .corrompu {
-  color: #072b07;
+    color: #072b07;
 }
 .technophile {
-  color: #0000ff82;
+    color: #0000ff82;
 }
 .virtuose {
-  color: #d2691e;
+    color: #d2691e;
 }
 
 /********************* Factions / Guildes / Réputations *********************/
 .co,
 .congrégation-ombre {
-  color: #6329bc !important;
+    color: #6329bc !important;
 }
 .garde-zéphyr {
-  color: #25AB37 !important;
+    color: #25AB37 !important;
 }
 .gardiens {
-  color: #e0cda9 !important;
+    color: #e0cda9 !important;
 }
 .khazariens {
-  color: #5555CD !important;
+    color: #5555CD !important;
 }
 .milice {
-  color: #2971bc !important;
+    color: #2971bc !important;
 }
 .pirates {
-  color: #52C9CB !important;
+    color: #52C9CB !important;
 }
 
 .nordien {
-  color: #4472c4 !important;
+    color: #4472c4 !important;
 }
 
 /******************** Créatures *********************/
 .perrack {
-  color: #663 !important;
+    color: #663 !important;
 }
 .skarnien {
-  color: #603 !important;
+    color: #603 !important;
 }
 
 /********************* Diverses couleurs *********************/
 .hardcore {
-  color: #853894 !important;
+    color: #853894 !important;
 }
 
 .exotique {
-  color: #0FF !important;
+    color: #0FF !important;
 }
 .semi-légendaire {
-  color: #DAA500 !important;
+    color: #DAA500 !important;
 }
 .légendaire {
-  color: #F0E !important;
+    color: #F0E !important;
 }
 
 .récompense {
-  color: #0C0 !important;
+    color: #0C0 !important;
 }
 .enchantement {
-  color: #09F !important;
+    color: #09F !important;
 }
 
 .important {
-  color: #D00;
-  font-weight: 700;
+    color: #D00;
+    font-weight: 700;
 }
 
 
 /**************************************************** PRÉSENTATIONS ****************************************************/
 /********************* Modèles de présentation *********************/
 .fiche-champ {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .fiche-personnage {
-  background-color: #FFF3E0;
-  box-shadow: 0 0 5px #FFE4C4;
-  color: #261A0D;
-  font-size: 13px;
-  margin: auto;
-  width: 600px;
+    background-color: #FFF3E0;
+    box-shadow: 0 0 5px #FFE4C4;
+    color: #261A0D;
+    font-size: 13px;
+    margin: auto;
+    width: 600px;
 }
 .fiche-personnage-contenu {
-  padding: 0 20px 30px;
+    padding: 0 20px 30px;
 }
 .fiche-personnage-contenu img.fiche-personnage-light {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 .fiche-personnage-contenu .fiche-personnage-partie:hover img.fiche-personnage-light {
-  opacity: 1;
+    opacity: 1;
 }
 .fiche-personnage-contenu a {
-  color: #4D2E00;
+    color: #4D2E00;
 }
 .fiche-personnage-contenu a:link:active,
 .fiche-personnage-contenu a:link:focus,
 .fiche-personnage-contenu a:link:hover {
-  color: #B35900;
+    color: #B35900;
 }
 .fiche-personnage-img-border {
-  border-bottom: 1px solid #8f7d00;
-  margin: auto;
-  width: 80%;
+    border-bottom: 1px solid #8f7d00;
+    margin: auto;
+    width: 80%;
 }
 
 .fiche-joueur {
-  background-color: #1A0D00;
-  border : 2px solid #331A00;
-  font-size: 13px;
-  margin: auto;
-  padding: 20px;
-  width: 560px;
+    background-color: #1A0D00;
+    border : 2px solid #331A00;
+    font-size: 13px;
+    margin: auto;
+    padding: 20px;
+    width: 560px;
 }
 .fiche-joueur-titre {
-  color: #B35900;
-  font-family: Tangerine;
-  font-size: 38px;
-  letter-spacing: 2px;
-  line-height: 18px;
-  text-align: center;
-  text-shadow: 2px 0 2px;
+    color: #B35900;
+    font-family: Tangerine;
+    font-size: 38px;
+    letter-spacing: 2px;
+    line-height: 18px;
+    text-align: center;
+    text-shadow: 2px 0 2px;
 }
 
 
 /********************* Couleurs pour présentations *********************/
 .bg-vert_présentation {
-  background-color: #519F3C;
+    background-color: #519F3C;
 }
 
 .bdc-vert_présentation {
-  border-color: #519F3C;
+    border-color: #519F3C;
 }
 
 .color-vert_présentation {
-  color: #519F3C;
+    color: #519F3C;
 }
 
 
 /********************* Récompenses des présentations - VSTD *********************/
 .récompenses-présentation.vstd {
-  margin: 0 auto;
-  width: 400px;
+    margin: 0 auto;
+    width: 400px;
 }
 
 .récompenses-présentation.vstd .récompense-accroche {
-  border-style: solid;
-  border-width: 2px;
-  color: #FC0;
-  font-family: lucida calligraphy;
-  padding: 5px 0;
-  text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    color: #FC0;
+    font-family: lucida calligraphy;
+    padding: 5px 0;
+    text-align: center;
 }
 .récompenses-présentation.vstd > tbody > tr > td {
-  border-style: solid;
-  border-width: 0 2px;
+    border-style: solid;
+    border-width: 0 2px;
 }
 .récompenses-présentation.vstd > tbody > tr:last-child > td {
-  border-width: 0 2px 2px;
+    border-width: 0 2px 2px;
 }
 
 .récompenses-présentation.vstd .récompense-description {
-  display: table;
+    display: table;
 }
 
 .récompenses-présentation.vstd .récompense-description .récompense-icon {
-  display: table-cell;
-  border-right-style: solid;
-  border-right-width: 2px;
-  text-align: center;
-  vertical-align: middle;
-  width: 70px;
+    display: table-cell;
+    border-right-style: solid;
+    border-right-width: 2px;
+    text-align: center;
+    vertical-align: middle;
+    width: 70px;
 }
 .récompenses-présentation.vstd .récompense-description .récompense-contenu {
-  display: table-cell;
-  padding: 5px 10px 0;
+    display: table-cell;
+    padding: 5px 10px 0;
 }
 
 .récompenses-présentation.vstd .récompense-contenu .récompense-texte {
-  color: #CDD4A1;
-  font-style: italic;
+    color: #CDD4A1;
+    font-style: italic;
 }
 .récompenses-présentation.vstd .récompense-contenu .récompense {
-  border-style: solid;
-  border-width: 2px 2px 0 2px;
-  margin-top: 10px;
-  padding: 3px 0;
-  text-align: center;
+    border-style: solid;
+    border-width: 2px 2px 0 2px;
+    margin-top: 10px;
+    padding: 3px 0;
+    text-align: center;
 }
 
 
 /********************* Récompenses des présentations - VSPE *********************/
 .récompenses-présentation {
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 .récompenses-présentation.vspé {
-  margin: 0 auto;
-  width: 800px;
+    margin: 0 auto;
+    width: 800px;
 }
 
 .récompenses-présentation.vspé > tbody > tr > td {
-  border-color: #519F3C;
-  border-style: solid;
-  border-width: 0 2px 2px;
-  padding: 0 0 15px;
+    border-color: #519F3C;
+    border-style: solid;
+    border-width: 0 2px 2px;
+    padding: 0 0 15px;
 }
 .récompenses-présentation.vspé .tour {
-  background-color: #519F3C;
-  border-color: #519F3C;
-  border-style: solid;
-  border-width: 0 2px;
-  font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
+    background-color: #519F3C;
+    border-color: #519F3C;
+    border-style: solid;
+    border-width: 0 2px;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .récompenses-présentation.vpsé .tiers-titre {
-  padding-right: 15px;
+    padding-right: 15px;
 }
 .récompenses-présentation.vspé .tiers-titre .tiers-badge {
-  background-color: #FC0;
-  border-color: #519F3C;
-  border-style: solid;
-  border-width: 1px 2px 2px 1px;
-  color: #000;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 700;
-  height: 22px;
-  text-align: center;
-  width: 30px;
+    background-color: #FC0;
+    border-color: #519F3C;
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    height: 22px;
+    text-align: center;
+    width: 30px;
 }
 .récompenses-présentation.vspé .tiers-titre .tiers-accroche {
-  color: #FC0;
-  font-family: lucida calligraphy;
-  padding-left: 10px;
+    color: #FC0;
+    font-family: lucida calligraphy;
+    padding-left: 10px;
 }
 
 .récompenses-présentation.vspé .tiers-contenu {
-  display: table;
-  margin: 5px 16px;
+    display: table;
+    margin: 5px 16px;
 }
 
 .récompenses-présentation.vspé .tiers-contenu .tiers-cadre {
-  border-bottom: 2px solid #519F3C;
-  border-left: 2px solid #519F3C;
-  display: table-cell;
-  width: 25px;
+    border-bottom: 2px solid #519F3C;
+    border-left: 2px solid #519F3C;
+    display: table-cell;
+    width: 25px;
 }
 .récompenses-présentation.vspé .tiers-contenu .tiers-texte {
-  color: #CDD4A1;
-  display: table-cell;
-  font-style: italic;
-  padding: 0 5px 5px;
+    color: #CDD4A1;
+    display: table-cell;
+    font-style: italic;
+    padding: 0 5px 5px;
 }
 
 .récompenses-présentation.vspé .tiers-récompense {
-  border: 1px solid #FFF;
-  color: #FFF;
-  font-weight: 700;
-  margin: 10px 15px 0;
-  padding: 5px;
-  text-align: center;
+    border: 1px solid #FFF;
+    color: #FFF;
+    font-weight: 700;
+    margin: 10px 15px 0;
+    padding: 5px;
+    text-align: center;
 }
 
 /**************************************************** COMMUNICATIONS ****************************************************/
 /********************* Phénix *********************/
 .gazette-classement-titre {
-  color: #261A0D;
-  font-size: 20px;
-  text-align: center;
+    color: #261A0D;
+    font-size: 20px;
+    text-align: center;
 }
 table.gazette-classement {
-  border-collapse: collapse;
-  margin: 0 auto;
-  text-align: center;
-  width: 700px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+    width: 700px;
 }
 table.gazette-classement th {
-  color: #FFF3E0;
-  font-size: 18px;
-  padding: 5px;
-  text-shadow: 1px 1px 3px #261A0D;
+    color: #FFF3E0;
+    font-size: 18px;
+    padding: 5px;
+    text-shadow: 1px 1px 3px #261A0D;
 }
 table.gazette-classement td {
-  border-color: #261A0D;
-  border-style: solid;
-  border-width: 1px 0;
-  font-size: 12px;
-  padding: 3px;
+    border-color: #261A0D;
+    border-style: solid;
+    border-width: 1px 0;
+    font-size: 12px;
+    padding: 3px;
 }
 table.gazette-classement td + td {
-  border-left-width: 1px;
+    border-left-width: 1px;
 }
 table.gazette-classement td[rowspan] {
-  border-right-width: 1px;
-  font-size: 15px;
-  font-weight: 700;
+    border-right-width: 1px;
+    font-size: 15px;
+    font-weight: 700;
 }
 table.gazette-classement .banni {
-  font-size: 10px;
-  text-decoration: line-through;
+    font-size: 10px;
+    text-decoration: line-through;
 }
 
 /******************************************************************************TEST*********************************************************************************/
 
 a.sceditor-button.active
 {
-  background: #A4BC83 !important;
+    background: #A4BC83 !important;
 }
 a.sceditor-button:hover
 {
-  background: #A4BC83 !important;
+    background: #A4BC83 !important;
 }
 
 .sceditor-container iframe, .sceditor-container textarea {
-  color: #fff !important;
+    color: #fff !important;
 }
 
 .sceditor-toolbar .sceditor-group,
 .sceditor-toolbar .sceditor-button.sceditor-button-source {
-  background-color: #ddd;
+    background-color: #ddd;
 }
 
 /************************************************FONTAWESOME*********************************************************************************************************/
@@ -2124,68 +2337,61 @@ a.sceditor-button:hover
 
 /* Popup */
 .sceditor-fontawesome {
-  width:220px;
-  height:250px;
-  overflow-y:auto;
+    width:220px;
+    height:250px;
+    overflow-y:auto;
 }
 
 /* Icônes */
 .sceditor-fontawesome i {
-  color:#333;
-  font-size:20px;
-  text-align:center;
-  cursor:pointer;
-  padding:3px 0;
-  width:25%;
+    color:#333;
+    font-size:20px;
+    text-align:center;
+    cursor:pointer;
+    padding:3px 0;
+    width:25%;
 }
 .sceditor-fontawesome i:hover { color:#333 }
 
 /************************************************TOOLBAR************************************************************************************/
 
 div#fa_toolbar {
-  background-color: #1A1209;  /* Couleur de fond */
-  border-radius: 0 0 50px 50px;  /* Arrondis les bords de la toolbar */
-  box-shadow: 0 0 5px #000000;  /* Affiche une ombre */
-  margin: auto;  /* Centre la toolbar */
-  width: 100%;  /* Modifie la longueur de la toolbar */
-  position: fixed;
+    background-color: #1A1209;  /* Couleur de fond */
+    border-radius: 0 0 50px 50px;  /* Arrondis les bords de la toolbar */
+    box-shadow: 0 0 5px #000000;  /* Affiche une ombre */
+    margin: auto;  /* Centre la toolbar */
+    width: 100%;  /* Modifie la longueur de la toolbar */
+    position: fixed;
 }
 
 div#fa_toolbar div, div#fa_toolbar span {
-  margin: 0 15px;  /* Repositionne correctement le contenu de la toolbar */
+    margin: 0 15px;  /* Repositionne correctement le contenu de la toolbar */
 }
 /********************************************COULEUR FICHE***************************************************************************************/
 
 .postdetails.poster-profile textarea {
-  color:#ffffff;}
+    color:#ffffff;}
 
 /******************************************CURSEUR*****************************************************************************************/
 
 body {
-  cursor: url(http://www.k-upload.fr/afficher-fichier-2018-02-18-124dd5ea7cursor.cur), auto;
+    cursor: url(http://www.k-upload.fr/afficher-fichier-2018-02-18-124dd5ea7cursor.cur), auto;
 }
 
 /******************************************BACKGROUND QUI S'ADAPTE*****************************************************************************************/
 
 body {
-  background-size: 100% auto;
+    background-size: 100% auto;
 }
 
 /************************************************DEFILEMENT HAUT BAS*************************************************************************/
 
 /*fleche haut/bas java et overall_header template*/
 .bouhautbas {
-  bottom: 10px;
-  right: 10px; /* remplacez left par right pour afficher les boutons à droite */
-  position: fixed;
-  z-index: 100;
-}
-
-
-/************************************************MESSAGE ADMIN*************************************************************************/
-
-.post.bgAdministrateur {
-  background-image: url('http://www.allo-image.net/stockimg/upload/1596903058560f823ddb78cbleuvert.png');
+    bottom: 10px;
+    right: 10px; /* remplacez left par right pour afficher les boutons à droite */
+    position: fixed;
+    z-index: 100;
 }
 
 /*******************************COULEUR MP*********************************************************************************/
@@ -2196,119 +2402,129 @@ body {
 
 /******************************REPONSE RAPIDE AVATAR*************************************************************/
 #av_quickreply img {
-  left: 15px;
-  position: relative;
-  top: 35px;
+    left: 15px;
+    position: relative;
+    top: 35px;
 }
 
 #av_quickreply {
-  float: left;
-  position : absolute;
+    float: left;
+    position : absolute;
 }
 
 /*******************************BOUTON SUIVANT PRECEDENT SUR MP*************************************************************************/
 #navMP{
-  height:16px;
-  height:1rem;
+    height:16px;
+    height:1rem;
 }
 #navMP>a{
-  display:inline-block;
-  padding-left:.75em;
-  padding-right:.75em;
-  font-size:1.2em;
-  line-height:1.2em;
-  color:#000000;
-  background:#ffffff;
-  text-decoration:none !important;
-  border:1px solid #aaa;
+    display:inline-block;
+    padding-left:.75em;
+    padding-right:.75em;
+    font-size:1.2em;
+    line-height:1.2em;
+    color:#000000;
+    background:#ffffff;
+    text-decoration:none !important;
+    border:1px solid #aaa;
 }
 #navMP>a:hover{
-  color:#ffffff;
-  background:#000000;
-  text-decoration:none !important;
+    color:#ffffff;
+    background:#000000;
+    text-decoration:none !important;
 }
 #navMP-precedent{
-  float:left;
-  border-radius:.6em 0 0 .6em;
+    float:left;
+    border-radius:.6em 0 0 .6em;
 }
 #navMP-suivant{
-  float:right;
-  border-radius:0 1.2em 1.2em 0;
+    float:right;
+    border-radius:0 1.2em 1.2em 0;
 }
 #navMP-precedent::before{
-  content:"Précédent";
+    content:"Précédent";
 }
 #navMP-suivant::before{
-  content:"Suivant";
+    content:"Suivant";
 }
 
 /* Template pour les mentions d'utilisateur */
 .tooltipster-content {
-  padding: 0 !important;
+    padding: 0 !important;
 }
 
 /**************************************************ALERTE****************************************************************************/
 .realTime_alert{
-  background:#FDFDFD no-repeat 10px center;
-  -webkit-background-size:50px;
-  -moz-background-size:50px;
-  -o-background-size:50px;
-  background-size:50px;
-  -webkit-box-shadow:0 0 4px rgba(0,0,0,.6);
-  -moz-box-shadow:0 0 4px rgba(0,0,0,.6);
-  box-shadow:0 0 4px rgba(0,0,0,.6);
-  position:fixed;
-  top:50px;
-  right:20px;
-  min-height:60px;
-  font-size:13px;
-  width:200px;
-  padding:10px 10px 10px 70px;
-  font-family:Helvetica;
-  color:#474747;
+    background:#FDFDFD no-repeat 10px center;
+    -webkit-background-size:50px;
+    -moz-background-size:50px;
+    -o-background-size:50px;
+    background-size:50px;
+    -webkit-box-shadow:0 0 4px rgba(0,0,0,.6);
+    -moz-box-shadow:0 0 4px rgba(0,0,0,.6);
+    box-shadow:0 0 4px rgba(0,0,0,.6);
+    position:fixed;
+    top:50px;
+    right:20px;
+    min-height:60px;
+    font-size:13px;
+    width:200px;
+    padding:10px 10px 10px 70px;
+    font-family:Helvetica;
+    color:#474747;
 }
 .realTime_alert b{
-  display:block;
-  margin-bottom:5px;
-  font-size:15px;
+    display:block;
+    margin-bottom:5px;
+    font-size:15px;
 }
 .realTime_alert .close{
-  position:absolute;
-  right:10px;
-  top:5px;
-  font-size:15px;
-  -webkit-border-radius:50px;
-  -moz-border-radius:50px;
-  border-radius:50px;
-  height:16px;
-  width:16px;
-  text-align:center;
-  line-height:13px;
-  cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+    font-size:15px;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    height:16px;
+    width:16px;
+    text-align:center;
+    line-height:13px;
+    cursor:pointer;
 }
 .realTime_alert .close:hover{
-  color:#FFF;
-  background:#666;
+    color:#FFF;
+    background:#666;
 }
 #ebtzd .tooltip{
-  opacity:0;
-  position:relative;
-  overflow:visible;
-  z-index:100!important;
-  display:inline-block;
-  top:5px;
-  -webkit-transition-duration:500ms;
-  -moz-transition-duration:500ms;
-  -o-transition-duration:500ms;
-  transition-duration:500ms;
-  background:rgba(0, 0, 0, .8);
-  padding:10px;
-  -webkit-border-radius:3px;
-  -moz-border-radius:3px;
-  border-radius:3px;
-  font-family:Helvetica;
-  letter-spacing:1px;
-  font-size:13px;
-  width:300px;
-  color:#fff;
+    opacity:0;
+    position:relative;
+    overflow:visible;
+    z-index:100!important;
+    display:inline-block;
+    top:5px;
+    -webkit-transition-duration:500ms;
+    -moz-transition-duration:500ms;
+    -o-transition-duration:500ms;
+    transition-duration:500ms;
+    background:rgba(0, 0, 0, .8);
+    padding:10px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    font-family:Helvetica;
+    letter-spacing:1px;
+    font-size:13px;
+    width:300px;
+    color:#fff;
+}
+
+/*********CURSEUR LARA***********************/
+body {
+    cursor: url(https://www.aht.li/3577718/FLEtest.cur), auto;
+}
+a:hover,
+.mainmenu,
+.selectCode {
+    cursor: url(https://www.aht.li/3577762/FLEtorange.cur), auto;
 }
