@@ -624,6 +624,20 @@ a.topictitle {
     font-size: 14px;
 }
 
+/* Flex contenus */
+.banner,
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+.flex-column {
+    flex-direction: column;
+}
+.banner.flex-column,
+.flex-center.flex-column {
+    align-items: center;
+}
+
 /**************************************************** RÈGLEMENTS ****************************************************/
 /********************* Général *********************/
 .rules .rules-categ-underline {
@@ -1949,7 +1963,7 @@ p.boutique-description {
     font-style: italic;
 }
 .djöllfulin {
-    color: #FF2D00 !important;
+    color: #FA5F3C !important;
 }
 .elfe {
     color: #0C8A1F !important;
