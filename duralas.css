@@ -1314,7 +1314,7 @@ span[class*="bounty-rank-"]::before {
     content: url(https://wiki.guildwars2.com/images/3/3a/Iron_Dagger.png);
 }
 .icon-claw::before {
-    content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_hand_21.jpg);
+    content: url(https://i.ibb.co/z2DtHyW/inv-weapon-hand-21.jpg);
 }
 .icon-cesta::before {
     content: url(https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_17.jpg);
@@ -1326,13 +1326,13 @@ span[class*="bounty-rank-"]::before {
     content: url(https://wiki.guildwars2.com/images/9/9c/Soft_Wood_Short_Bow.png);
 }
 .icon-crossbow::before {
-    content: url(http://media.blizzard.com/wow/icons/56/inv_weapon_crossbow_04.jpg);
+    content: url(https://i.ibb.co/RQTQBss/inv-weapon-crossbow-04.jpg);
 }
 .icon-tonfa::before {
-    content: url(http://media.blizzard.com/wow/icons/56/ability_sap.jpg);
+    content: url(https://i.ibb.co/1LvwHPM/ability-sap.jpg);
 }
 .icon-flail::before {
-    content: url(http://media.blizzard.com/wow/icons/56/inv_mace_1h_pandung_c_01.jpg);
+    content: url(https://i.ibb.co/jGmKgPP/inv-mace-1h-pandung-c-01.jpg);
 }
 .icon-sword::before {
     content: url(https://wiki.guildwars2.com/images/6/68/Fine_Sword.png);
@@ -1341,13 +1341,13 @@ span[class*="bounty-rank-"]::before {
     content: url(https://wiki.guildwars2.com/images/6/6a/Steel_Spear.png);
 }
 .icon-axe::before {
-    content: url(https://wiki.guildwars2.com/images/b/ba/Bronze_Axe.png);
+    content: url(https://wiki.guildwars2.com/images/d/da/Mithril_Axe.png);
 }
 .icon-scythe::before {
-    content: url(http://media.blizzard.com/wow/icons/56/inv_staff_78.jpg);
+    content: url(https://i.ibb.co/7GyWtb9/inv-staff-78.jpg);
 }
 .icon-mace::before {
-    content: url(https://wiki.guildwars2.com/images/e/ee/Iron_Mace.png);
+    content: url(https://wiki.guildwars2.com/images/a/aa/Basic_Mace.png);
 }
 .icon-hammer::before {
     content: url(https://wiki.guildwars2.com/images/c/c8/Bronze_Hammer.png);
@@ -1356,7 +1356,7 @@ span[class*="bounty-rank-"]::before {
     content: url(https://wiki.guildwars2.com/images/6/63/Soft_Wood_Staff.png);
 }
 .icon-staff-ether::before {
-    content: url(http://media.blizzard.com/wow/icons/56/inv_staff_draenei_a_03.jpg);
+    content: url(https://i.ibb.co/2qdPv4k/inv-staff-draenei-a-03.jpg);
 }
 .icon-scepter::before {
     content: url(https://wiki.guildwars2.com/images/6/6c/Crude_Scepter.png);
@@ -1374,10 +1374,13 @@ span[class*="bounty-rank-"]::before {
     content: url(https://wiki.guildwars2.com/images/d/d9/Mystic_Rifle.png);
 }
 .icon-turret::before {
-    content: url(https://2img.net/image.noelshack.com/fichiers/2019/30/7/1564338700-technophile-turret.png);
+    content: url(https://i.ibb.co/RYtpYzk/technophile-turret.png);
 }
 .icon-deck::before {
-    content: url(http://media.blizzard.com/wow/icons/56/inv_misc_ticket_tarot_maelstrom_01.jpg);
+    content: url(https://wiki.guildwars2.com/images/a/a4/Sandstorm_Trump_Hand.png);
+}
+.icon-deck-exotique::before {
+    content: url(https://wiki.guildwars2.com/images/a/a9/Sandstorm_Meld_Hand.png);
 }
 .icon-ring::before {
     content: url(https://wiki.guildwars2.com/images/4/4e/Druid%27s_Circle.png);
