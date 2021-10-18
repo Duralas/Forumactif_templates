@@ -625,10 +625,16 @@ a.topictitle {
 }
 
 /* Flex contenus */
+.flex {
+    display: flex;
+}
 .banner,
 .flex-center {
     display: flex;
     justify-content: center;
+}
+.flex-end {
+    justify-content: flex-end;
 }
 .flex-column {
     flex-direction: column;
@@ -1198,6 +1204,12 @@ a.topictitle {
 }
 .quests-nordiens .icon-todo::before {
     content: url(https://i.servimg.com/u/f13/11/12/92/75/c_user12.png);
+}
+
+/********************* La Volière *********************/
+.espion { 
+    color: #D00; 
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; 
 }
 
 /********************* Contrats *********************/
@@ -2347,7 +2359,7 @@ a.sceditor-button:hover
 
 /************************************************FONTAWESOME*********************************************************************************************************/
 
-/* Ajoute Font Awesome aux polices de la textarea pour que les icônes soient visibles */
+/* Ajoute Font Awesome aux polices de la textarea pour que les s soient visibles */
 .sceditor-container textarea { font-family:Verdana, Arial, Helvetica, sans-serif, FontAwesome !important }
 /* Image du bouton */
 .sceditor-button-fontawesome div { background:url(https://i.servimg.com/u/f19/19/06/98/92/fa-f10.png) !important }
@@ -2542,6 +2554,7 @@ body {
 }
 a:hover,
 .mainmenu,
-.selectCode {
+.selectCode,
+[data-link] {
     cursor: url(https://www.aht.li/3577762/FLEtorange.cur), auto;
 }
