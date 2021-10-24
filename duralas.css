@@ -1207,9 +1207,9 @@ a.topictitle {
 }
 
 /********************* La Volière *********************/
-.espion { 
-    color: #D00; 
-    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; 
+.espion {
+    color: #D00;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
 /********************* Contrats *********************/
@@ -2065,7 +2065,7 @@ p.boutique-description {
     color: #4472c4 !important;
 }
 
-/******************** Créatures *********************/
+/******************** Créatures ********************/
 .perrack {
     color: #663 !important;
 }
@@ -2073,7 +2073,25 @@ p.boutique-description {
     color: #603 !important;
 }
 
-/********************* Diverses couleurs *********************/
+/******************** Titres ********************/
+.joueur-titre-artéfact {
+    color: #FA0 !important;
+}
+.joueur-titre-event,
+.joueur-titre-événement {
+    color: #0FF !important;
+}
+.joueur-titre-faction {
+    color: #080 !important;
+}
+.joueur-titre-irl {
+    color: #E8E !important;
+}
+.joueur-titre-porte_bonheur {
+    color: #FA0 !important;
+}
+
+/******************** Diverses couleurs ********************/
 .hardcore {
     color: #853894 !important;
 }
@@ -2359,7 +2377,7 @@ a.sceditor-button:hover
 
 /************************************************FONTAWESOME*********************************************************************************************************/
 
-/* Ajoute Font Awesome aux polices de la textarea pour que les s soient visibles */
+/* Ajoute Font Awesome aux polices de la textarea pour que les icônes soient visibles */
 .sceditor-container textarea { font-family:Verdana, Arial, Helvetica, sans-serif, FontAwesome !important }
 /* Image du bouton */
 .sceditor-button-fontawesome div { background:url(https://i.servimg.com/u/f19/19/06/98/92/fa-f10.png) !important }
