@@ -321,6 +321,14 @@
                               notifContent = author + " a créé l'activité <a href=\"" + postHref + "\">" + postLabel + "</a> dans <a href=\"" + forumHref + "\">" + forumLabel + "</a>";
 
                               break;
+                          case 14: /* Nouvelle récompense */
+                            notifContent = content.hasOwnProperty("award")
+                              && typeof content.award === "object"
+                              && content.award.hasOwnProperty("award_notif")
+                            ? content.award.award_notif
+                            : "Votre dévotion a (enfin) été récompensée !";
+
+                            break;
                           default: /* À faire MDR */
                               notifContent = "Demande à Dougal pourquoi il a pas codé cette notif (liée à " + from.name + ") !";
                               console.log("Tiens, donne ces infos à Dougal : ", content);

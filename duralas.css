@@ -491,6 +491,25 @@ body.chatbox {
     color: #D00;
 }
 
+/********** Récompenses sur le profil **********/
+/* Mon Profil */
+#list_awards.catBottom {
+    background-color: #000 !important;
+}
+/* Profil public */
+.awards_module .catLeft,
+#profile-advanced-details .module-title {
+    background: unset;
+    border: unset;
+}
+.awards_module .row1 {
+    background-color: #000;
+}
+/* Global */
+div.award {
+    border: unset;
+}
+
 /************************************************************************Mise en page**************************************************************************/
 
 
@@ -1470,6 +1489,10 @@ span[class*="bounty-rank-"]::before {
     content: url(https://i.servimg.com/u/f13/11/12/92/75/50px_s10.png);
 }
 
+.icon-seal-oasis::before {
+    content: url(https://i.ibb.co/VNmZqX5/seal-oasis.png);
+}
+
 .icon-mount::before {
     content: url(https://wiki.guildwars2.com/images/4/44/Mini_Lunar_%22Horse%22.png);
 }
@@ -2424,6 +2447,12 @@ div#fa_toolbar div, div#fa_toolbar span {
 body {
     cursor: url(http://www.k-upload.fr/afficher-fichier-2018-02-18-124dd5ea7cursor.cur), auto;
 }
+a:hover,
+.mainmenu,
+.selectCode,
+[data-link]{
+    cursor: pointer;
+}
 
 /******************************************BACKGROUND QUI S'ADAPTE*****************************************************************************************/
 
@@ -2567,7 +2596,7 @@ body {
 }
 
 /*********CURSEUR LARA***********************/
-body {
+/*body {
     cursor: url(https://www.aht.li/3577718/FLEtest.cur), auto;
 }
 a:hover,
@@ -2575,4 +2604,4 @@ a:hover,
 .selectCode,
 [data-link] {
     cursor: url(https://www.aht.li/3577762/FLEtorange.cur), auto;
-}
+}*/
