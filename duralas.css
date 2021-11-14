@@ -10,7 +10,7 @@
     float: none;
 }
 
-/**************************************************************************Design du fond**************************************************************************/
+/***************************************** DESIGN DU FOND *****************************************/
 html {
     background-color: #000;
 }
@@ -18,7 +18,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-y:scroll !important;
-    /*width: 100%;*/
+
+    /* Variables */
+    --color-congrégation_ombre: #6329BC;
+    --color-garde_zéphyr: #25AB37;
+    --color-gardiens: #E0CDA9;
+    --color-khazariens: #5555CD;
+    --color-milice: #2971BC;
+    --color-pirates: #52C9CB;
 }
 
 .site_description{
@@ -510,8 +517,7 @@ div.award {
     border: unset;
 }
 
-/************************************************************************Mise en page**************************************************************************/
-
+/****************************************** MISE EN PAGE ******************************************/
 
 /*liens*/
 .postbody a { text-shadow : 0 0 3px #A4BC83}
@@ -600,7 +606,7 @@ div.cont_code { clear: right; }
     filter: brightness(50%);
 }
 
-/************************************************************************************Mise en page********************************************************************/
+/******************************************** Structure *******************************************/
 .titre {
     background:#0f1400;text-align:center; font-size:20px; text-shadow:1px 1px 3px #000;padding:10px;
 }
@@ -663,8 +669,8 @@ a.topictitle {
     align-items: center;
 }
 
-/**************************************************** RÈGLEMENTS ****************************************************/
-/********************* Général *********************/
+/******************************************* RÈGLEMENTS *******************************************/
+/******************** Général *******************/
 .rules .rules-categ-underline {
     border-color: #01a2bb94;
 }
@@ -706,7 +712,48 @@ a.topictitle {
     font-size: 12px;
 }
 
-/*********** Nordiens ***********/
+/****************** Transverse ******************/
+.champ {
+    text-decoration: underline;
+}
+.séparation {
+    border-bottom: 1px solid;
+    height: 15px;
+    margin: auto;
+    width: 50px;
+}
+
+/******************* Factions *******************/
+article.faction {
+    color: #FFF;
+}
+article.faction h1,
+article.faction h2,
+article.faction h3 {
+    background: unset;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 2px;
+    color: var(--color-faction);
+    margin: unset;
+    padding-bottom: 0.5rem;
+    text-align: left;
+}
+article.faction h1 {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    text-align: center;
+}
+article.faction h2 {
+    font-size: 1.75rem;
+    line-height: 1rem;
+    padding-left: 2rem;
+}
+article.faction h3 {
+    padding-left: 1rem;
+}
+
+/******************* Nordiens *******************/
 .rules-nord .rule-frame {
     background-color: #499ab163;
 }
@@ -714,7 +761,7 @@ a.topictitle {
     background-color: #648e9a5c;
 }
 
-/*********** Djöllfulins ***********/
+/***************** Djöllfulins ******************/
 .rules-djöllfulin .rule-frame {
     background-color: #1919198c;
     border-color: #6100008c;
@@ -769,8 +816,7 @@ a.topictitle {
 }
 .bestiaire .caractéristique,
 .bestiaire-caractéristique,
-.bestiaire-champ,
-.bestiaire .champ {
+.bestiaire-champ {
     text-decoration: underline;
 }
 .bestiaire-séparation {
@@ -2064,28 +2110,82 @@ p.boutique-description {
 }
 
 /********************* Factions / Guildes / Réputations *********************/
+span.faction,
+strong.faction,
+.titre.faction,
+.titrerace.faction,
+.soustitre.faction {
+    color: var(--color-faction); !important;
+}
+span.co,
+strong.co,
+.titre.co,
+.titrerace.co,
+.soustitre.co,
+span.congrégation-ombre,
+strong.congrégation-ombre,
+.titre.congrégation-ombre,
+.titrerace.congrégation-ombre,
+.soustitre.congrégation-ombre {
+    color: var(--color-congrégation_ombre); !important;
+}
 .co,
 .congrégation-ombre {
-    color: #6329bc !important;
+    --color-faction: var(--color-congrégation_ombre);
+}
+span.garde-zéphyr,
+strong.garde-zéphyr,
+.titre.garde-zéphyr,
+.titrerace.garde-zéphyr,
+.soustitre.garde-zéphyr {
+    color: var(--color-garde_zéphyr); !important;
 }
 .garde-zéphyr {
-    color: #25AB37 !important;
+    --color-faction: var(--color-garde_zéphyr);
+}
+span.gardiens,
+strong.gardiens,
+.titre.gardiens,
+.titrerace.gardiens,
+.soustitre.gardiens {
+    color: var(--color-gardiens); !important;
 }
 .gardiens {
-    color: #e0cda9 !important;
+    --color-faction: var(--color-gardiens);
+}
+span.khazariens,
+strong.khazariens,
+.titre.khazariens,
+.titrerace.khazariens,
+.soustitre.khazariens {
+    color: var(--color-khazariens); !important;
 }
 .khazariens {
-    color: #5555CD !important;
+    --color-faction: var(--color-khazariens);
+}
+span.milice,
+strong.milice,
+.titre.milice,
+.titrerace.milice,
+.soustitre.milice {
+    color: var(--color-milice); !important;
 }
 .milice {
-    color: #2971bc !important;
+    --color-faction: var(--color-milice);
+}
+span.pirates,
+strong.pirates,
+.titre.pirates,
+.titrerace.pirates,
+.soustitre.pirates {
+    color: var(--color-pirates); !important;
 }
 .pirates {
-    color: #52C9CB !important;
+    --color-faction: var(--color-pirates);
 }
 
 .nordien {
-    color: #4472c4 !important;
+    color: #4472C4 !important;
 }
 
 /******************** Créatures ********************/
